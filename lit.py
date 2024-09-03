@@ -7,9 +7,15 @@ st.title("Chatbot de Teoria Musical")
 
 # Adicionar uma descrição
 st.write("""
-Bem-vindo ao Chatbot de Música! 
-Este é um chatbot que ajuda você a entender teoria musical, ritmos, e muito mais. 
-Navegue pelas funcionalidades e explore o mundo da música com nosso assistente interativo.
+Bem-vindo ao curso interativo para estudos em Teoria Musical!
+          
+Aqui você encontra textos, imagens, videos e exemplos para aprender tudo o que você precisa para desenvolver-se no seu instrumento. 
+         
+Basta escolher o tema que você quer estudar e seguir com o guia proposto para conhecer sobre a história da música, os ritmos musicais, intervalos, escalas, acordes, campos harmônicos e muito mais... 
+         
+Para qualquer dúvida, correção ou sugestão de conteúdo, entre em contato pelo e-mail ourcontentdigital@gmail.com
+         
+Bons estudos e até mais :)
 """)
 
 # Menu de opções
@@ -31,7 +37,15 @@ A maioria das culturas tem seus próprios mitos fundadores relacionados à inven
 
 Todas as culturas conhecidas utilizaram a música como forma de expressão e, por isso, a música é considerada um universal cultural da humanidade. Mas, foi com o estudo de Pitágoras que os seres humanos começaram a estudar a música de forma científica.
 
-Pitágoras desenvolveu o estudo (...)
+Pitágoras desenvolveu o estudo das relações matemáticas entre os sons, estabelecendo as bases da teoria musical. Ele é conhecido por descobrir que as vibrações sonoras podem ser descritas em termos de proporções numéricas. Seu trabalho em acústica e harmonia levou à formulação dos princípios que explicam a produção de intervalos musicais através de relações matemáticas entre as frequências das notas.
+
+Pitágoras utilizou o monocórdio para investigar a relação entre matemática e música, revelando as proporções numéricas subjacentes à harmonia musical. O monocórdio é um instrumento simples composto por uma única corda esticada sobre uma caixa de ressonância. Pitágoras descobriu que ao dividir a corda em diferentes seções, os sons produzidos tinham relações matemáticas claras, como a relação 2:1 que resulta em uma oitava, 3:2 para uma quinta, e 4:3 para uma quarta. Essas descobertas mostraram que as notas musicais podiam ser descritas em termos de frações e proporções, estabelecendo a base para a teoria musical ocidental.
+
+Utilizando o monocórdio, Pitágoras pôde demonstrar como a variação no comprimento da corda influencia o tom e a qualidade do som, ajudando a entender que a harmonia musical está intrinsecamente ligada a princípios matemáticos. Esse estudo não só influenciou a teoria musical ao longo dos séculos, mas também destacou a conexão entre a matemática e a música, um conceito que continua a ser explorado na acústica e na teoria musical moderna. O monocórdio, portanto, não foi apenas um instrumento musical, mas uma ferramenta essencial na compreensão das relações entre som e matemática.
+
+A ideia de que as notas musicais podem ser representadas por frações e proporções era inovadora e lançou as bases para a notação musical e a teoria da música ocidental. Pitágoras e seus seguidores acreditavam que a harmonia do cosmos poderia ser entendida através da matemática, uma ideia que influenciou profundamente o desenvolvimento da música e da matemática na antiguidade.
+
+Esse estudo pioneiro não só ajudou a formar a base para a teoria musical, mas também demonstrou a relação intrínseca entre a matemática e a música, uma conexão que continua a ser explorada e valorizada até os dias de hoje.
 
 Apesar de não ser uma medida exata, a história da música pode ser dividida entre diferentes períodos de acordo com as mudanças tecnológicas e expressivas do ser humano. Alguns desses períodos são: 
 
@@ -65,7 +79,7 @@ Os ritmos musicais definem a organização das notas e dos acordes que serão to
 
 Para estudar o ritmo, usam-se os conceitos: 
 
-*Beat*
+**Beat**
 
 O beat é a pulsação constante que pode ser sentida na música, similar ao batimento cardíaco, servindo como a base para a duração das notas e dos silêncios.
 
@@ -73,7 +87,7 @@ Assim, o beat é o que mantém a música organizada no tempo, ajudando os músic
 
 Por exemplo, em uma música com um tempo de 60 BPM (batidas por minuto), a pulsação ocorre a cada um segundo; enquanto que, em uma música de 120 BPM, a pulsação ocorre a cada meio segundo.
 
-*Duração*
+**Duração**
 
 A duração marca o período das notas e das pausas, ou seja, marca por quanto tempo uma nota ou uma pausa deve ser tocada.
 
@@ -84,41 +98,48 @@ Veja um resumo dos principais valores de notas e pausas:
 - Semibreve:
 
     Nota: Uma semibreve equivale a quatro tempos em uma medida 4/4.
+
     Pausa: A pausa de semibreve também dura quatro tempos.
 
 - Mínima:
 
     Nota: Uma mínima dura dois tempos.
+
     Pausa: A pausa de mínima também dura dois tempos.
 
 - Semínima:
 
     Nota: Uma semínima dura um tempo.
+
     Pausa: A pausa de semínima também dura um tempo.
 
 - Colcheia:
 
     Nota: Uma colcheia dura metade de um tempo.
+
     Pausa: A pausa de colcheia também dura metade de um tempo.
 
 - Semicolcheia:
 
     Nota: Uma semicolcheia dura um quarto de um tempo.
+
     Pausa: A pausa de semicolcheia também dura um quarto de um tempo.
 
 - Fusa:
 
     Nota: Uma fusa dura um oitavo de um tempo.
+
     Pausa: A pausa de fusa também dura um oitavo de um tempo.
 
 - Semifusa:
 
     Nota: Uma semifusa dura um décimo sexto de um tempo.
+
     Pausa: A pausa de semifusa também dura um décimo sexto de um tempo.
 
 Esses valores de notas e pausas são fundamentais para a leitura e escrita de partituras, permitindo aos músicos compreender a duração relativa das notas e pausas e, assim, interpretar corretamente o ritmo de uma peça musical.
 
-*Compasso*
+**Compasso**
 
 O compasso é a organização dos tempos em padrões regulares de batidas fortes e fracas.
 Indicado por uma fórmula de compasso, como 4/4, 3/4, 6/8, etc.
@@ -128,14 +149,16 @@ Os diferentes tipos de compassos são:
 - Simples:
 
     Exemplo: 4/4 (quatro tempos por compasso, cada tempo é uma semínima)
+
     Padrão de acentuação: Forte, fraco, médio-forte, fraco
 
 - Composto:
 
     Exemplo: 6/8 (seis colcheias por compasso, organizado em dois grupos de três colcheias)
+
     Padrão de acentuação: Forte, fraco, fraco, médio-forte, fraco, fraco
 
-*Ritmo*
+**Ritmo**
 
 O ritmo é o padrão de duração das notas e pausas em uma peça musical.
 
@@ -147,9 +170,21 @@ O ritmo é o padrão de duração das notas e pausas em uma peça musical.
 
     Uma sequência mista em 4/4: ♩ ♪ ♫ ♩ ♬
 
-*Padrões Rítmicos*
+**Padrões Rítmicos**
 
 Padrões rítmicos são sequências que foram consagradas em gêneros musicais, sendo os mais conhecidos entre os músicos:
+
+- Rock: 
+
+- Jazz: 
+
+- Blues: 
+
+- Hip-Hop: Utiliza batidas fortes e frequentemente sincopadas, com amostras de música e loops.
+
+- Reggae: Originário da Jamaica, caracteriza-se por um ritmo distinto chamado de "batida" ou "beat" que enfatiza o terceiro tempo do compasso.
+
+- Samba: Ritmo brasileiro com raízes africanas, marcado por um padrão rítmico distintivo e percussivo.
 
 - Bossa Nova: Originário do Brasil, caracteriza-se por um padrão rítmico sincopado e suave.
 
@@ -159,15 +194,9 @@ Padrões rítmicos são sequências que foram consagradas em gêneros musicais, 
 
 - Mazurka: Originária da Polônia, uma dança com um padrão rítmico característico de três tempos, com ênfase no segundo tempo.
 
-- Hip-Hop: Utiliza batidas fortes e frequentemente sincopadas, com amostras de música e loops.
-
-- Reggae: Originário da Jamaica, caracteriza-se por um ritmo distinto chamado de "batida" ou "beat" que enfatiza o terceiro tempo do compasso.
-
 - Afro-Cubano: Combinação de influências africanas e cubanas, com ritmos como o "clavé" e complexas polirritmias.
 
 - Flamenco: Originário da Espanha, possui um ritmo característico chamado "compás", com variações entre diferentes estilos.
-
-- Samba: Ritmo brasileiro com raízes africanas, marcado por um padrão rítmico distintivo e percussivo.
 
 - Tango: Originário da Argentina, com um ritmo de dois tempos e ênfase na melancolia e paixão.
 
@@ -217,16 +246,13 @@ Esses são os nomes dos intervalos musicais usando a nota dó (C) como referênc
 
 
 
-        Exemplo: /ia 
-            
-            "Quais são os intervalos musicais de Lá sustenido?"
 
 
 Para saber como e quando utilizá-los, precisamos saber as características dos intervalos musicais, que podem ser: 
 
-- *Dissonantes*: Intervalos que criam tensão, usados para criar movimento ou expectativa na música.
+**Dissonantes**: Intervalos que criam tensão, usados para criar movimento ou expectativa na música.
 
-- *Consonantes*: Intervalos que criam resolução, usados para criar a sensação de descanso ou conclusão na música. 
+**Consonantes**: Intervalos que criam resolução, usados para criar a sensação de descanso ou conclusão na música. 
 
 
 - Uníssono -> Consonante
@@ -256,16 +282,10 @@ Para saber como e quando utilizá-los, precisamos saber as características dos 
 - Oitava -> Consonante
 
 
-Para saber quando utilizar os intervalos dissonantes ou consonantes, podemos pensar na música como uma narrativa. 
+Para saber quando utilizar os intervalos dissonantes ou consonantes, podemos pensar na música como uma narrativa. Normalmente, para contar uma boa história, precisamos transitar entre momentos de conflitos e momentos de conclusão para criar uma trama envolvente. Com a música ocorre algo muito parecido, porque para criar uma música emocionante é preciso transitar entre a tensão dos intervalos dissonantes e o relaxamento dos intervalos consonantes constantemente para envolver o ouvinte. 
 
-Normalmente, para contar uma boa história, precisamos transitar entre momentos de conflitos e momentos de conclusão para criar uma trama envolvente.
+Decidir como e quando fazer isso é o que vai determinar o seu estilo como músico e, por isso, não existe uma fórmula para criar uma música além do que estudamos em Teoria Musical. É aí que entra a sua criatividade em jogo...
 
-Com a música ocorre algo muito parecido, porque para criar uma música emocionante é preciso transitar entre a tensão dos intervalos dissonantes e o relaxamento dos intervalos consonantes constantemente para envolver o ouvinte. Decidir como e quando fazer isso é o que vai determinar o seu estilo como músico e, por isso, não existe uma fórmula para criar uma música além do que estudamos em Teoria Musical. É aí que entra a sua criatividade em jogo...
-
-
-Se você estiver com alguma dúvida sobre intervalos musicais, não hesite em perguntar para a assistente com inteligência artificial usando o comando /ia. 
-
-Ou então, envie sua pergunta para ourcontentdigital@gmail.com que responderemos assim que possível. 
 
         """
     
@@ -282,17 +302,29 @@ Elas formam a estrutura básica sobre a qual a música é construída, fornecend
 
 Existem diferentes tipos de escalas, entre elas: 
 
-- /Escalas_pentatonicas: Escalas pentatônicas são escalas musicais que consistem em cinco notas por oitava.
+/Escalas_pentatonicas: Escalas musicais que consistem em cinco notas por oitava.
 
-- /Escala_maior: Conjunto de escalas musicais amplamente utilizadas na música ocidental.
+/Escala_maior: Conjunto de escalas musicais amplamente utilizadas na música ocidental.
 
-- /Escala_menor: Outro conjunto de escalas musicais amplamente difundidas entre músicos.
+/Escala_menor: Outro conjunto de escalas musicais amplamente difundidas entre músicos.
 
-- /Escala_blues: Escala musical utilizada no blues, rock 'n' roll e jazz.
+/Escala_blues: Escala musical utilizada no blues, rock 'n' roll e jazz.
+
+"""
+
+    st.write(escalas_text)
+
+    # Exibir imagem
+    image_path = os.path.join('images', 'escalas.jpeg')
+    if os.path.exists(image_path):
+        image = Image.open(image_path)
+        st.image(image, caption='Escalas Musicais e Relativas')
 
 
 
-*Escalas Pentatônicas*
+    escalas_text_2 = """
+
+**Escalas Pentatônicas**
 
 As escalas pentatônicas são escalas musicais que consistem em cinco notas por oitava, daí o termo "penta" que significa cinco. 
 
@@ -300,27 +332,28 @@ Elas são amplamente usadas em diversas culturas musicais ao redor do mundo devi
 
 Por não conterem semitons adjacentes, as escalas pentatônicas tendem a criar sonoridades mais estáveis e menos dissonantes.
 
-*Tipos de Escalas Pentatônicas*
 
-Veja as principais escalas pentatônicas:
+- Pentatônica Maior:
 
-- *Pentatônica Maior:* 
+        Intervalos: Segunda Maior - Terça Maior - Quinta Justa - Sexta Maior - Oitava
 
-  Segunda Maior - Terça Maior - Quinta Justa - Sexta Maior - Oitava
+        Distância: Tonalidade - 1T - 1T - 1,5T - 1T - 1,5T.
+            
+        Exemplo em Dó: C - D - E - G - A - C.
 
-  Tonalidade - 1T - 1T - 1,5T - 1T - 1,5T.
+- Pentatônica Menor:
+
+        Intervalos: Terça Menor - Quarta Justa - Quinta Justa - Sétima Menor - Oitava
+
+        Distância: Tonalidade - 1,5T - 1T - 1T - 1,5T - 1T. 
+        
+        Exemplo em Lá: A - C - D - E - G - A.
+
+.
+...........................................................................................................................................................................
+.
   
-  Exemplo em Dó: C - D - E - G - A - C.
-
-- *Pentatônica Menor:* 
-
-  Terça Menor - Quarta Justa - Quinta Justa - Sétima Menor - Oitava
-
-  Tonalidade - 1,5T - 1T - 1T - 1,5T - 1T. 
-  
-  Exemplo em Lá: A - C - D - E - G - A.
-
-  *Escala Maior*
+**Escalas Maiores**
 
 A escala maior é uma das escalas mais fundamentais e amplamente utilizadas na música ocidental, composta por sete notas separadas por intervalos específicos. 
 
@@ -329,37 +362,36 @@ As notas na escala maior formam acordes que são considerados estáveis e conson
 Muitas composições usam a escala maior como ponto de partida e modulam para outras tonalidades relacionadas durante o desenvolvimento da peça.
 
 
-*Tipos de escalas maiores*
-
-Veja agora as três principais escalas maiores
+- Escala Maior Natural: 
 
 
-    - *Escala Maior Natural:* Comporta todas as notas naturais de Dó à Dó.
+        Intervalos: Segunda Maior - Terça Maior - Quarta Justa - Quinta Justa - Sexta Maior - Sétima Maior - Oitava
 
-Segunda Maior - Terça Maior - Quarta Justa - Quinta Justa - Sexta Maior - Sétima Maior - Oitava
+        Distância: Tonalidade - T - T - ST - T - T - T - ST
 
-Tonalidade - T - T - ST - T - T - T - ST
-
-    Exemplo: C - D - E - F - G - A - B - C
+        Exemplo: C - D - E - F - G - A - B - C
 
 
-    - *Escala Maior Harmônica:* Semelhante à escala maior natural, mas com a sexta menor.
+- Escala Maior Harmônica: 
 
-Segunda Maior - Terça Maior - Quarta Justa - Quinta Justa - Sexta Menor - Sétima Maior - Oitava
+        Intervalos: Segunda Maior - Terça Maior - Quarta Justa - Quinta Justa - Sexta Menor - Sétima Maior - Oitava
 
-Tonalidade - T - T - ST - T - ST - 1,5T - ST
+        Distância: Tonalidade - T - T - ST - T - ST - 1,5T - ST
 
-    Exemplo: C - D - E - F - G - G# - B - C
+        Exemplo: C - D - E - F - G - G# - B - C
 
     
-    - *Escala Maior Melódica:* Semelhante à escala maior natural, mas com a sexta e a sétima menor. 
+- Escala Maior Melódica: 
 
-Segunda Maior - Terça Maior - Quarta Justa - Quinta Justa - Sexta Menor - Sétima Menor - Oitava
+        Intervalos: Segunda Maior - Terça Maior - Quarta Justa - Quinta Justa - Sexta Menor - Sétima Menor - Oitava
 
-Tonalidade - T - T - ST - T - ST - T - ST
+        Distância: Tonalidade - T - T - ST - T - ST - T - ST
 
+.
+...........................................................................................................................................................................
+.
 
-*Escala Menor*
+**Escalas Menores**
 
 A escala menor é uma escala fundamental na música ocidental, conhecida por seu som mais sombrio e emotivo em comparação com a escala maior. 
 
@@ -367,39 +399,43 @@ Assim como na escala maior, a escala menor também pode ser usada como ponto de 
 
 Em muitas composições, a alternância entre escalas maior e menor é usada para criar contrastes emocionais e atmosféricos, já que muitas escalas menores são relativas às escalas maiores, ou seja, possuem as mesmas notas em diferentes ordens. 
 
-*Tipos de Escalas Menores*
-
-Veja agora as três principais escalas menores.
+Veja agora as três principais escalas menores:
 
 
-    - *Escala Menor Natural:* 
+- Escala Menor Natural:
 
 
-Segunda Maior - Terça Menor - Quarta Justa - Quinta Justa - Sexta Menor - Sétima Menor - Oitava 
+        Intervalos: Segunda Maior - Terça Menor - Quarta Justa - Quinta Justa - Sexta Menor - Sétima Menor - Oitava 
 
-Tonalidade - T - ST - T - T - ST - T - T
+        Distância: Tonalidade - T - ST - T - T - ST - T - T
 
-    Exemplo: C - D - D# - F - G - G# - A# - C
+        Exemplo: C - D - D# - F - G - G# - A# - C
 
     
-    - *Escala Menor Harmônica:* Semelhante à escala menor natural, mas com a sétima maior
+- Escala Menor Harmônica:
+    
+        Intervalos: Segunda Maior - Terça Menor - Quarta Justa - Quinta Justa - Sexta Menor - Sétima Maior - Oitava 
 
-Segunda Maior - Terça Menor - Quarta Justa - Quinta Justa - Sexta Menor - Sétima Maior - Oitava 
+        Distância: Tonalidade - T - ST - T - T - ST - 1,5T - ST
 
-Tonalidade - T - ST - T - T - ST - 1,5T - ST
-
-    Exemplo: C - D - D# - F - G - G# - B - C
+        Exemplo: C - D - D# - F - G - G# - B - C
 
 
-    - *Escala Menor Melódica:* Esta escala varia na subida e na descida. Quando ascendente, é semelhante à escala menor natural, mas com a sexta e a sétima maior. Já no movimento descente, retorna à escala menor natural.
+- Escala Menor Melódica:
+    
+Esta escala varia na subida e na descida. Quando ascendente, é semelhante à escala menor natural, mas com a sexta e a sétima maior. Já no movimento descente, retorna à escala menor natural.
 
-Segunda Maior - Terça Menor - Quarta Justa - Quinta Justa - Sexta Maior - Sétima Maior - Oitava
+        Intervalos: Segunda Maior - Terça Menor - Quarta Justa - Quinta Justa - Sexta Maior - Sétima Maior - Oitava
 
-Tonalidade - T - ST - T - T - T - T - ST
+        Distância: Tonalidade - T - ST - T - T - T - T - ST
 
-    Exemplo: C - D - D# - F - G - A - B - C
+        Exemplo: C - D - D# - F - G - A - B - C
 
-*Escala Blues*
+.
+...........................................................................................................................................................................
+.    
+
+**Escala Blues**
 
 A escala de blues é uma das escalas mais icônicas e reconhecíveis na música, especialmente no gênero do blues, mas também é amplamente utilizada em jazz, rock e outros estilos musicais. 
 
@@ -410,19 +446,16 @@ A escala de blues é essencialmente uma escala pentatônica com adição de blue
 A presença das blue notes permite aos músicos explorar uma ampla gama de emoções e expressões musicais. Essas notas adicionam tensão, melancolia e um sentimento de "blues" à música.
 
 
-*Estrutura da Escala de Blues:* 
+        Intervalo: Terça Menor - Quarta Justa - Quinta Diminuta - Quinta Perfeita - Sétima Menor - Oitava
 
-Terça Menor - Quarta Justa - Quinta Diminuta - Quinta Perfeita - Sétima Menor - Oitava
+        Distância: Tonalidade - 1,5T - T - ST - ST - 1,5T - T
 
-Tonalidade - 1,5T - T - ST - ST - 1,5T - T
+        Exemplo: 
+
     """
-    st.write(escalas_text)
+    st.write(escalas_text_2)
 
-    # Exibir imagem
-    image_path = os.path.join('images', 'escalas.jpeg')
-    if os.path.exists(image_path):
-        image = Image.open(image_path)
-        st.image(image, caption='Escalas Musicais')
+
 
 def acordes():
     st.subheader("Acordes")
@@ -439,98 +472,99 @@ São divididos conceitualmente em:
         
 - /Inversoes: Referem-se a diferentes arranjos de notas dentro de um acorde, onde a nota mais grave muda sem alterar as outras notas do acorde. 
 
-*Tríades*
+.
+...........................................................................................................................................................................
+.
+
+**Tríades**
 
 As tríades são elementos cruciais na teoria musical e na prática de composição. 
 
 Elas proporcionam a estrutura básica para a harmonia tonal e são essenciais para músicos entenderem a relação entre notas e a construção de acordes dentro de uma determinada tonalidade. 
 
-
-*Tipos de Tríades:*
-
 Veja agora os principais tipos de sobreposições com três notas para compor acordes.
 
-
-    - *Tríade Maior*: 
+- Tríade Maior:
 
 Possui uma sonoridade alegre e estável, frequentemente associada a sentimentos positivos.
 
-Composta pela Tônica, Terça Maior e Quinta Justa.
-        
-    C + E + G -> Formando o acorde Dó maior (C)
+        Composta pela Tônica, Terça Maior e Quinta Justa.
+                
+        C + E + G -> Formando o acorde Dó maior (C)
 
         
-    - *Tríade Menor*: 
+- Tríade Menor: 
 
 Possui uma sonoridade melancólica, sombria e introspectiva, associada a emoções mais sérias e tristes.
 
-Composta pela Tônica, Terça Menor e Quinta Justa. 
+        Composta pela Tônica, Terça Menor e Quinta Justa. 
 
-    A + C + E -> Formando o acorde de Lá menor (Am)
+        A + C + E -> Formando o acorde de Lá menor (Am)
 
         
-    - *Tríade Diminuta*: 
+- Tríade Diminuta: 
 
 Possui uma sonoridade tensa e instável, usada para criar uma sensação de suspense e movimento, muitas vezes resolvendo para acordes mais estáveis. 
 
-Composta pela Tônica, Terça Menor e Quinta Diminuta. 
+        Composta pela Tônica, Terça Menor e Quinta Diminuta. 
 
-    B + D + F -> Formando o acorde Si diminuto (B°)
+        B + D + F -> Formando o acorde Si diminuto (B°)
 
     
-    - *Tríade Aumentada*: 
+- Tríade Aumentada: 
 
 Possui uma sonoridade expansiva, intrigante e ambígua, usada para criar efeitos de suspensão e para introduzir complexidade harmônica, sendo mais usada em passagens sofisticadas e progressões avançadas.
 
-Composta pela Tônica, Terça Maior e Quinta Aumentada (Sexta Menor)
+        Composta pela Tônica, Terça Maior e Quinta Aumentada (Sexta Menor)
 
-    F + A + C♯ -> Formando o acorde Fá aumentado
+        F + A + C♯ -> Formando o acorde Fá aumentado
 
-    *Tétrades*
+.
+...........................................................................................................................................................................
+.
+
+**Tétrades**
 
 As tetrades adicionam maior complexidade e riqueza sonora em comparação com as triades, sendo amplamente utilizadas em jazz, música erudita e estilos contemporâneos, permitindo a inclusão de extensões como nonas (9), décimas terças (11) e décimas quintas (13), expandindo ainda mais as possibilidades harmônicas. 
 
 São fundamentais em progressões harmônicas complexas e na improvisação, oferecendo aos músicos uma base sólida para explorar diferentes sensações sonoras.
 
-
-*Tipos de Tétrades:*
-
 Veja agora os principais tipos de sobreposições com quatro notas para compor acordes complexos.
 
 
-    - *Tétrade Maior (Maj7)*: 
+- Tétrade Maior (Maj7): 
 
-Composta pela Tônica, Terça Maior, Quinta Justa e Sétima Maior.
+        Composta pela Tônica, Terça Maior, Quinta Justa e Sétima Maior.
 
-    C - E - G - B -> Dó maior com sétima maior (Cmaj7)
-
-    
-    - *Tétrade Menor (m7)*: 
-
-Composta pela Tônica, Terça Menor, Quinta Justa e Sétima Menor.
-
-    D - F - A - C -> Ré menor com sétima menor (Dm7).
-    
-
-    - *Tétrade Dominante (7)*: 
-
-Composta pela Tônica, Terça Maior, Quinta Justa e Sétima Menor.
-
-    G - B - D - F -> Formando o acorde Sol maior com sétima menor (G7).
+        C - E - G - B -> Dó maior com sétima maior (Cmaj7)
 
     
-    - *Tétrade Diminuta (dim7)*: 
+- Tétrade Menor (m7): 
 
-Composta pela Tônica, Terça Menor, Quinta Diminuta e Sexta Maior.
+        Composta pela Tônica, Terça Menor, Quinta Justa e Sétima Menor.
 
-    B - D - F - Ab -> Formando o acorde Si diminuto com sétima diminuta (Bdmin7)
+        D - F - A - C -> Ré menor com sétima menor (Dm7).
+    
+
+- Tétrade Dominante (7): 
+
+        Composta pela Tônica, Terça Maior, Quinta Justa e Sétima Menor.
+
+        G - B - D - F -> Formando o acorde Sol maior com sétima menor (G7).
 
     
-    - *Tétrade Aumentada (maj7#5)*: 
+- Tétrade Diminuta (dim7): 
 
-Composta pela Tônica, Terça Maior, Quinta Aumentada e Sétima Maior.
+        Composta pela Tônica, Terça Menor, Quinta Diminuta e Sexta Maior.
 
-    F - A# - C# - E -> Formando o acorde Fá maior com sétima maior e quinta aumentada (Fmaj7#5)
+        B - D - F - Ab -> Formando o acorde Si diminuto com sétima diminuta (Bdmin7)
+
+    
+- Tétrade Aumentada (maj7#5): 
+
+        Composta pela Tônica, Terça Maior, Quinta Aumentada e Sétima Maior.
+
+        F - A# - C# - E -> Formando o acorde Fá maior com sétima maior e quinta aumentada (Fmaj7#5)
 
 *Inversões de acordes*
 
@@ -542,27 +576,24 @@ As inversões proporcionam variações na textura e no timbre dos acordes, crian
 
 Em arranjos musicais, as inversões são usadas para distribuir melhor as vozes entre os instrumentos ou vocais, criando um equilíbrio harmonioso.
 
-
-*Tipos de Inversões de Acordes*
-
 Veja agora os principais tipos de inversões de acordes para utilizar nas suas progressões harmônicas.
 
 
-    - *Inversão da terça (3ª)*: 
+- Inversão da terça (3ª): 
     
 A terça da tríade no acorde torna-se a nota mais grave.
 
         Exemplo: C (C-E-G) torna-se (E-G-C), a nota E (terça) se torna a nota mais grave.
 
         
-    - *Inversão da quinta (5ª)*: 
+- Inversão da quinta (5ª): 
 
 A quinta da tríade no acorde torna-se a nota mais grave.
 
         Exemplo: C (C-E-G) torna-se (G-C-E), a nota G (quinta) se torna a nota mais grave.
 
         
-- *Inversão da sétima (7ª)*: 
+- Inversão da sétima (7ª): 
 
 A sétima da tétrade no acorde torna-se a nota mais grave.
 
@@ -596,8 +627,43 @@ Campos harmônicos são uma coleção de acordes derivados de uma escala como ba
 
 - /Ciclo_das_quintas: Sequência de acordes em que cada acorde sucessivo é formado pela adição de uma quinta justa acima do acorde anterior.
 
+.
+...........................................................................................................................................................................
+.
 
-*Campo Harmônico Maior*
+**Funções harmônicas**
+
+Para saber como utilizar cada um dos acordes, é preciso conhecer as funções de cada um deles no campo harmônico.
+
+Estas funções são geralmente divididas em três categorias principais: Tônica (T), Subdominante (SD) e Dominante (D). Cada categoria tem um papel específico na progressão harmônica, que são: 
+
+- Tônica (T): Estes acordes proporcionam uma sensação de repouso e estabilidade.
+
+- Subdominante (SD): Estes acordes preparam a resolução e criam uma sensação de movimento.
+
+- Dominante (D): Estes acordes geram tensão que normalmente resolve de volta à Tônica.
+
+Exemplo das funções harmônicas no campo harmônico maior de Dó: 
+
+- I: C -> Tônica 
+
+- II: Dm -> Subdominante 
+
+- III: Em -> Tônica 
+
+- IV: F -> Subdominante 
+
+- V: G -> Dominante 
+
+- VI: Am -> Tônica 
+
+- VII: B° -> Dominante 
+
+.
+...........................................................................................................................................................................
+.
+
+**Campo Harmônico Maior**
 
 O campo harmônico maior é usado para criar progressões de acordes que seguem as regras de resolução tonal e proporcionam estruturas harmonicamente coesas. 
 
@@ -607,7 +673,7 @@ Músicos frequentemente improvisam e compõem dentro do campo harmônico maior, 
 
 O campo harmônico maior é construído a partir das sete notas da escala maior natural. Cada grau da escala forma um acorde triádico ou tetrádico seguindo a seguinte fórmula: 
 
-*Veja a fórmula para a construção do campo harmônico maior:* 
+Veja a fórmula para a construção do campo harmônico maior:
 
 - I: Tríade Maior da nota correspondente
 
@@ -640,37 +706,11 @@ Exemplo do campo harmônico maior em Dó:
 
 - VII: B°
 
+.
+...........................................................................................................................................................................
+.
 
-*Funções harmônicas*
-
-Para saber como utilizar cada um dos acordes, é preciso conhecer as funções de cada um deles no campo harmônico.
-
-Estas funções são geralmente divididas em três categorias principais: Tônica (T), Subdominante (SD) e Dominante (D). Cada categoria tem um papel específico na progressão harmônica, que são: 
-
-    - *Tônica (T)*: Estes acordes proporcionam uma sensação de repouso e estabilidade.
-
-    - *Subdominante (SD)*: Estes acordes preparam a resolução e criam uma sensação de movimento.
-
-    - *Dominante (D)*: Estes acordes geram tensão que normalmente resolve de volta à Tônica.
-
-Exemplo das funções harmônicas no campo harmônico maior de Dó: 
-
-- I: C -> Tônica 
-
-- II: Dm -> Subdominante 
-
-- III: Em -> Tônica 
-
-- IV: F -> Subdominante 
-
-- V: G -> Dominante 
-
-- VI: Am -> Tônica 
-
-- VII: B° -> Dominante 
-
-
-*Campo Harmônico Menor*
+**Campo Harmônico Menor**
 
 Assim como no campo harmônico maior, o campo harmônico menor se refere à estrutura de acordes baseada em uma escala menor, seguindo os mesmos princípios de construção dos acordes que o campo harmônico maior, mas utilizando a escala menor como referência. Vamos explorar mais sobre o campo harmônico menor:
 
@@ -680,8 +720,7 @@ Assim como no campo harmônico maior, é possível modular para outras tonalidad
 
 Músicos frequentemente exploram o campo harmônico menor para criar melodias e harmonizações que reflitam a tonalidade e o sentimento melancólico associado à escala menor.
 
-
-*Veja a fórmula para a construção do campo harmônico menor:* 
+Veja a fórmula para a construção do campo harmônico menor:
 
 Assim como no campo harmônico maior, o campo harmônico menor é formado pelos acordes construídos a partir das sete notas da escala menor diatônica.
 
@@ -716,38 +755,11 @@ Exemplo do campo harmônico menor em Lá:
 
 - VII: G
 
+.
+...........................................................................................................................................................................
+.
 
-*Funções harmônicas*
-
-Para saber como utilizar cada um dos acordes, é preciso conhecer as funções de cada um deles no campo harmônico.
-
-Estas funções são geralmente divididas em três categorias principais: Tônica (T), Subdominante (SD) e Dominante (D). Cada categoria tem um papel específico na progressão harmônica, que são: 
-
-    - *Tônica (T)*: Estes acordes proporcionam uma sensação de repouso e estabilidade.
-
-    - *Subdominante (SD)*: Estes acordes preparam a resolução e criam uma sensação de movimento.
-
-    - *Dominante (D)*: Estes acordes geram tensão que normalmente resolve de volta à Tônica.
-
-    
-Exemplo das funções harmônicas no campo harmônico menor de Lá: 
-
-- I: Am -> Tônica 
-
-- II: B° -> Subdominante 
-
-- III: C -> Tônica 
-
-- IV: Dm -> Subdominante 
-
-- V: Em -> Dominante 
-
-- VI: F -> Tônica 
-
-- VII: G° -> Dominante 
-
-
-*Ciclo das quartas*
+**Ciclo das quartas**
 
 O ciclo das quartas é uma fórmula de modulação organizada de acordo com o intervalo músical de quartas justas descendentes partindo da tônica. 
 
@@ -784,8 +796,11 @@ A - D - G - C - F - Bb - Eb - Ab - Db - Gb - B - E - A
 
 B - E - A - D - G - C - F - Bb - Eb - Ab - Db - Gb - B
 
+.
+...........................................................................................................................................................................
+.
 
-*Ciclo das Quintas*
+**Ciclo das Quintas**
 
 O ciclo das quintas é uma sequência de acordes ou tonalidades organizadas de acordo com o intervalo de quintas justas ascendentes entre elas.
 
@@ -820,8 +835,11 @@ A - E - B - F# - C# - G# - D# - Bb - F - C - G - D - A
 
 Se você reparar, o ciclo de quartas e de quintas possuem os mesmos acordes; mas, enquanto o ciclo de quintas segue um movimento ascendente, o ciclo de quartas segue um movimento descendente. Ou seja, o ciclo de quartas é o ciclo de quintas lido ao contrário!
 
+.
+...........................................................................................................................................................................
+.
 
-*Modulação*
+**Modulação**
 
 A modulação na música refere-se à técnica de mudar de uma tonalidade ou centro tonal para outra dentro de uma composição. 
 
@@ -832,26 +850,24 @@ Pode ser usada para criar tensão, resolver conflitos musicais e destacar moment
 
 *Técnicas de Modulação*
 
-    - Modulação por Acordes de Dominante: 
-
-Muito comum na música tonal, onde acordes de dominante (por exemplo, V7) são usados para preparar e resolver em novas tonalidades.
-
-    - Uso de Acordes Cromáticos: 
-
-Acordes que não pertencem à tonalidade original podem ser usados como pontes para modulações, criando tensão que se resolve na nova tonalidade.
-
-
-*Tipos de Modulação*
-
-    - Modulação Direta: 
+- Modulação Direta: 
     
 A modulação direta ocorre quando há uma mudança abrupta de uma tonalidade para outra. Isso pode ser feito através de um acorde que serve como ponte entre as duas tonalidades, muitas vezes um acorde de dominante que leva à nova tonalidade.
     
-    - Modulação Gradual: 
+- Modulação Gradual: 
     
 A modulação gradual envolve uma transição suave de uma tonalidade para outra, utilizando acordes comuns às duas tonalidades ou progressões que gradualmente levam à nova tonalidade. Isso cria uma sensação de fluidez e continuidade na mudança tonal.
 
-        Exemplo: Uma música em C maior pode modular para G maior usando um acorde de dominante (D7), que prepara a transição harmônica para a nova tonalidade.
+Exemplo: Uma música em C maior pode modular para G maior usando um acorde de dominante (D7), que prepara a transição harmônica para a nova tonalidade.
+
+- Modulação por Acordes de Dominante: 
+
+Muito comum na música tonal, onde acordes de dominante (por exemplo, V7) são usados para preparar e resolver em novas tonalidades.
+
+- Uso de Acordes Cromáticos: 
+
+Acordes que não pertencem à tonalidade original podem ser usados como pontes para modulações, criando tensão que se resolve na nova tonalidade.
+
 
 
     """
@@ -878,7 +894,18 @@ Encontre outros materiais para os estudos de Teoria Musical:
 
 - /Videos: Vídeos e aulas gratuitas
 
-Veja os *sites e softwares gratuitos* que podem te ajudar com os seus estudos: 
+.
+...................................................................................................................................................
+.
+
+Veja os **ebooks gratuitos** disponíveis na internet para ajudar com estudos específicos:
+
+
+.
+...................................................................................................................................................
+.
+
+Veja os **sites e softwares gratuitos** que podem te ajudar com os seus estudos: 
 
 https://www.oolimo.com/en/
 
@@ -899,7 +926,11 @@ https://www.musicca.com/pt/metronomo
 https://www.musicca.com/pt/gerador-de-acordes
 
 
-Veja os recursos de *vídeos gratuitos na internet* para ampliar seus estudos: 
+.
+...................................................................................................................................................
+.
+
+Veja os recursos de **vídeos gratuitos na internet** para ampliar seus estudos: 
 
 [Vídeo sobre teoria musical](https://www.youtube.com/watch?v=oU4i59Mf8Yo&pp=ygUMbXVzaWMgdGhlb3J5)
 
