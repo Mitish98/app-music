@@ -5,8 +5,15 @@ from PIL import Image
 # Título da aplicação no Streamlit
 st.title("Chatbot de Música")
 
+# Adicionar uma descrição
+st.write("""
+Bem-vindo ao Chatbot de Música! 
+Este é um chatbot que ajuda você a entender teoria musical, ritmos, e muito mais. 
+Navegue pelas funcionalidades e explore o mundo da música com nosso assistente interativo.
+""")
+
 # Menu de opções
-menu = ["História", "Períodos Históricos", "Ritmos", "Intervalos", "Escalas"]
+menu = ["História", "Ritmos", "Intervalos", "Escalas", "Acordes", "Campos harmônicos", "Modos gregos", "Recursos adicionais"]
 choice = st.sidebar.selectbox("Escolha um tema", menu)
 
 # Interface para inserir comandos e receber respostas
@@ -30,31 +37,6 @@ Pitágoras desenvolveu o estudo (...)
         """
         st.write(historia_text)
 
-elif choice == "Períodos Históricos":
-    st.subheader("Períodos Históricos da Música")
-    if st.button("Mostrar Períodos"):
-        periodos_historicos_text = """
-*Períodos históricos da música*
-
-Apesar de não ser uma medida exata, a história da música pode ser dividida entre diferentes períodos de acordo com as mudanças tecnológicas e expressivas do ser humano. Alguns desses períodos são:
-
-- *Pré-História*: Musicalidade corporal e instrumentos primitivos como flautas feitas de ossos e tambores.
-
-- *Antiguidade*: A música era uma parte importante da vida religiosa e social. Instrumentos como a lira, harpa e flautas eram populares. Os gregos desenvolveram teorias musicais que influenciaram profundamente a música ocidental, principalmente nas sociedades da Mesopotâmia, Egito e Grécia Antiga.
-
-- *Idade Média*: O canto gregoriano era predominante na Igreja Católica. Desenvolveram-se notações musicais primitivas. Troubadours e trovadores espalharam a música secular pela Europa.
-
-- *Renascimento (1400-1600)*: Desenvolvimento da música polifônica, onde múltiplas linhas melódicas são tocadas simultaneamente. Forma popular de música vocal secular na Itália e Inglaterra. A popularidade dos instrumentos de tecla e corda aumentou.
-
-- *Barroco (1600-1750)*: A ópera nasceu na Itália e se espalhou por toda a Europa. Formação das primeiras orquestras e desenvolvimento da música orquestral, apresentando compositores como Johann Sebastian Bach, George Frideric Handel, Antonio Vivaldi.
-
-- *Clássico (1750-1820)*: A música clássica focava em clareza, ordem e equilíbrio, com as composições de Wolfgang Amadeus Mozart, Ludwig van Beethoven (período inicial), Franz Joseph Haydn.
-
-- *Romântico (1820-1900)*: Maior foco na expressão emocional e individualismo. Expansão das orquestras e complexidade das composições. Ludwig van Beethoven (período tardio), Franz Schubert, Johannes Brahms, Pyotr Ilyich Tchaikovsky, Richard Wagner.
-
-- *Moderno (Século XX)*: Surgimento de inúmeros estilos e gêneros populares, incluindo jazz, rock, pop, música eletrônica e hip-hop. Experimentação com formas, tonalidades e novas tecnologias permitiram maior intercâmbio e fusão de músicas de diferentes culturas.
-        """
-        st.write(periodos_historicos_text)
 
 elif choice == "Ritmos":
     st.subheader("Ritmos Musicais")
@@ -108,7 +90,7 @@ Os intervalos são as distâncias entre duas notas e são fundamentais para a co
 
 # Função para exibir texto e imagens sobre escalas
 def exibir_escalas():
-    st.title("Escalas Musicais")
+    st.subheader("Escalas Musicais")
 
     escalas_text = """
     Escalas musicais são sequências ordenadas de notas musicais que seguem padrões específicos de intervalos entre cada nota. 
