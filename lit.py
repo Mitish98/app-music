@@ -333,7 +333,7 @@ Elas são amplamente usadas em diversas culturas musicais ao redor do mundo devi
 Por não conterem semitons adjacentes, as escalas pentatônicas tendem a criar sonoridades mais estáveis e menos dissonantes.
 
 
-- Pentatônica Maior:
+- **Pentatônica Maior**:
 
         Intervalos: Segunda Maior - Terça Maior - Quinta Justa - Sexta Maior - Oitava
 
@@ -341,7 +341,25 @@ Por não conterem semitons adjacentes, as escalas pentatônicas tendem a criar s
             
         Exemplo em Dó: C - D - E - G - A - C.
 
-- Pentatônica Menor:
+
+"""
+
+    st.write(escalas_text_2)
+
+# Exibir imagem
+    image_path = os.path.join('images', 'pentatonica-maior.jpg')
+    if os.path.exists(image_path):
+        image = Image.open(image_path)
+        st.image(image, caption='Pentatonica Maior')
+
+
+    pentatonica_menor_text = """
+
+.
+...........................................................................................................................................................................
+.
+
+- **Pentatônica Menor**:
 
         Intervalos: Terça Menor - Quarta Justa - Quinta Justa - Sétima Menor - Oitava
 
@@ -349,10 +367,22 @@ Por não conterem semitons adjacentes, as escalas pentatônicas tendem a criar s
         
         Exemplo em Lá: A - C - D - E - G - A.
 
+"""
+
+    st.write(pentatonica_menor_text)
+    # Exibir imagem
+    image_path = os.path.join('images', 'pentatonica-menor.jpg')
+    if os.path.exists(image_path):
+        image = Image.open(image_path)
+        st.image(image, caption='Pentatonica Menor')
+
+
+    escalas_text_3 = """
+
 .
 ...........................................................................................................................................................................
 .
-  
+
 **Escalas Maiores**
 
 A escala maior é uma das escalas mais fundamentais e amplamente utilizadas na música ocidental, composta por sete notas separadas por intervalos específicos. 
@@ -453,7 +483,7 @@ A presença das blue notes permite aos músicos explorar uma ampla gama de emoç
         Exemplo: 
 
     """
-    st.write(escalas_text_2)
+    st.write(escalas_text_3)
 
 
 
