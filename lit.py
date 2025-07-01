@@ -2,6 +2,19 @@ import streamlit as st
 import os
 from PIL import Image
 
+def audio_embed(youtube_url):
+    video_id = youtube_url.split("v=")[-1]
+    embed_url = f"https://www.youtube.com/embed/{video_id}?start=0"
+    st.markdown(
+        f"""
+        <iframe width="100%" height="40" src="{embed_url}" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
 # Título da aplicação no Streamlit
 st.title("Chatbot de Teoria Musical")
 
@@ -26,53 +39,190 @@ if choice == "História":
     """)
 
     st.subheader("📐 A sistematização da teoria musical")
-
     st.markdown("""
     A tentativa de entender a música de forma lógica e científica começou com Pitágoras no século VI a.C. Observando os sons de martelos e cordas, ele percebeu relações matemáticas entre as notas. Seu principal experimento foi com o monocórdio — uma corda esticada que, ao ser dividida em proporções simples (como 2:1 ou 3:2), produzia intervalos musicais consonantes. Essa descoberta lançou as bases para a teoria musical ocidental, unindo matemática e som.
     """)
 
+    # ANTIGUIDADE
     st.subheader("🏛️ Antiguidade")
-
     st.markdown("""
-    Na Mesopotâmia, Egito e Grécia, a música era central em rituais, teatros e cerimônias. Os gregos estudaram escalas (modos), ética musical e acústica. Instrumentos como a lira, aulos e harpa eram comuns. Pitágoras, Platão e Aristóteles deixaram reflexões duradouras sobre a música. O conceito de “música das esferas” acreditava que o cosmos produzia harmonia sonora invisível.
-    """)
+    **🎼 Características técnicas:**
+    - Uso de escalas gregas (modos)
+    - Música monofônica e ritualística
+    - Instrumentação rudimentar (lira, aulos, harpa)
 
+    **👤 Compositores/Filósofos:**
+    - Pitágoras:
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Terpandro:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Mesomedes de Creta:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    # IDADE MÉDIA
     st.subheader("🕍 Idade Média (500–1400)")
-
     st.markdown("""
-    A música sacra dominou o cenário europeu, especialmente através do canto gregoriano. Os monges desenvolveram a notação musical, o que permitiu preservar obras e ensinar. No campo secular, trovadores e menestréis espalhavam canções de amor e heroísmo. A polifonia começou a surgir em catedrais como Notre-Dame de Paris.
-    """)
+    **🎼 Características técnicas:**
+    - Canto gregoriano (monofônico e modal)
+    - Desenvolvimento da notação musical
+    - Polifonia nascente (Notre-Dame)
 
+    **👤 Compositores:**
+    - Hildegard von Bingen
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Leonin:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Perotin:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Guido d’Arezzo:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    # RENASCIMENTO
     st.subheader("🎨 Renascimento (1400–1600)")
-
     st.markdown("""
-    Houve uma valorização da voz humana e do equilíbrio entre as partes musicais. A música polifônica atingiu novos patamares com compositores como Palestrina e Josquin des Prez. O humanismo inspirou obras seculares e religiosas. Instrumentos como alaúdes, cravos e flautas doces ganharam destaque.
-    """)
+    **🎼 Características técnicas:**
+    - Polifonia rica e imitativa
+    - Equilíbrio entre vozes
+    - Música vocal e instrumental se desenvolvendo paralelamente
 
+    **👤 Compositores:**
+    - Josquin des Prez
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Giovanni Palestrina:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Thomas Tallis:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Orlando di Lasso:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    # BARROCO
     st.subheader("🎻 Barroco (1600–1750)")
-
     st.markdown("""
-    Foi o período do nascimento da ópera e do concerto. A música tornou-se mais expressiva, com contrastes intensos e ornamentações. Compositores como Johann Sebastian Bach, Antonio Vivaldi e Georg Friedrich Händel exploraram a harmonia funcional e formas como a fuga e a suíte. As primeiras orquestras surgiram.
-    """)
+    **🎼 Características técnicas:**
+    - Baixo contínuo, uso de tonalidade maior/menor
+    - Contraponto elaborado
+    - Nasce a ópera, oratório e concerto
 
+    **👤 Compositores:**
+    - J.S. Bach
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Vivaldi:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Handel:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Monteverdi:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Purcell:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    # CLÁSSICO
     st.subheader("🎼 Clássico (1750–1820)")
-
     st.markdown("""
-    O ideal de clareza, ordem e simetria marcou o estilo clássico. As formas sonata, sinfonia e quarteto de cordas foram consolidadas. Mozart, Haydn e o jovem Beethoven definiram o período, destacando-se pela elegância melódica e equilíbrio formal.
-    """)
+    **🎼 Características técnicas:**
+    - Forma sonata, simetria e equilíbrio
+    - Textura homofônica
+    - Crescimento da orquestra sinfônica
 
+    **👤 Compositores:**
+    - Mozart
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Haydn:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Beethoven (1ª fase):")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    # ROMÂNTICO
     st.subheader("🎭 Romântico (1820–1900)")
-
     st.markdown("""
-    A música tornou-se um veículo de expressão individual e emoção profunda. As orquestras se expandiram e surgiram temas como o nacionalismo e o misticismo. Destaques incluem Chopin, Schumann, Brahms, Tchaikovsky, Verdi e Wagner, este último revolucionando a ópera com dramas musicais integrados.
-    """)
+    **🎼 Características técnicas:**
+    - Harmonia cromática, melodia expressiva
+    - Nacionalismo e individualismo
+    - Orquestras maiores e mais dramáticas
 
+    **👤 Compositores:**
+    - Chopin
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Wagner:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Tchaikovsky:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Verdi:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Brahms:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("- Liszt:")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    # MODERNO E CONTEMPORÂNEO
     st.subheader("🌐 Moderno e Contemporâneo (1900–presente)")
+    st.markdown("""
+    **🎼 Características técnicas e evolução histórica:**
+
+    - **Blues (final do século XIX – início do século XX):**  
+      Robert Johnson, B.B. King  
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
     st.markdown("""
-    O século XX trouxe rupturas com a tradição tonal e uma explosão de estilos. Compositores como Stravinsky e Schoenberg romperam padrões. Ao mesmo tempo, gêneros populares como jazz, rock, pop e hip hop transformaram a paisagem musical global. A tecnologia permitiu a gravação, sintetização e difusão instantânea da música.
+    - **Jazz (início do século XX):**  
+      Louis Armstrong, Miles Davis, John Coltrane  
     """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
+    st.markdown("""
+    - **Soul (1950s–60s):**  
+      Aretha Franklin, Otis Redding  
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("""
+    - **R&B (desde os anos 40):**  
+      Ray Charles, Marvin Gaye, Beyoncé  
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("""
+    - **Funk (1960s–70s):**  
+      James Brown, Stevie Wonder  
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("""
+    - **Rock (desde os anos 50):**  
+      Elvis Presley, The Beatles, Led Zeppelin  
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.markdown("""
+    - **Pop (desde os anos 50):**  
+      Michael Jackson, Madonna, Taylor Swift  
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
 
 if choice == "Ritmos":
