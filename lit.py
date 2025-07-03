@@ -29,23 +29,49 @@ Bons estudos e até mais!!!
 """)
 
 # Menu de opções
-menu = ["História", "Ritmos", "Intervalos", "Escalas", "Acordes & Arpejos", "Campos harmônicos", "Modos gregos", "Recursos adicionais"]
+menu = ["História", "Ritmos", "Intervalos","Acordes & Arpejos", "Escalas Naturais", "Campos Harmônicos", "Modos Gregos", "Recursos Adicionais"]
 choice = st.sidebar.selectbox("Escolha uma função", menu)
 
 if choice == "História":
     st.header("História da Música 🎼")
 
     st.markdown("""
-    A música é uma das expressões mais antigas da humanidade. Nas civilizações pré-históricas, ela era praticada como parte de rituais religiosos, caças e celebrações. Utilizando o corpo e instrumentos rudimentares, os sons simbolizavam conexões com a natureza, com os deuses e com os membros da tribo. Essa musicalidade ajudava a criar coesão social, comunicação simbólica e identidade coletiva.
+    A música é uma das expressões mais antigas e universais da humanidade. Desde os primórdios, os seres humanos se afeiçoaram aos sons — não apenas como ruído do ambiente, mas como forma de organizar a experiência emocional, criar vínculos sociais e dar sentido ao mundo ao seu redor.
+
+A batida do coração, o som da respiração, o eco das cavernas, o ritmo dos passos: todos esses elementos naturais já traziam padrões que o ser humano começou a perceber e imitar. Ao bater pedras, soprar por ossos ou entoar sons com a voz, nossos ancestrais descobriram que certas vibrações causavam emoções e *transes mentais*. Assim, os sons poderiam emergir como uma extensão do corpo e mente.
     """)
 
-    st.subheader("📐 A sistematização da teoria musical")
+    st.subheader("🪨 A Música na Pré-História")
     st.markdown("""
-    A tentativa de entender a música de forma lógica e científica começou com Pitágoras no século VI a.C. Observando os sons de martelos e cordas, ele percebeu relações matemáticas entre as notas. Seu principal experimento foi com o monocórdio — uma corda esticada que, ao ser dividida em proporções simples (como 2:1 ou 3:2), produzia intervalos musicais consonantes. Essa descoberta lançou as bases para a teoria musical ocidental, unindo matemática e som.
-    """)
+    Durante o período pré-histórico, a música não era feita para entretenimento como conhecemos hoje. Ela cumpria funções essenciais para a vida em comunidade, sendo usada em:
+
+    - **Rituais mágicos e religiosos**: Acreditava-se que sons e ritmos podiam invocar espíritos, curar doenças, atrair chuva ou garantir sucesso na caça.
+    - **Comunicação à distância**: Por meio de tambores e cantos, tribos podiam se comunicar entre grupos distantes.
+    - **Expressão emocional e identidade coletiva**: A música ajudava a fortalecer os laços do grupo e transmitir sentimentos, histórias e tradições oralmente.
+
+    Os instrumentos eram feitos de materiais disponíveis na natureza, como ossos, pedras, madeira e peles de animais. Alguns exemplos:
+
+    - **Percussão corporal** (bater palmas, estalar os dedos, pisar no chão)
+    - **Flautas de osso**
+    - **Tambores com pele de animal**
+    - **Apitos e chocalhos feitos com sementes e conchas**
+
+    Não havia uma linguagem musical escrita ou regras harmônicas, mas já se percebia uma organização rítmica e melódica intencional. A música era uma linguagem instintiva e coletiva — ligada diretamente à sobrevivência, à espiritualidade e à cultura.
+""")
 
     # ANTIGUIDADE
     st.subheader("🏛️ Antiguidade")
+    st.markdown("""
+Com o surgimento das primeiras civilizações, a música passou a ocupar um papel ainda mais estruturado nas sociedades da Antiguidade. Egípcios, sumérios, gregos, hebreus, indianos e chineses desenvolveram formas musicais ligadas à religião, à educação, à guerra e ao entretenimento.
+
+No **Egito Antigo**, a música era parte essencial dos cultos religiosos e cerimônias funerárias. Instrumentos como harpas, flautas e tamborins acompanhavam cantos dedicados aos deuses e aos faraós.
+
+Na **Grécia Antiga**, a música era considerada uma arte divina, ligada à matemática, à filosofia e à moral. Pitágoras descobriu proporções harmônicas entre sons, e pensadores como Platão e Aristóteles discutiram seu poder sobre a alma e a sociedade. Os gregos usavam a lira, a cítara e o aulos (instrumento de sopro) em festivais, teatro e educação.
+
+Na **Roma Antiga**, a música era muito influenciada pelos gregos e usada em banquetes, arenas, templos e exércitos. Embora com menor preocupação filosófica, os romanos expandiram o uso da música como forma de espetáculo e propaganda imperial.
+
+Ao longo da Antiguidade, a música consolidou-se como uma linguagem importante para expressar valores espirituais, sociais e culturais — sempre entrelaçada com outras formas de arte e poder.
+""")
     st.markdown("""
     **🎼 Características técnicas:**
     - Uso de escalas gregas (modos)
@@ -53,7 +79,16 @@ if choice == "História":
     - Instrumentação rudimentar (lira, aulos, harpa)
 
     **👤 Compositores/Filósofos:**
-    - **Pitágoras:**
+    - **Pitágoras (século VI a.C.):** descobriu as relações matemáticas entre os sons — um marco fundamental que ajudou a fundar a base da teoria musical ocidental. Pitágoras percebeu que os sons agradáveis (ou consonantes) tinham relações diretas com o comprimento da corda que vibrava. Fazendo o experimento com um monocórdio, ou seja, um instrumento formado por uma única corda esticada sobre uma caixa de ressonância marcada com uma régua com marcações do comprimento da corda junto de um cavalete móvel que pode dividir a corda em diferentes posições. 
+    
+    Com esse experimento, Pitágoras obteve o seguinte resultado: 
+
+        - Quando uma corda é dividida ao meio (1:2), produz um som uma oitava acima do som original.
+
+        - Dividida na razão 2:3, resulta em uma quinta justa.
+
+        - Na razão 3:4, uma quarta justa.
+
     """)
     st.markdown("- **Terpandro:** foi um célebre poeta lírico e citharode (tocado de cítara, tipo de lira) da Antiga Grécia, ativo por volta do século VII a.C. Segundo Strabo e Plutarco, foi ele quem aumentou as cordas da lira de quatro para sete, dando forma ao que viria a se chamar kithara. Embora suas obras não tenham sobreviveram completas, fragmentos são citados por autores antigos, e sua influência perdurou – consideram-no o primeiro nome certo da história musical da Grécia ")
 
@@ -68,6 +103,17 @@ if choice == "História":
 
     # IDADE MÉDIA
     st.subheader("🕍 Idade Média (500–1400)")
+
+    st.markdown("""
+Na Idade Média (aproximadamente do século V ao XV), a música europeia foi profundamente influenciada pela Igreja Católica, que a utilizava como instrumento de fé, liturgia e poder. O **canto gregoriano** — melódico, monofônico e em latim — dominava os mosteiros e catedrais, servindo para elevar o espírito e acompanhar as orações.
+
+Nesse período, os monges desenvolveram os primeiros sistemas de **notação musical**, permitindo registrar e transmitir músicas com mais precisão. Guido d’Arezzo, por exemplo, criou a base do que viria a ser a pauta musical moderna e a **mão guidoniana**, uma técnica visual para ensinar os sons.
+
+Fora dos muros da Igreja, também floresceu a música **profana**. Trovadores, jograis e menestréis compunham e cantavam canções sobre amor, guerras e feitos heroicos, muitas vezes acompanhados por alaúdes, harpas e flautas. Essa música ajudava a preservar histórias e a entreter os nobres e o povo.
+
+A música medieval foi o ponto de partida para a polifonia (várias vozes simultâneas), que surgiria mais intensamente nos séculos finais da Idade Média, abrindo caminho para as inovações da Renascença.
+""")
+
     st.markdown("""
     **🎼 Características técnicas:**
     - Canto gregoriano (monofônico e modal)
@@ -98,6 +144,19 @@ if choice == "História":
 
     # RENASCIMENTO
     st.subheader("🎨 Renascimento (1400–1600)")
+
+    st.markdown("""
+Durante o Renascimento (séculos XV e XVI), a música acompanhou o espírito humanista da época, buscando equilíbrio, clareza e expressividade. Com o avanço da imprensa e o redescobrimento das artes clássicas, os compositores passaram a valorizar mais a **emoção humana**, a **beleza sonora** e a **técnica polifônica** — ou seja, várias vozes independentes cantando em harmonia.
+
+A música sacra ainda era muito presente, com missas e motetos mais elaborados e refinados. No entanto, a música **profana** ganhou força, com madrigais, chansons e villanellas tratando de temas cotidianos, amorosos e até humorísticos.
+
+Compositores como **Josquin des Prez**, **Palestrina**, **Orlando di Lasso** e **William Byrd** foram mestres em criar texturas vocais ricas, onde a música seguia de perto os sentimentos e significados do texto.
+
+Instrumentos como o alaúde, o cravo e a viola da gamba se popularizaram, e a música instrumental começou a ganhar espaço próprio — preparando o terreno para os grandes concertos e sonatas do período barroco.
+
+O Renascimento marcou uma transição da música como ferramenta da fé para a música como forma de arte e expressão individual.
+""")
+
     st.markdown("""
     **🎼 Características técnicas:**
     - Polifonia rica e imitativa
@@ -126,6 +185,19 @@ if choice == "História":
 
     # BARROCO
     st.subheader("🎻 Barroco (1600–1750)")
+
+    st.markdown("""
+O período Barroco foi uma era de grande inovação na música. Marcado pelo exagero, contraste e emoção intensa, o estilo barroco refletia o esplendor das cortes e da Igreja. A música tornou-se mais dramática, expressiva e ornamentada, com destaque para a criação de formas e gêneros que influenciariam toda a música ocidental posterior.
+
+Foi nesse período que surgiram a **ópera**, o **concerto**, a **sonata** e a **fuga**. A música instrumental ganhou status de igualdade com a vocal, com compositores explorando a virtuosidade dos instrumentos e a riqueza das combinações sonoras.
+
+O **baixo contínuo** (acompanhamento harmônico constante) passou a ser a base das composições, e a **tonalidade** (sistema de escalas maior e menor) se consolidou como linguagem musical dominante.
+
+Grandes nomes como **Johann Sebastian Bach**, **George Frideric Handel**, **Antonio Vivaldi** e **Claudio Monteverdi** criaram obras-primas que combinavam técnica, emoção e espiritualidade.
+
+A música barroca procurava mover o ouvinte, exaltando sentimentos e criando atmosferas grandiosas — seja nos palácios, nas igrejas ou nos teatros.
+""")
+
     st.markdown("""
     **🎼 Características técnicas:**
     - Baixo contínuo, uso de tonalidade maior/menor
@@ -133,8 +205,9 @@ if choice == "História":
     - Nasce a ópera, oratório e concerto
 
     **👤 Compositores:**
-    - **J.S. Bach:  **
+
     """)
+    st.markdown("""- **J.S. Bach:**""")
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
     st.markdown("""- **Vivaldi:** Vivaldi foi um compositor italiano do Barroco, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
@@ -163,6 +236,19 @@ if choice == "História":
 
     # CLÁSSICO
     st.subheader("🎼 Clássico (1750–1820)")
+
+    st.markdown("""
+O período Clássico (aproximadamente 1750–1820) buscou simplicidade, clareza e equilíbrio — em contraste com o estilo ornamentado do Barroco. Inspirados pelos ideais do Iluminismo, os compositores valorizavam a razão, a ordem e a forma musical bem definida.
+
+Foi nesse contexto que se consolidaram gêneros como a **sinfonia**, o **quarteto de cordas** e a **sonata**, além da evolução da **forma sonata**, usada como estrutura principal nos movimentos de muitas obras instrumentais.
+
+A música tornou-se mais acessível, voltada não só à aristocracia, mas também à nova burguesia em ascensão. A orquestra se estabilizou em sua formação, e o **piano** substituiu o cravo como instrumento dominante nos salões e nas casas.
+
+Os principais compositores desse período foram **Joseph Haydn**, conhecido como o “pai da sinfonia”; **Wolfgang Amadeus Mozart**, com sua combinação de perfeição formal e beleza emocional; e **Ludwig van Beethoven**, que começou no estilo clássico, mas já antecipava a intensidade do Romantismo.
+
+A música clássica equilibra razão e emoção, estrutura e expressão — refletindo a harmonia idealizada do século XVIII.
+""")
+
     st.markdown("""
     **🎼 Características técnicas:**
     - Forma sonata, simetria e equilíbrio
@@ -190,6 +276,19 @@ if choice == "História":
 
     # ROMÂNTICO
     st.subheader("🎭 Romântico (1820–1900)")
+
+    st.markdown("""
+O período Romântico foi marcado pela valorização da emoção, da imaginação e da subjetividade. A música tornou-se uma forma profunda de expressão individual, refletindo paixões, dramas, sonhos e até revoltas sociais.
+
+Os compositores romperam com as regras rígidas do Classicismo e buscaram mais **liberdade formal**, **variedade de timbres** e **intensidade emocional**. A orquestra cresceu em tamanho e em cores sonoras, permitindo paisagens sonoras mais ricas e dramáticas.
+
+Temas como **amor trágico**, **natureza**, **heroísmo**, **nacionalismo** e **misticismo** tornaram-se comuns. Muitos músicos usaram suas obras para expressar sentimentos patrióticos ou inspirados em lendas e literaturas de seus países.
+
+Destaques do período incluem **Frédéric Chopin**, com suas peças poéticas para piano; **Franz Schubert**, mestre da canção (lied); **Johannes Brahms**, que unia emoção com forma; **Richard Wagner**, com suas óperas monumentais; e **Pyotr Tchaikovsky**, que combinava intensidade russa com delicadeza melódica.
+
+A música romântica fala direto ao coração — é intensa, pessoal e muitas vezes arrebatadora, buscando tocar o ouvinte em sua alma mais profunda.
+""")
+
     st.markdown("""
     **🎼 Características técnicas:**
     - Harmonia cromática, melodia expressiva
@@ -364,6 +463,7 @@ if choice == "Ritmos":
     """)
 
 
+
 elif choice == "Intervalos":
     st.header("Intervalos Musicais 🎶")
 
@@ -379,7 +479,7 @@ elif choice == "Intervalos":
     - **1 semitom (½ tom)**: distância entre duas notas adjacentes (ex: C para C♯)
     - **1 tom (2 semitons)**: distância equivalente a dois semitons (ex: C para D)
 
-    A classificação do intervalo depende da **quantidade de tons** entre as duas notas e do **nome das notas envolvidas**.
+    A classificação do intervalo depende da **quantidade de tons** entre as duas notas.
     """)
 
     st.subheader("🎵 Tipos de Intervalos com a nota C como exemplo")
@@ -400,6 +500,15 @@ elif choice == "Intervalos":
     | Sétima menor            | 5T        | C – B♭         |
     | Sétima maior            | 5½T       | C – B          |
     | Oitava justa            | 6T        | C – C (oitava) |
+    """)
+
+    st.info("""**¹ Dica:** Liste os intervalos musicais partindo da referência de outras notas. 
+    
+**² Dica:** Identifique no seu instrumento onde estão esses intervalos.
+
+**³ Dica:** Treine a identificação de intervalos de ouvido a partir de aplicativos como Tenuto, Perfect Ear ou teoria online como teoria.com.
+    
+    
     """)
 
     st.subheader("🎯 Consonância e Dissonância")
@@ -434,7 +543,9 @@ elif choice == "Intervalos":
     Saber quando usar cada um é uma escolha estética e emocional. Essa alternância é o que dá vida à música e abre espaço para sua **criatividade** como compositor ou intérprete.
     """)
 
-    st.info("🎧 Dica: Treine identificar os intervalos de ouvido usando aplicativos como Tenuto, Perfect Ear ou teoria online como teoria.com.")
+    st.info("""🎧 **Dica:** Ouça músicas conhecidas e tente identificar os intervalos presentes nas melodias. 
+    
+Descubra onde ocorre uma terça maior, terça menor, quarta ou quinta justa em trechos de canções populares para conectar teoria à prática, fortalecendo sua percepção musical de forma contextualizada e prazerosa.""")
 
 # Função para exibir texto e imagens sobre escalas
 def exibir_escalas():
@@ -516,53 +627,100 @@ def acordes():
     st.header("Acordes & Arpejos Musicais 🎹")
 
     st.markdown("""
-    Os **acordes** são combinações de notas tocadas simultaneamente que produzem harmonia. Eles são a base da harmonia na música e ajudam a definir o tom, a emoção e a direção da composição.
+    Os acordes são combinações de notas tocadas simultaneamente que produzem uma harmonia. Eles são a base da harmonia na música e ajudam a definir o tom, a emoção e a direção da composição. Os arpejos nada mais são do que as notas de um acorde tocadas de forma melódica, ou seja, sequencial. 
 
-    Os acordes são formados por sobreposição de **terças** e podem variar de estruturas simples (tríades) a mais complexas (tétrades e extensões).
+    Os acordes são formados pela **sobreposição de terças** e podem variar de estruturas com três notas (tríades) ou estruturas de quatro notas (tétrades).
+    
+    A sobreposição de terças consiste em empilhar intervalos de terça maior ou menor a partir de uma nota-base, chamada tônica. 
+
+    Para sobrepor terças, siga este processo:
+
+    **1. Escolha uma nota base (tônica): é o ponto de partida do acorde.**
+    
+    - Exemplo: vamos usar a nota Dó (C).
+
+    **2. Adicione um intervalo de terça a partir da tônica:**
+
+    - Se for uma terça maior, adicione Mi (E)
+
+    - Se for uma terça menor, adicione Mi♭ (E♭)
+
+    **3. Sobreponha mais uma terça a partir da nota obtida:**
+
+    Aqui, você empilha mais uma terça (maior ou menor) sobre a anterior (Mi ou Mi♭).
+
+    - Se estava com C + E, adicionar uma terça menor dá Sol (G) → C-E-G (tríade maior)
+
+    - Se estava com C + E♭, adicionar uma terça maior dá G também → C-E♭-G (tríade menor)
+
+   **4. Adicione uma quarta nota (opcional - para formar tétrades)**
+    
+    Empilhe mais uma terça sobre a terceira nota:
+
+    - Sobre G (que veio de C-E-G), uma terça maior dá B (Si) → C-E-G-B → Acorde Cmaj7
+
+    - Sobre G, uma terça menor dá B♭ (Si♭) → C-E-G-B♭ → Acorde C7 (dominante)
+
+    - Sobre G, outra terça menor com a base menor (C-E♭-G-B♭) → C-E♭-G-B♭ → Acorde Cm7
     """)
 
-    st.subheader("🔹 Tríades (3 notas)")
+    st.subheader("🔹 Tipos de Tríades")
 
     st.markdown("""
-    As **tríades** são acordes básicos compostos por três notas: **tônica**, **terça** e **quinta**. Elas são o alicerce de praticamente toda a música tonal ocidental.
-
-    | Tipo               | Fórmula                  | Exemplo (notas) | Sonoridade                   |
-    |--------------------|---------------------------|------------------|------------------------------|
-    | Tríade Maior       | Tônica - 3ª Maior - 5ª Justa | C – E – G        | Alegre, estável              |
-    | Tríade Menor       | Tônica - 3ª Menor - 5ª Justa | A – C – E        | Triste, introspectiva        |
-    | Tríade Diminuta    | Tônica - 3ª Menor - 5ª Dim  | B – D – F        | Instável, tensa              |
-    | Tríade Aumentada   | Tônica - 3ª Maior - 5ª Aum  | F – A – C♯       | Ambígua, expansiva           |
+    | Tipo               | Empilhamento de Terças         | Fórmula do acorde                  |Exemplos |
+    |--------------------|-------------------------------|------------------------------|------------------|
+    | Tríade Maior       | 3ª Maior + 3ª Menor            | Tônica - 3ª Maior - 5ª Justa | C – E – G        |
+    | Tríade Menor       | 3ª Menor + 3ª Maior            | Tônica - 3ª Menor - 5ª Justa | A – C – E        |
+    | Tríade Diminuta    | 3ª Menor + 3ª Menor            | Tônica - 3ª Menor - 5ª Dim   | B – D – F        |
+    | Tríade Aumentada   | 3ª Maior + 3ª Maior            | Tônica - 3ª Maior - 5ª Aum   | F – A – C♯       |
     """)
 
-    st.image("images/triade-maior.png", caption="Representação visual das tríades", use_column_width=True)
+    st.success("""💡 **Dica:** Construa uma tabela com as colunas *Tonalidade*, *Tipo de Tríade*, *Notas do Acorde* e *Empilhamento de Terças* para encontrar todos os acordes possíveis nas tríades dos 12 tons. 
+    
+*Obs: Há um total de 48 combinações possíveis para as tríades nos 12 tons.*
+    """)
 
-    st.image("images/triade-menor.png", caption="Representação visual das tríades", use_column_width=True)
+    st.markdown("""
+    
+    **Veja as maneiras de montar acordes em tríades no braço da guitarra:** 
+    
+    """)
 
-    st.image("images/triade-diminuta.png", caption="Representação visual das tríades", use_column_width=True)
+    st.image("images/triade-maior.png", caption="Acordes de Sol Maior", use_column_width=True)
 
-    st.image("images/triade-aumentada.png", caption="Representação visual das tríades", use_column_width=True)
+    st.image("images/triade-menor.png", caption="Acordes de Sol Menor", use_column_width=True)
 
-    st.subheader("🔸 Tétrades (4 notas)")
+    st.image("images/triade-diminuta.png", caption="Acordes de Sol Diminuto", use_column_width=True)
+
+    st.image("images/triade-aumentada.png", caption="Acordes de Sol Aumentado", use_column_width=True)
+
+    st.subheader("🔸 Tipos de Tétrades")
 
     st.markdown("""
     As **tétrades** acrescentam uma **quarta nota** à tríade, geralmente uma **sétima**, trazendo mais complexidade harmônica. São muito usadas em jazz, MPB e harmonias avançadas.
 
-    | Tipo                | Fórmula                               | Exemplo (notas)     | Sonoridade                     |
-    |---------------------|----------------------------------------|----------------------|--------------------------------|
-    | Tétrade Maior (maj7)| T - 3M - 5J - 7M                      | C – E – G – B        | Brilhante, suave               |
-    | Tétrade Menor (m7)  | T - 3m - 5J - 7m                      | D – F – A – C        | Suave, emotiva                 |
-    | Dominante (7)       | T - 3M - 5J - 7m                      | G – B – D – F        | Tensa, pede resolução          |
-    | Diminuta (dim7)     | T - 3m - 5d - 6M (7 diminuta)         | B – D – F – A♭       | Extremamente instável          |
-    | Aumentada (maj7#5)  | T - 3M - 5A - 7M                      | F – A♯ – C♯ – E      | Ambígua, moderna               |
+    | Tipo                | Empilhamento de Terças                       | Fórmula                               | Exemplo (notas)     |
+    |---------------------|---------------------------------------------|--------------------------------------|---------------------|
+    | Tétrade Maior (maj7)| 3ª Maior + 3ª Menor + 3ª Maior               | Tônica - 3ª Maior - 5ª Justa - 7ª Maior  | C – E – G – B       |
+    | Tétrade Menor (m7)  | 3ª Menor + 3ª Maior + 3ª Menor               | Tônica - 3ª Menor - 5ª Justa - 7ª Menor  | D – F – A – C       |
+    | Dominante (7)       | 3ª Maior + 3ª Menor + 3ª Menor               | Tônica - 3ª Maior - 5ª Justa - 7ª Menor  | G – B – D – F       |
+    | Diminuta (dim7)     | 3ª Menor + 3ª Menor + 3ª Menor               | Tônica - 3ª Menor - 5ª Diminuta - 7ª Diminuta | B – D – F – A♭      |
+    | Aumentada (maj7#5)  | 3ª Maior + 3ª Maior + 3ª Maior               | Tônica - 3ª Maior - 5ª Aumentada - 7ª Maior | F – A♯ – C♯ – E     |
     """)
 
-    st.image("images/tetrade-maior7+.png", caption="Representação visual das tríades", use_column_width=True)
 
-    st.image("images/tetrade-dominante7.png", caption="Representação visual das tríades", use_column_width=True)
+    st.success("""💡 **Desafio:** Construa uma tabela com as colunas *Tonalidade*, *Tipo de Tríade*, *Notas do Acorde* e *Empilhamento de Terças* para encontrar todos os acordes possíveis nas tétrades dos 12 tons. 
+    
+*Obs: Há um total de 60 combinações possíveis para as tétrades nos 12 tons.*
+    """)
 
-    st.image("images/tetrade-menor7.png", caption="Representação visual das tríades", use_column_width=True)
+    st.image("images/tetrade-maior7+.png", caption="Acordes de Sol Maior com +7", use_column_width=True)
 
-    st.image("images/tetrade-meiodiminuta.png", caption="Representação visual das tríades", use_column_width=True)
+    st.image("images/tetrade-dominante7.png", caption="Acordes de Sol Maior com Sétima Maior", use_column_width=True)
+
+    st.image("images/tetrade-menor7.png", caption="Acordes de Sol Menor com Sétima Maior", use_column_width=True)
+
+    st.image("images/tetrade-meiodiminuta.png", caption="Acordes de Sol Meio-Diminuto", use_column_width=True)
 
     st.subheader("🎼 Arpejos")
 
@@ -893,13 +1051,13 @@ elif choice == "Ritmos":
     st.write("Conteúdo sobre ritmos musicais")
 elif choice == "Intervalos":
     st.write("Conteúdo sobre intervalos musicais")
-elif choice == "Escalas":
+elif choice == "Escalas Naturais":
     exibir_escalas()
 elif choice == "Acordes & Arpejos":
     acordes()
-elif choice == "Campos harmônicos":
+elif choice == "Campos Harmônicos":
     harmonico()
-elif choice == "Modos gregos":
+elif choice == "Modos Gregos":
     gregos()
-elif choice == "Recursos adicionais":
+elif choice == "Recursos Adicionais":
     recursos()
