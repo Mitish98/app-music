@@ -13,8 +13,10 @@ cloudinary.config(
     api_secret=os.getenv("CLOUDINARY_API_SECRET")
 )
 
+
+
 # Upload do arquivo MP3
-response = cloudinary.uploader.upload("audios/example.mp3", resource_type="video")
+response = cloudinary.uploader.upload("audios/Orlande de Lassus - Lagrime di San Pietro： I. Il magnanimo Pietro.mp3", resource_type="video")
 
 print("URL pública:", response['secure_url'])
 

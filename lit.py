@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import os
 from PIL import Image
 
@@ -28,7 +29,7 @@ Bons estudos e até mais!!!
 """)
 
 # Menu de opções
-menu = ["História", "Ritmos", "Intervalos", "Escalas", "Acordes", "Campos harmônicos", "Modos gregos", "Recursos adicionais"]
+menu = ["História", "Ritmos", "Intervalos", "Escalas", "Acordes & Arpejos", "Campos harmônicos", "Modos gregos", "Recursos adicionais"]
 choice = st.sidebar.selectbox("Escolha uma função", menu)
 
 if choice == "História":
@@ -52,15 +53,18 @@ if choice == "História":
     - Instrumentação rudimentar (lira, aulos, harpa)
 
     **👤 Compositores/Filósofos:**
-    - Pitágoras:
+    - **Pitágoras:**
     """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+    st.markdown("- **Terpandro:** foi um célebre poeta lírico e citharode (tocado de cítara, tipo de lira) da Antiga Grécia, ativo por volta do século VII a.C. Segundo Strabo e Plutarco, foi ele quem aumentou as cordas da lira de quatro para sete, dando forma ao que viria a se chamar kithara. Embora suas obras não tenham sobreviveram completas, fragmentos são citados por autores antigos, e sua influência perdurou – consideram-no o primeiro nome certo da história musical da Grécia ")
 
-    st.markdown("- Terpandro:")
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+    st.markdown("""- **Mesomedes de Creta:** Mesomedes de Creta foi um importante poeta lírico e compositor grego do início do século II d.C. Ele viveu durante o período de Hadrian e foi liberto desse imperador, servindo também durante Antonino Pio. Mesomedes era cantor e tocador de kithara, escrevendo poemas — ao todo cerca de 15 — em grego antigo, dos quais pelo menos quatro acompanham a notação musical original, entre elas *Hymn to Nemesis*, *Hymn to the Sun*, *Prayer to Calliope and Apollo*, *Prayer to the Muse*.
 
-    st.markdown("- Mesomedes de Creta:")
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    Ouça Hymn to the Sun:
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344173/suoop7qv2kyqzaawngvw.mp3")
+
+
 
     # IDADE MÉDIA
     st.subheader("🕍 Idade Média (500–1400)")
@@ -70,19 +74,27 @@ if choice == "História":
     - Desenvolvimento da notação musical
     - Polifonia nascente (Notre-Dame)
 
-    **👤 Compositores:**
-    - Hildegard von Bingen
+    **👤 Compositores:**""")
+
+    st.markdown("""- **Guido d’Arezzo (991 – 1033):** foi um monge beneditino italiano e um dos maiores teóricos musicais da Idade Média. Não é reconhecido por composições musicais como outros, mas sim por sua enorme contribuição teórica e pedagógica à música medieval ocidental. Ele foi um monge beneditino que revolucionou o ensino da música com invenções de notações e composições que usamos até hoje, considerado o *pai da notação musical moderna* e um dos grandes inovadores da pedagogia musical ocidental.                 
+                """)
+    
+
+    st.markdown("""- **Hildegard von Bingen (1098–1179):** monja beneditina, mística, médica, filósofa natural, compositora e visionária, ela viveu no Sacro Império Romano-Germânico e é considerada uma das primeiras compositoras da história da música ocidental cujas obras sobreviveram com autoria confirmada, sendo uma das mais importantes compositoras da Idade Média. Hildegard compôs mais de 70 obras litúrgicas (cânticos, hinos, responsórios) reunidas no ciclo *Symphonia armoniae celestium revelationum*. 
+
+    Ouça *De Spiritu Sancto*:
     """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
-    st.markdown("- Leonin:")
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344803/hwynylkgkytdtbriavxh.mp3")
 
-    st.markdown("- Perotin:")
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
-    st.markdown("- Guido d’Arezzo:")
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+  
+    st.markdown("""- **Leonin (1150–1201):** monge ou cônego ligado à Catedral de Notre-Dame de Paris, foi um dos primeiros compositores a usar a notação moderna e é considerado o primeiro grande compositor de polifonia na história da música ocidental. Foi sucedido por Perotin, que desenvolveu ainda mais a técnica polifônica, escrevendo músicas a 3 e 4 vozes.
+
+    Ouça *Nostrum Organum Duplum*:
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751392698/lggvrlwdh2ij3oc5ysbw.mp3")
+
 
     # RENASCIMENTO
     st.subheader("🎨 Renascimento (1400–1600)")
@@ -93,18 +105,24 @@ if choice == "História":
     - Música vocal e instrumental se desenvolvendo paralelamente
 
     **👤 Compositores:**
-    - Josquin des Prez
+    - **Josquin des Prez (1455–1521):** foi um dos compositores mais influentes do Renascimento. Nascido possivelmente na região da atual fronteira entre França e Bélgica (então parte dos Países Baixos borgonheses), ele é considerado o maior compositor de sua época, comparado frequentemente a figuras como Michelangelo ou Leonardo da Vinci, mas na música. Josquin se destacou pela inovação e refinamento da polifonia vocal, isto é, várias vozes cantando melodias diferentes que se combinam harmonicamente. 
+  
+
+    Ouça *Ave Maria ... virgo serena*:
     """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751486334/pcvqhxhbll6eacvxtlv5.mp3")
 
-    st.markdown("- Giovanni Palestrina:")
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+    st.markdown("""- **Giovanni Palestrina (1525–1594):** Palestrina foi um compositor italiano do Renascimento, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais. Seu estilo serviu como modelo pedagógico no estudo de contraponto, sendo estudado até hoje em conservatórios
 
-    st.markdown("- Thomas Tallis:")
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+    Ouça *Missa Papae Marcelli*:
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751488772/g0cuwgdeglakntyy6rgc.mp3")
 
-    st.markdown("- Orlando di Lasso:")
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+    st.markdown("""- **Orlando di Lasso (1532–1594):** foi um compositor francês do Renascimento, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+    Ouça *Lagrime di San Pietro: I. Il magnanimo Pietro*:
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751497992/cwezwqiiugdezve7uecr.mp3")
 
     # BARROCO
     st.subheader("🎻 Barroco (1600–1750)")
@@ -115,20 +133,32 @@ if choice == "História":
     - Nasce a ópera, oratório e concerto
 
     **👤 Compositores:**
-    - J.S. Bach
+    - **J.S. Bach:  **
     """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
-    st.markdown("- Vivaldi:")
+    st.markdown("""- **Vivaldi:** Vivaldi foi um compositor italiano do Barroco, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+    Ouça uma de suas músicas:
+    """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
-    st.markdown("- Handel:")
+    st.markdown("""- **Handel:** Handel foi um compositor alemão do Barroco, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+    Ouça uma de suas músicas:
+    """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
-    st.markdown("- Monteverdi:")
+    st.markdown("""- **Monteverdi:** Monteverdi foi um compositor italiano do Barroco, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+    Ouça uma de suas músicas:
+    """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
-    st.markdown("- Purcell:")
+    st.markdown("""- **Purcell:** Purcell foi um compositor inglês do Barroco, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+    Ouça uma de suas músicas:
+    """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
     # CLÁSSICO
@@ -140,14 +170,22 @@ if choice == "História":
     - Crescimento da orquestra sinfônica
 
     **👤 Compositores:**
-    - Mozart
+    - **Mozart:** Mozart foi um compositor austríaco do Clássico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+    Ouça uma de suas músicas:
     """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
-    st.markdown("- Haydn:")
+    st.markdown("""- **Haydn:** Haydn foi um compositor austríaco do Clássico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+    Ouça uma de suas músicas:
+    """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
-    st.markdown("- Beethoven (1ª fase):")
+    st.markdown("""- **Beethoven (1ª fase):** Beethoven foi um compositor alemão do Clássico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+    Ouça uma de suas músicas:
+    """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
     # ROMÂNTICO
@@ -159,23 +197,40 @@ if choice == "História":
     - Orquestras maiores e mais dramáticas
 
     **👤 Compositores:**
-    - Chopin
+    - **Chopin:** Chopin foi um compositor polonês do Romântico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+    Ouça uma de suas músicas:
     """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
-    st.markdown("- Wagner:")
+    st.markdown("""- **Wagner:** Wagner foi um compositor alemão do Romântico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+    Ouça uma de suas músicas:
+    """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
-    st.markdown("- Tchaikovsky:")
+    st.markdown("""- **Tchaikovsky:** Tchaikovsky foi um compositor russo do Romântico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+    Ouça uma de suas músicas:
+    """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
-    st.markdown("- Verdi:")
+    st.markdown("""- **Verdi:** Verdi foi um compositor italiano do Romântico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+    Ouça uma de suas músicas:
+    """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
-    st.markdown("- Brahms:")
+    st.markdown("""- **Brahms:** Brahms foi um compositor alemão do Romântico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+    Ouça uma de suas músicas:
+    """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
-    st.markdown("- Liszt:")
+    st.markdown("""- **Liszt:** Liszt foi um compositor húngaro do Romântico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+    Ouça uma de suas músicas:
+    """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
     # MODERNO E CONTEMPORÂNEO
@@ -458,7 +513,7 @@ def exibir_escalas():
     st.success("💡 Dica: experimente tocar as escalas no seu instrumento em diferentes tons para sentir como cada uma afeta a sonoridade da música.")
 
 def acordes():
-    st.header("Acordes Musicais 🎹")
+    st.header("Acordes & Arpejos Musicais 🎹")
 
     st.markdown("""
     Os **acordes** são combinações de notas tocadas simultaneamente que produzem harmonia. Eles são a base da harmonia na música e ajudam a definir o tom, a emoção e a direção da composição.
@@ -479,6 +534,14 @@ def acordes():
     | Tríade Aumentada   | Tônica - 3ª Maior - 5ª Aum  | F – A – C♯       | Ambígua, expansiva           |
     """)
 
+    st.image("images/triade-maior.png", caption="Representação visual das tríades", use_column_width=True)
+
+    st.image("images/triade-menor.png", caption="Representação visual das tríades", use_column_width=True)
+
+    st.image("images/triade-diminuta.png", caption="Representação visual das tríades", use_column_width=True)
+
+    st.image("images/triade-aumentada.png", caption="Representação visual das tríades", use_column_width=True)
+
     st.subheader("🔸 Tétrades (4 notas)")
 
     st.markdown("""
@@ -493,34 +556,37 @@ def acordes():
     | Aumentada (maj7#5)  | T - 3M - 5A - 7M                      | F – A♯ – C♯ – E      | Ambígua, moderna               |
     """)
 
-    st.subheader("🎼 Inversões de Acordes")
+    st.image("images/tetrade-maior7+.png", caption="Representação visual das tríades", use_column_width=True)
+
+    st.image("images/tetrade-dominante7.png", caption="Representação visual das tríades", use_column_width=True)
+
+    st.image("images/tetrade-menor7.png", caption="Representação visual das tríades", use_column_width=True)
+
+    st.image("images/tetrade-meiodiminuta.png", caption="Representação visual das tríades", use_column_width=True)
+
+    st.subheader("🎼 Arpejos")
 
     st.markdown("""
-    As **inversões** mudam a ordem das notas em um acorde, colocando uma nota diferente na **posição mais grave**. Isso altera a sonoridade e cria movimentos harmônicos mais suaves.
+    Um **arpejo** é quando as notas de um acorde são tocadas **sequencialmente**, uma após a outra, em vez de simultaneamente. Isso cria um efeito melódico com base na harmonia do acorde e é muito usado em solos, acompanhamento e improvisação.
 
-    | Tipo de Inversão    | O que muda?                        | Exemplo (acorde C)   |
-    |----------------------|-------------------------------------|------------------------|
-    | 1ª Inversão (3ª no baixo) | Terça como nota mais grave     | E – G – C              |
-    | 2ª Inversão (5ª no baixo) | Quinta como nota mais grave    | G – C – E              |
-    | 3ª Inversão (7ª no baixo) | Sétima como nota mais grave    | B♭ – C – E – G         |
+    Os arpejos podem seguir o mesmo formato dos acordes (tríades, tétrades, etc.) e são essenciais para músicos que desejam entender e aplicar harmonia de forma fluida em seus instrumentos.
 
-    As inversões são usadas para:
+    | Tipo de Arpejo        | Fórmula                  | Exemplo (notas)     | Aplicação comum                         |
+    |------------------------|---------------------------|----------------------|-----------------------------------------|
+    | Arpejo Maior           | Tônica - 3ª Maior - 5ª Justa | C – E – G            | Pop, rock, clássico                     |
+    | Arpejo Menor           | Tônica - 3ª Menor - 5ª Justa | A – C – E            | Blues, jazz, música triste              |
+    | Arpejo Dominante (7)   | T - 3M - 5J - 7m             | G – B – D – F        | Jazz, modulações, resoluções harmônicas|
+    | Arpejo Menor 7 (m7)    | T - 3m - 5J - 7m             | D – F – A – C        | Jazz, bossa nova, soul                  |
+    | Arpejo Diminuto        | T - 3m - 5d - 6M             | B – D – F – A♭       | Música de suspense, tensão harmônica   |
 
-    - Suavizar o encadeamento entre acordes;
-    - Criar linhas de baixo mais melódicas;
-    - Adicionar interesse harmônico ao arranjo.
+    Os arpejos também podem ser tocados de forma ascendente, descendente ou alternada, e são uma ferramenta essencial para explorar a sonoridade dos acordes no tempo.
     """)
 
-    st.success("💡 Dica: Toque um acorde em sua forma fundamental e depois em diferentes inversões. Perceba como a sensação muda, mesmo com as mesmas notas!")
+    st.image("images/Arpejos Tríades 5ª Corda.png", caption="Representação visual das tríades", use_column_width=True)
+    st.image("images/Arpejos Tríades 6ª Corda.png", caption="Representação visual das tríades", use_column_width=True)
 
-    st.markdown("""
-    ---
-    Explore também:
+    
 
-    - `/Triades` – Entenda em profundidade os acordes básicos;
-    - `/Tetrades` – Aprenda a usar acordes com sétima;
-    - `/Inversoes` – Experimente diferentes disposições dos acordes no seu instrumento.
-    """)
 def harmonico():
     st.header("🎼 Campo Harmônico")
 
@@ -829,7 +895,7 @@ elif choice == "Intervalos":
     st.write("Conteúdo sobre intervalos musicais")
 elif choice == "Escalas":
     exibir_escalas()
-elif choice == "Acordes":
+elif choice == "Acordes & Arpejos":
     acordes()
 elif choice == "Campos harmônicos":
     harmonico()
