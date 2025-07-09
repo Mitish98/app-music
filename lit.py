@@ -332,51 +332,30 @@ A música romântica fala direto ao coração — é intensa, pessoal e muitas v
     """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
-    # MODERNO E CONTEMPORÂNEO
-    st.subheader("🌐 Moderno e Contemporâneo (1900–presente)")
-    st.markdown("""
-    **🎼 Características técnicas e evolução histórica:**
-
-    - **Blues (final do século XIX – início do século XX):**  
-      Robert Johnson, B.B. King  
-    """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+    
+    st.header("🎼 Estilos Musicais Contemporâneos")
 
     st.markdown("""
-    - **Jazz (início do século XX):**  
-      Louis Armstrong, Miles Davis, John Coltrane  
-    """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+    Cada cultura desenvolveu padrões rítmicos próprios que influenciaram a música ocidental:
 
-    st.markdown("""
-    - **Soul (1950s–60s):**  
-      Aretha Franklin, Otis Redding  
-    """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+    - **Brasil**: Samba, Baião, Maracatu, Frevo
+    - **África Ocidental**: Ritmos polirrítmicos com djembês
+    - **Oriente Médio**: Usos complexos de ciclos rítmicos (maqams)
+    - **Índia**: Talas (estruturas rítmicas com até 108 tempos)
 
-    st.markdown("""
-    - **R&B (desde os anos 40):**  
-      Ray Charles, Marvin Gaye, Beyoncé  
+    Compreender esses ritmos amplia a percepção e a criatividade musical. Veja mais detalhes de alguns dos principais estilos da música contemporânea: 
     """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
-
-    st.markdown("""
-    - **Funk (1960s–70s):**  
-      James Brown, Stevie Wonder  
-    """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
-
-    st.markdown("""
-    - **Rock (desde os anos 50):**  
-      Elvis Presley, The Beatles, Led Zeppelin  
-    """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
-
-    st.markdown("""
-    - **Pop (desde os anos 50):**  
-      Michael Jackson, Madonna, Taylor Swift  
-    """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+    st.subheader("Gospel")
+    st.subheader("Blues")
+    st.subheader("Country")
+    st.subheader("Rock")
+    st.subheader("Jazz")
+    st.subheader("Pop")
+    st.subheader("Bossa-Nova")
+    st.subheader("Samba")
+    st.subheader("Choro")
+    st.subheader("Baião")
+    st.subheader("Reggae")
 
 
 if choice == "Ritmos":
@@ -449,20 +428,6 @@ if choice == "Ritmos":
     Já a **subdivisão** é a divisão interna do tempo. Por exemplo, uma semínima pode ser subdividida em duas colcheias ou quatro semicolcheias, permitindo criar diferentes grooves e variações rítmicas.
     """)
 
-    st.subheader("🎼 Padrões Rítmicos no Mundo")
-
-    st.markdown("""
-    Cada cultura desenvolveu padrões rítmicos próprios que influenciaram a música ocidental:
-
-    - **Brasil**: Samba, Baião, Maracatu, Frevo
-    - **África Ocidental**: Ritmos polirrítmicos com djembês
-    - **Oriente Médio**: Usos complexos de ciclos rítmicos (maqams)
-    - **Índia**: Talas (estruturas rítmicas com até 108 tempos)
-
-    Compreender esses ritmos amplia a percepção e a criatividade musical.
-    """)
-
-
 
 elif choice == "Intervalos":
     st.header("Intervalos Musicais 🎶")
@@ -470,8 +435,6 @@ elif choice == "Intervalos":
     st.markdown("""
     Os **intervalos musicais** são a distância entre duas notas. Eles são essenciais para compreender a construção de melodias e harmonias. Um intervalo pode ser tocado de forma **melódica** (notas em sequência) ou **harmônica** (notas simultâneas).
     """)
-
-    st.subheader("📏 O que mede um intervalo?")
 
     st.markdown("""
     A unidade de medida para intervalos é o **tom** e o **semitom**:
@@ -482,25 +445,32 @@ elif choice == "Intervalos":
     A classificação do intervalo depende da **quantidade de tons** entre as duas notas.
     """)
 
-    st.subheader("🎵 Tipos de Intervalos com a nota C como exemplo")
+    st.markdown("""
+    | Nome do Intervalo       | Distância | Exemplo       | Qualidade             | Áudio |
+    |-------------------------|-----------|----------------|------------------------|-------|
+    | Uníssono                | 0T        | C – C          | Consonante            | <audio controls style="width:100px;" src="audios/unisono.mp3"></audio> |
+    | Segunda menor           | ½T        | C – C♯/D♭       | Dissonante            | <audio controls style="width:100px;" src="audios/segunda_menor.mp3"></audio> |
+    | Segunda maior           | 1T        | C – D          | Dissonante            | <audio controls style="width:100px;" src="audios/segunda_maior.mp3"></audio> |
+    | Terça menor             | 1½T       | C – E♭         | Consonante imperfeita | <audio controls style="width:100px;" src="audios/terca_menor.mp3"></audio> |
+    | Terça maior             | 2T        | C – E          | Consonante imperfeita | <audio controls style="width:100px;" src="audios/terca_maior.mp3"></audio> |
+    | Quarta justa            | 2½T       | C – F          | Consonante            | <audio controls style="width:100px;" src="audios/quarta_justa.mp3"></audio> |
+    | Quarta aumentada / Quinta diminuta | 3T | C – F♯/G♭ | Dissonante | <audio controls style="width:100px;" src="audios/quarta_aumentada.mp3"></audio> |
+    | Quinta justa            | 3½T       | C – G          | Consonante            | <audio controls style="width:100px;" src="audios/quinta_justa.mp3"></audio> |
+    | Sexta menor             | 4T        | C – A♭         | Consonante imperfeita | <audio controls style="width:100px;" src="audios/sexta_menor.mp3"></audio> |
+    | Sexta maior             | 4½T       | C – A          | Consonante imperfeita | <audio controls style="width:100px;" src="audios/sexta_maior.mp3"></audio> |
+    | Sétima menor            | 5T        | C – B♭         | Dissonante            | <audio controls style="width:100px;" src="audios/setima_menor.mp3"></audio> |
+    | Sétima maior            | 5½T       | C – B          | Dissonante            | <audio controls style="width:100px;" src="audios/setima_maior.mp3"></audio> |
+    | Oitava justa            | 6T        | C – C (oitava) | Consonante            | <audio controls style="width:100px;" src="audios/oitava_justa.mp3"></audio> |
+    """, unsafe_allow_html=True)
 
     st.markdown("""
-    | Nome do Intervalo       | Distância | Exemplo       |
-    |-------------------------|-----------|----------------|
-    | Uníssono                | 0T        | C – C          |
-    | Segunda menor           | ½T        | C – C♯/D♭       |
-    | Segunda maior           | 1T        | C – D          |
-    | Terça menor             | 1½T       | C – E♭         |
-    | Terça maior             | 2T        | C – E          |
-    | Quarta justa            | 2½T       | C – F          |
-    | Quarta aumentada / Quinta diminuta | 3T | C – F♯/G♭ |
-    | Quinta justa            | 3½T       | C – G          |
-    | Sexta menor             | 4T        | C – A♭         |
-    | Sexta maior             | 4½T       | C – A          |
-    | Sétima menor            | 5T        | C – B♭         |
-    | Sétima maior            | 5½T       | C – B          |
-    | Oitava justa            | 6T        | C – C (oitava) |
+    Intervalos podem ser classificados pela sensação que causam:
+
+    - **Consonantes**: sons estáveis, agradáveis ao ouvido (relaxamento).
+    - **Dissonantes**: sons instáveis, que geram tensão (movimento).
+
     """)
+
 
     st.info("""**¹ Dica:** Liste os intervalos musicais partindo da referência de outras notas. 
     
@@ -511,26 +481,7 @@ elif choice == "Intervalos":
     
     """)
 
-    st.subheader("🎯 Consonância e Dissonância")
 
-    st.markdown("""
-    Intervalos podem ser classificados pela sensação que causam:
-
-    - **Consonantes**: sons estáveis, agradáveis ao ouvido (relaxamento).
-    - **Dissonantes**: sons instáveis, que geram tensão (movimento).
-
-    | Intervalo               | Classificação       |
-    |-------------------------|---------------------|
-    | Uníssono                | Consonante          |
-    | Segunda menor/maior     | Dissonante          |
-    | Terça menor/maior       | Consonante imperfeita |
-    | Quarta justa            | Consonante          |
-    | Quarta aumentada        | Dissonante          |
-    | Quinta justa            | Consonante          |
-    | Sexta menor/maior       | Consonante imperfeita |
-    | Sétima menor/maior      | Dissonante          |
-    | Oitava justa            | Consonante          |
-    """)
 
     st.subheader("💡 Intervalos e Narrativa Musical")
 
@@ -626,8 +577,11 @@ def exibir_escalas():
 def acordes():
     st.header("Acordes & Arpejos Musicais 🎹")
 
+    st.markdown("Os acordes são combinações de notas tocadas simultaneamente que produzem uma harmonia. Eles são a base da harmonia na música e ajudam a definir o tom, a emoção e a direção da composição. Os arpejos nada mais são do que as notas de um acorde tocadas de forma melódica, ou seja, sequencial. ")
+
+    st.subheader("Formação de Acordes")
+
     st.markdown("""
-    Os acordes são combinações de notas tocadas simultaneamente que produzem uma harmonia. Eles são a base da harmonia na música e ajudam a definir o tom, a emoção e a direção da composição. Os arpejos nada mais são do que as notas de um acorde tocadas de forma melódica, ou seja, sequencial. 
 
     Os acordes são formados pela **sobreposição de terças** e podem variar de estruturas com três notas (tríades) ou estruturas de quatro notas (tétrades).
     
@@ -1044,13 +998,13 @@ Aproveite esses recursos para estudar no seu ritmo e transformar a teoria em pr�
 
 # Exibindo conteúdo baseado na escolha do usuário
 if choice == "História":
-    st.write("Conteúdo sobre a história da música")
+    st.write("")
 elif choice == "Períodos Históricos":
-    st.write("Conteúdo sobre os períodos históricos da música")
+    st.write("")
 elif choice == "Ritmos":
-    st.write("Conteúdo sobre ritmos musicais")
+    st.write("")
 elif choice == "Intervalos":
-    st.write("Conteúdo sobre intervalos musicais")
+    st.write("")
 elif choice == "Escalas Naturais":
     exibir_escalas()
 elif choice == "Acordes & Arpejos":
