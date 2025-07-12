@@ -16,24 +16,12 @@ def audio_embed(youtube_url):
     )
 
 
-# Título da aplicação no Streamlit
-st.title("Chatbot de Teoria Musical")
-
-# Adicionar uma descrição
-st.write("""
-Bem-vindo ao curso interativo para estudos em Teoria Musical! Escolha o tema que você quer estudar e mão na massa! 
-
-Entre em contato pelo e-mail ourcontentdigital@gmail.com
-         
-Bons estudos e até mais!!!
-""")
-
 # Menu de opções
 menu = ["História", "Ritmos", "Intervalos","Acordes & Arpejos", "Escalas Naturais", "Campos Harmônicos", "Modos Gregos", "Recursos Adicionais"]
 choice = st.sidebar.selectbox("Escolha uma função", menu)
 
 if choice == "História":
-    st.header("História da Música 🎼")
+    st.title("História da Música 🎼")
 
     st.markdown("""
     A música é uma das expressões mais antigas e universais da humanidade. Desde os primórdios, os seres humanos se afeiçoaram aos sons — não apenas como ruído do ambiente, mas como forma de organizar a experiência emocional, criar vínculos sociais e dar sentido ao mundo ao seu redor.
@@ -41,7 +29,7 @@ if choice == "História":
 A batida do coração, o som da respiração, o eco das cavernas, o ritmo dos passos: todos esses elementos naturais já traziam padrões que o ser humano começou a perceber e imitar. Ao bater pedras, soprar por ossos ou entoar sons com a voz, nossos ancestrais descobriram que certas vibrações causavam emoções e *transes mentais*. Assim, os sons poderiam emergir como uma extensão do corpo e mente.
     """)
 
-    st.subheader("🪨 A Música na Pré-História")
+    st.header("🪨 A Música na Pré-História")
     st.markdown("""
     Durante o período pré-histórico, a música não era feita para entretenimento como conhecemos hoje. Ela cumpria funções essenciais para a vida em comunidade, sendo usada em:
 
@@ -60,26 +48,33 @@ A batida do coração, o som da respiração, o eco das cavernas, o ritmo dos pa
 """)
 
     # ANTIGUIDADE
-    st.subheader("🏛️ Antiguidade")
+    st.header("🏛️ Antiguidade")
     st.markdown("""
 Com o surgimento das primeiras civilizações, a música passou a ocupar um papel ainda mais estruturado nas sociedades da Antiguidade. Egípcios, sumérios, gregos, hebreus, indianos e chineses desenvolveram formas musicais ligadas à religião, à educação, à guerra e ao entretenimento.
+""")
+    
+    st.markdown("""
+    **🎼 Características técnicas:**
+    - Uso de escalas gregas (modos)
+    - Música monofônica e ritualística
+    - Instrumentação rudimentar (lira, aulos, harpa)""")
 
+    st.markdown("""
 No **Egito Antigo**, a música era parte essencial dos cultos religiosos e cerimônias funerárias. Instrumentos como harpas, flautas e tamborins acompanhavam cantos dedicados aos deuses e aos faraós.
 
 Na **Grécia Antiga**, a música era considerada uma arte divina, ligada à matemática, à filosofia e à moral. Pitágoras descobriu proporções harmônicas entre sons, e pensadores como Platão e Aristóteles discutiram seu poder sobre a alma e a sociedade. Os gregos usavam a lira, a cítara e o aulos (instrumento de sopro) em festivais, teatro e educação.
 
 Na **Roma Antiga**, a música era muito influenciada pelos gregos e usada em banquetes, arenas, templos e exércitos. Embora com menor preocupação filosófica, os romanos expandiram o uso da música como forma de espetáculo e propaganda imperial.
-
-Ao longo da Antiguidade, a música consolidou-se como uma linguagem importante para expressar valores espirituais, sociais e culturais — sempre entrelaçada com outras formas de arte e poder.
 """)
-    st.markdown("""
-    **🎼 Características técnicas:**
-    - Uso de escalas gregas (modos)
-    - Música monofônica e ritualística
-    - Instrumentação rudimentar (lira, aulos, harpa)
 
-    **👤 Compositores/Filósofos:**
-    - **Pitágoras (século VI a.C.):** descobriu as relações matemáticas entre os sons — um marco fundamental que ajudou a fundar a base da teoria musical ocidental. Pitágoras percebeu que os sons agradáveis (ou consonantes) tinham relações diretas com o comprimento da corda que vibrava. Fazendo o experimento com um monocórdio, ou seja, um instrumento formado por uma única corda esticada sobre uma caixa de ressonância marcada com uma régua com marcações do comprimento da corda junto de um cavalete móvel que pode dividir a corda em diferentes posições. 
+
+    st.subheader("**Terpandro (século VII a.C)** ")
+    st.markdown("Foi um célebre poeta lírico e citharode (tocado de cítara, tipo de lira) da Antiga Grécia, ativo por volta do século VII a.C. Segundo Strabo e Plutarco, foi ele quem aumentou as cordas da lira de quatro para sete, dando forma ao que viria a se chamar kithara. Embora suas obras não tenham sobreviveram completas, fragmentos são citados por autores antigos, e sua influência perdurou – consideram-no o primeiro nome certo da história musical da Grécia ")
+
+    st.subheader("**Pitágoras (século VI a.C.)**")
+
+    st.markdown("""
+     Descobriu as relações matemáticas entre os sons — um marco fundamental que ajudou a fundar a base da teoria musical ocidental. Pitágoras percebeu que os sons agradáveis (ou consonantes) tinham relações diretas com o comprimento da corda que vibrava. Fazendo o experimento com um monocórdio, ou seja, um instrumento formado por uma única corda esticada sobre uma caixa de ressonância marcada com uma régua com marcações do comprimento da corda junto de um cavalete móvel que pode dividir a corda em diferentes posições. 
     
     Com esse experimento, Pitágoras obteve o seguinte resultado: 
 
@@ -90,23 +85,32 @@ Ao longo da Antiguidade, a música consolidou-se como uma linguagem importante p
         - Na razão 3:4, uma quarta justa.
 
     """)
-    st.markdown("- **Terpandro:** foi um célebre poeta lírico e citharode (tocado de cítara, tipo de lira) da Antiga Grécia, ativo por volta do século VII a.C. Segundo Strabo e Plutarco, foi ele quem aumentou as cordas da lira de quatro para sete, dando forma ao que viria a se chamar kithara. Embora suas obras não tenham sobreviveram completas, fragmentos são citados por autores antigos, e sua influência perdurou – consideram-no o primeiro nome certo da história musical da Grécia ")
-
-    st.markdown("""- **Mesomedes de Creta:** Mesomedes de Creta foi um importante poeta lírico e compositor grego do início do século II d.C. Ele viveu durante o período de Hadrian e foi liberto desse imperador, servindo também durante Antonino Pio. Mesomedes era cantor e tocador de kithara, escrevendo poemas — ao todo cerca de 15 — em grego antigo, dos quais pelo menos quatro acompanham a notação musical original, entre elas *Hymn to Nemesis*, *Hymn to the Sun*, *Prayer to Calliope and Apollo*, *Prayer to the Muse*.
 
 
-    Ouça Hymn to the Sun:
+    st.subheader("**Mesomedes de Creta (século II d.C)**")
+    st.markdown("""Foi um importante poeta lírico e compositor grego do início do século II d.C. Ele viveu durante o período de Hadrian e foi liberto desse imperador, servindo também durante Antonino Pio. Mesomedes era cantor e tocador de kithara, escrevendo poemas — ao todo cerca de 15 — em grego antigo, dos quais pelo menos quatro acompanham a notação musical original, entre elas *Hymn to Nemesis*, *Hymn to the Sun*, *Prayer to Calliope and Apollo*, *Prayer to the Muse*.
+
+Ouça *Hymn to the Sun*:
     """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344173/suoop7qv2kyqzaawngvw.mp3")
 
 
 
     # IDADE MÉDIA
-    st.subheader("🕍 Idade Média (500–1400)")
+    st.header("🕍 Idade Média (500–1400)")
 
     st.markdown("""
 Na Idade Média (aproximadamente do século V ao XV), a música europeia foi profundamente influenciada pela Igreja Católica, que a utilizava como instrumento de fé, liturgia e poder. O **canto gregoriano** — melódico, monofônico e em latim — dominava os mosteiros e catedrais, servindo para elevar o espírito e acompanhar as orações.
-
+""")
+    
+    st.markdown("""
+    **🎼 Características técnicas:**
+    - Canto gregoriano (monofônico e modal)
+    - Desenvolvimento da notação musical
+    - Polifonia nascente (Notre-Dame)
+""")
+    
+    st.markdown("""
 Nesse período, os monges desenvolveram os primeiros sistemas de **notação musical**, permitindo registrar e transmitir músicas com mais precisão. Guido d’Arezzo, por exemplo, criou a base do que viria a ser a pauta musical moderna e a **mão guidoniana**, uma técnica visual para ensinar os sons.
 
 Fora dos muros da Igreja, também floresceu a música **profana**. Trovadores, jograis e menestréis compunham e cantavam canções sobre amor, guerras e feitos heroicos, muitas vezes acompanhados por alaúdes, harpas e flautas. Essa música ajudava a preservar histórias e a entreter os nobres e o povo.
@@ -114,28 +118,22 @@ Fora dos muros da Igreja, também floresceu a música **profana**. Trovadores, j
 A música medieval foi o ponto de partida para a polifonia (várias vozes simultâneas), que surgiria mais intensamente nos séculos finais da Idade Média, abrindo caminho para as inovações da Renascença.
 """)
 
-    st.markdown("""
-    **🎼 Características técnicas:**
-    - Canto gregoriano (monofônico e modal)
-    - Desenvolvimento da notação musical
-    - Polifonia nascente (Notre-Dame)
-
-    **👤 Compositores:**""")
-
-    st.markdown("""- **Guido d’Arezzo (991 – 1033):** foi um monge beneditino italiano e um dos maiores teóricos musicais da Idade Média. Não é reconhecido por composições musicais como outros, mas sim por sua enorme contribuição teórica e pedagógica à música medieval ocidental. Ele foi um monge beneditino que revolucionou o ensino da música com invenções de notações e composições que usamos até hoje, considerado o *pai da notação musical moderna* e um dos grandes inovadores da pedagogia musical ocidental.                 
+  
+    st.subheader("**Guido d’Arezzo (991 – 1033)**")
+    st.markdown("""Foi um monge beneditino italiano e um dos maiores teóricos musicais da Idade Média. Não é reconhecido por composições musicais como outros, mas sim por sua enorme contribuição teórica e pedagógica à música medieval ocidental. Ele foi um monge beneditino que revolucionou o ensino da música com invenções de notações e composições que usamos até hoje, considerado o *pai da notação musical moderna* e um dos grandes inovadores da pedagogia musical ocidental.                 
                 """)
     
+    st.subheader("**Hildegard von Bingen (1098–1179)**")
+    st.markdown("""Monja beneditina, mística, médica, filósofa natural, compositora e visionária, ela viveu no Sacro Império Romano-Germânico e é considerada uma das primeiras compositoras da história da música ocidental cujas obras sobreviveram com autoria confirmada, sendo uma das mais importantes compositoras da Idade Média. Hildegard compôs mais de 70 obras litúrgicas (cânticos, hinos, responsórios) reunidas no ciclo *Symphonia armoniae celestium revelationum*. 
 
-    st.markdown("""- **Hildegard von Bingen (1098–1179):** monja beneditina, mística, médica, filósofa natural, compositora e visionária, ela viveu no Sacro Império Romano-Germânico e é considerada uma das primeiras compositoras da história da música ocidental cujas obras sobreviveram com autoria confirmada, sendo uma das mais importantes compositoras da Idade Média. Hildegard compôs mais de 70 obras litúrgicas (cânticos, hinos, responsórios) reunidas no ciclo *Symphonia armoniae celestium revelationum*. 
-
-    Ouça *De Spiritu Sancto*:
+Ouça *De Spiritu Sancto*:
     """)
 
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344803/hwynylkgkytdtbriavxh.mp3")
 
 
-  
-    st.markdown("""- **Leonin (1150–1201):** monge ou cônego ligado à Catedral de Notre-Dame de Paris, foi um dos primeiros compositores a usar a notação moderna e é considerado o primeiro grande compositor de polifonia na história da música ocidental. Foi sucedido por Perotin, que desenvolveu ainda mais a técnica polifônica, escrevendo músicas a 3 e 4 vozes.
+    st.subheader("**Leonin (1150–1201)**")
+    st.markdown(""" monge ou cônego ligado à Catedral de Notre-Dame de Paris, foi um dos primeiros compositores a usar a notação moderna e é considerado o primeiro grande compositor de polifonia na história da música ocidental. Foi sucedido por Perotin, que desenvolveu ainda mais a técnica polifônica, escrevendo músicas a 3 e 4 vozes.
 
     Ouça *Nostrum Organum Duplum*:
     """)
@@ -143,11 +141,21 @@ A música medieval foi o ponto de partida para a polifonia (várias vozes simult
 
 
     # RENASCIMENTO
-    st.subheader("🎨 Renascimento (1400–1600)")
+    st.header("🎨 Renascimento (1400–1600)")
 
     st.markdown("""
 Durante o Renascimento (séculos XV e XVI), a música acompanhou o espírito humanista da época, buscando equilíbrio, clareza e expressividade. Com o avanço da imprensa e o redescobrimento das artes clássicas, os compositores passaram a valorizar mais a **emoção humana**, a **beleza sonora** e a **técnica polifônica** — ou seja, várias vozes independentes cantando em harmonia.
+    """)
 
+    
+    st.markdown("""
+    **🎼 Características técnicas:**
+    - Polifonia rica e imitativa
+    - Equilíbrio entre vozes
+    - Música vocal e instrumental se desenvolvendo paralelamente
+
+ """)
+    st.markdown("""
 A música sacra ainda era muito presente, com missas e motetos mais elaborados e refinados. No entanto, a música **profana** ganhou força, com madrigais, chansons e villanellas tratando de temas cotidianos, amorosos e até humorísticos.
 
 Compositores como **Josquin des Prez**, **Palestrina**, **Orlando di Lasso** e **William Byrd** foram mestres em criar texturas vocais ricas, onde a música seguia de perto os sentimentos e significados do texto.
@@ -157,38 +165,48 @@ Instrumentos como o alaúde, o cravo e a viola da gamba se popularizaram, e a m�
 O Renascimento marcou uma transição da música como ferramenta da fé para a música como forma de arte e expressão individual.
 """)
 
+    st.subheader("**Josquin des Prez (1455–1521)**")
     st.markdown("""
-    **🎼 Características técnicas:**
-    - Polifonia rica e imitativa
-    - Equilíbrio entre vozes
-    - Música vocal e instrumental se desenvolvendo paralelamente
-
-    **👤 Compositores:**
-    - **Josquin des Prez (1455–1521):** foi um dos compositores mais influentes do Renascimento. Nascido possivelmente na região da atual fronteira entre França e Bélgica (então parte dos Países Baixos borgonheses), ele é considerado o maior compositor de sua época, comparado frequentemente a figuras como Michelangelo ou Leonardo da Vinci, mas na música. Josquin se destacou pela inovação e refinamento da polifonia vocal, isto é, várias vozes cantando melodias diferentes que se combinam harmonicamente. 
+    Foi um dos compositores mais influentes do Renascimento. Nascido possivelmente na região da atual fronteira entre França e Bélgica (então parte dos Países Baixos borgonheses), ele é considerado o maior compositor de sua época, comparado frequentemente a figuras como Michelangelo ou Leonardo da Vinci, mas na música. Josquin se destacou pela inovação e refinamento da polifonia vocal, isto é, várias vozes cantando melodias diferentes que se combinam harmonicamente. 
   
 
     Ouça *Ave Maria ... virgo serena*:
     """)
+
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751486334/pcvqhxhbll6eacvxtlv5.mp3")
 
-    st.markdown("""- **Giovanni Palestrina (1525–1594):** Palestrina foi um compositor italiano do Renascimento, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais. Seu estilo serviu como modelo pedagógico no estudo de contraponto, sendo estudado até hoje em conservatórios
 
-    Ouça *Missa Papae Marcelli*:
+    st.subheader("**Giovanni Palestrina (1525–1594)** ")
+    st.markdown("""Palestrina foi um compositor italiano do Renascimento, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais. Seu estilo serviu como modelo pedagógico no estudo de contraponto, sendo estudado até hoje em conservatórios
+
+Ouça *Missa Papae Marcelli*:
     """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751488772/g0cuwgdeglakntyy6rgc.mp3")
 
-    st.markdown("""- **Orlando di Lasso (1532–1594):** foi um compositor francês do Renascimento, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
 
-    Ouça *Lagrime di San Pietro: I. Il magnanimo Pietro*:
+    st.subheader("**Orlando di Lasso (1532–1594)** ")
+    st.markdown("""foi um compositor francês do Renascimento, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+Ouça *Lagrime di San Pietro: I. Il magnanimo Pietro*:
     """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751497992/cwezwqiiugdezve7uecr.mp3")
 
     # BARROCO
-    st.subheader("🎻 Barroco (1600–1750)")
+    st.header("🎻 Barroco (1600–1750)")
 
     st.markdown("""
 O período Barroco foi uma era de grande inovação na música. Marcado pelo exagero, contraste e emoção intensa, o estilo barroco refletia o esplendor das cortes e da Igreja. A música tornou-se mais dramática, expressiva e ornamentada, com destaque para a criação de formas e gêneros que influenciariam toda a música ocidental posterior.
+    """)
 
+    st.markdown("""
+    **🎼 Características técnicas:**
+    - Baixo contínuo, uso de tonalidade maior/menor
+    - Contraponto elaborado
+    - Nasce a ópera, oratório e concerto
+    """)
+
+
+    st.markdown("""
 Foi nesse período que surgiram a **ópera**, o **concerto**, a **sonata** e a **fuga**. A música instrumental ganhou status de igualdade com a vocal, com compositores explorando a virtuosidade dos instrumentos e a riqueza das combinações sonoras.
 
 O **baixo contínuo** (acompanhamento harmônico constante) passou a ser a base das composições, e a **tonalidade** (sistema de escalas maior e menor) se consolidou como linguagem musical dominante.
@@ -198,141 +216,140 @@ Grandes nomes como **Johann Sebastian Bach**, **George Frideric Handel**, **Anto
 A música barroca procurava mover o ouvinte, exaltando sentimentos e criando atmosferas grandiosas — seja nos palácios, nas igrejas ou nos teatros.
 """)
 
-    st.markdown("""
-    **🎼 Características técnicas:**
-    - Baixo contínuo, uso de tonalidade maior/menor
-    - Contraponto elaborado
-    - Nasce a ópera, oratório e concerto
 
-    **👤 Compositores:**
+    st.subheader("**Claudio Monteverdi (1567–1643)**")
+    st.markdown("""Sua carreira reflete a transformação profunda que a música europeia sofria ao sair do Renascimento e caminhar para o Barroco. Monteverdi foi o primeiro a aplicar emoção intensa à música polifônica, criando o que ele chamou de "Seconda Prattica" (segunda prática), onde a música serve ao texto, não o contrário. Monteverdi foi um dos primeiros compositores a escrever óperas completas e, por isso, é considerado como o pai da ópera e o pioneiro do Barroco. 
 
-    """)
-    st.markdown("""- **J.S. Bach:**""")
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
-
-    st.markdown("""- **Vivaldi:** Vivaldi foi um compositor italiano do Barroco, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
-
-    Ouça uma de suas músicas:
+Ouça uma de suas óperas mais famosas *L`Orfeo*:
     """)
     st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
-    st.markdown("""- **Handel:** Handel foi um compositor alemão do Barroco, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
 
-    Ouça uma de suas músicas:
+    st.subheader("**Vivaldi (1678-1741)**")
+    st.markdown("""Um dos mais influentes músicos do Barroco e foi pioneiro no desenvolvimento do concerto instrumental, especialmente o concerto solo para violino. Ele escreveu mais de 500 concertos, além de óperas, cantatas, obras sacras e música de câmara. Como exímio violinista, suas obras exploram as possibilidades técnicas do instrumento, abrindo caminho para o concerto como forma de exibição da habilidade do solista. 
+                
+Sua obra mais famosa, *Quatro Estações*, parte de um conjunto de 12 concertos onde Cada uma das estações (Primavera, Verão, Outono, Inverno) é representada por um concerto para violino. Cada peça é acompanhada de um soneto (provavelmente escrito pelo próprio Vivaldi) que descreve as cenas e sensações que a música retrata — como pássaros cantando, tempestades, brisa do outono, frio cortante etc.
+
+Ouça *Four Seasons*:
     """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1752259605/nhxy9zxf4qdyn9y8c8f3.mp3")
 
-    st.markdown("""- **Monteverdi:** Monteverdi foi um compositor italiano do Barroco, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+    st.subheader("**J.S. Bach (1685-1750)** ")
 
-    Ouça uma de suas músicas:
-    """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+    st.markdown("""É considerado um dos maiores gênios da história da música ocidental. Ele foi o ápice do estilo barroco, sintetizando com maestria todas as técnicas musicais de sua época — especialmente o contraponto, em que diferentes linhas melódicas se entrelaçam de forma complexa e harmônica. 
+                
+Bach levou à perfeição gêneros como a fuga, a cantata, o concerto e a missão coral, criando obras que uniam profundidade espiritual, rigor técnico e beleza emocional. Sua música é ao mesmo tempo racional e sensível, estruturada e expressiva.
+    
+Uma de suas principais obras, *O Cravo Bem Temperado*, é uma coleção de prelúdios e fugas dividido em dois livro contendo 24 pares de peças — um prelúdio seguido de uma fuga — em todas as tonalidades maiores e menores, totalizando 48 peças ao todo.
 
-    st.markdown("""- **Purcell:** Purcell foi um compositor inglês do Barroco, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+O principal propósito de *O Cravo Bem Temperado* era mostrar a versatilidade do sistema tonal (uso das escalas maiores e menores) em todos os tons possíveis. Na época, existia um desafio técnico: a afinação dos instrumentos de teclado. Bach demonstrou que, com um sistema de afinação "temperado", era possível tocar em todas as tonalidades sem soar desafinado. Esse sistema temperado é o precursor do sistema de afinação moderna, em que o teclado é dividido de forma equilibrada para permitir modulações sem problemas sonoros.  
+                
+Ouça uma de suas produções *Prelude and Fugue: No. 18 in G-Sharp Minor, BWV 887*:
+                """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1752254587/bmf9qfbd5qqpjmdcncgn.mp3")
 
-    Ouça uma de suas músicas:
-    """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
     # CLÁSSICO
-    st.subheader("🎼 Clássico (1750–1820)")
+    st.header("🎼 Clássico (1750–1820)")
 
     st.markdown("""
-O período Clássico (aproximadamente 1750–1820) buscou simplicidade, clareza e equilíbrio — em contraste com o estilo ornamentado do Barroco. Inspirados pelos ideais do Iluminismo, os compositores valorizavam a razão, a ordem e a forma musical bem definida.
+O período Clássico buscou simplicidade, clareza e equilíbrio — em contraste com o estilo ornamentado do Barroco. Inspirados pelos ideais do Iluminismo, os compositores valorizavam a razão, a ordem e a forma musical bem definida.
+    """)
 
+    st.markdown("""
 Foi nesse contexto que se consolidaram gêneros como a **sinfonia**, o **quarteto de cordas** e a **sonata**, além da evolução da **forma sonata**, usada como estrutura principal nos movimentos de muitas obras instrumentais.
 
-A música tornou-se mais acessível, voltada não só à aristocracia, mas também à nova burguesia em ascensão. A orquestra se estabilizou em sua formação, e o **piano** substituiu o cravo como instrumento dominante nos salões e nas casas.
-
-Os principais compositores desse período foram **Joseph Haydn**, conhecido como o “pai da sinfonia”; **Wolfgang Amadeus Mozart**, com sua combinação de perfeição formal e beleza emocional; e **Ludwig van Beethoven**, que começou no estilo clássico, mas já antecipava a intensidade do Romantismo.
-
-A música clássica equilibra razão e emoção, estrutura e expressão — refletindo a harmonia idealizada do século XVIII.
 """)
 
     st.markdown("""
     **🎼 Características técnicas:**
-    - Forma sonata, simetria e equilíbrio
-    - Textura homofônica
-    - Crescimento da orquestra sinfônica
-
-    **👤 Compositores:**
-    - **Mozart:** Mozart foi um compositor austríaco do Clássico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
-
-    Ouça uma de suas músicas:
+    - Harmonia tonal com progressões previsíveis e cadências claras.
+    - Uso da forma sonata como estrutura central.
+    - Desenvolvimento da orquestra clássica, com seções definidas de cordas, sopros e percussão leve.
+                
     """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
-    st.markdown("""- **Haydn:** Haydn foi um compositor austríaco do Clássico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+    st.markdown("""
+A música tornou-se mais acessível, voltada não só à aristocracia, mas também à nova burguesia em ascensão. A orquestra se estabilizou em sua formação, e o **piano** substituiu o cravo como instrumento dominante nos salões e nas casas.
 
-    Ouça uma de suas músicas:
+Ao contrário do Barroco, onde as óperas falavam de mitologia e reis, o período clássico trouxe personagens comuns e situações sociais reais, como em As Bodas de Fígaro (Mozart), que mostra criados desafiando senhores.
+
+""")
+
+    st.subheader("**Mozart (1756–1791)** ")
+    st.markdown("""
+    Considerado um gênio precoce, ele marcou profundamente o período clássico e influenciou gerações com sua musicalidade intuitiva, sua riqueza expressiva e seu domínio técnico absoluto.
+                
+Mozart é o modelo do Classicismo musical: equilíbrio formal, clareza melódica e perfeição harmônica. Mas sua música vai muito além da beleza — ela é profundamente expressiva, emocionalmente inteligente e, muitas vezes, teatral e humana.
+                
+Mozart escreveu mais de 20 óperas e 40 sinfonias, sendo que várias delas são pilares do repertório até hoje. Foi o primeiro a trazer personagens realistas, com falhas e sentimentos humanos, para o palco da ópera. Antes, os personagens eram idealizados ou míticos. Mozart é considerado por muitos o maior compositor da história ocidental pela sua habilidade de unir complexidade técnica e profunda humanidade.
+    
+Ouça uma de suas sinfonias *Symphony No. 25 in G minor*:
     """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1752286273/bvzu89jgalpsqucqo3gt.mp3")
 
-    st.markdown("""- **Beethoven (1ª fase):** Beethoven foi um compositor alemão do Clássico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+    st.subheader("**Beethoven (1770–1827)**")
+    st.markdown("""Redefiniu o papel da música, transformando-a de uma arte cortesã e decorativa em um veículo de expressão pessoal, emoção profunda e ideia filosófica. Ele é a figura de transição entre o Classicismo e o Romantismo, e sua vida e obra são uma jornada intensa de luta, superação, inovação e legado eterno.
+                
+ Escreveu em praticamente todos os gêneros musicais da época: sinfonias, sonatas, quartetos, concertos, óperas e música coral. Mas o que o diferencia não é a quantidade, e sim o impacto profundo de sua arte. 
+                
+Beethoven via a música como drama puro, e é o primeiro compositor a tratar a estrutura musical como uma narrativa emocional. Isso influenciou profundamente os românticos: temas como luta, superação, liberdade e transcendência se tornaram o novo padrão.
 
-    Ouça uma de suas músicas:
+Ouça uma de suas obras *Symphony No. 5, Op. 67*:
     """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1752287831/uadibd8ti2vxuybt0hwi.mp3")
 
     # ROMÂNTICO
-    st.subheader("🎭 Romântico (1820–1900)")
+    st.header("🎭 Romântico (1820–1900)")
 
     st.markdown("""
 O período Romântico foi marcado pela valorização da emoção, da imaginação e da subjetividade. A música tornou-se uma forma profunda de expressão individual, refletindo paixões, dramas, sonhos e até revoltas sociais.
 
 Os compositores romperam com as regras rígidas do Classicismo e buscaram mais **liberdade formal**, **variedade de timbres** e **intensidade emocional**. A orquestra cresceu em tamanho e em cores sonoras, permitindo paisagens sonoras mais ricas e dramáticas.
-
-Temas como **amor trágico**, **natureza**, **heroísmo**, **nacionalismo** e **misticismo** tornaram-se comuns. Muitos músicos usaram suas obras para expressar sentimentos patrióticos ou inspirados em lendas e literaturas de seus países.
-
-Destaques do período incluem **Frédéric Chopin**, com suas peças poéticas para piano; **Franz Schubert**, mestre da canção (lied); **Johannes Brahms**, que unia emoção com forma; **Richard Wagner**, com suas óperas monumentais; e **Pyotr Tchaikovsky**, que combinava intensidade russa com delicadeza melódica.
-
-A música romântica fala direto ao coração — é intensa, pessoal e muitas vezes arrebatadora, buscando tocar o ouvinte em sua alma mais profunda.
-""")
-
+                
+                """)
+    
     st.markdown("""
     **🎼 Características técnicas:**
     - Harmonia cromática, melodia expressiva
     - Nacionalismo e individualismo
     - Orquestras maiores e mais dramáticas
-
-    **👤 Compositores:**
-    - **Chopin:** Chopin foi um compositor polonês do Romântico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
-
-    Ouça uma de suas músicas:
-    """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
-
-    st.markdown("""- **Wagner:** Wagner foi um compositor alemão do Romântico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
-
-    Ouça uma de suas músicas:
-    """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
-
-    st.markdown("""- **Tchaikovsky:** Tchaikovsky foi um compositor russo do Romântico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
-
-    Ouça uma de suas músicas:
-    """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
-
-    st.markdown("""- **Verdi:** Verdi foi um compositor italiano do Romântico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
-
-    Ouça uma de suas músicas:
-    """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
-
-    st.markdown("""- **Brahms:** Brahms foi um compositor alemão do Romântico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
-
-    Ouça uma de suas músicas:
-    """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
-
-    st.markdown("""- **Liszt:** Liszt foi um compositor húngaro do Romântico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
-
-    Ouça uma de suas músicas:
-    """)
-    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
-
+""")
     
+    st.markdown("""
+
+Temas como **amor trágico**, **natureza**, **heroísmo**, **nacionalismo** e **misticismo** tornaram-se comuns. Muitos músicos usaram suas obras para expressar sentimentos patrióticos ou inspirados em lendas e literaturas de seus países.
+
+A música romântica fala direto ao coração — é intensa, pessoal e muitas vezes arrebatadora, buscando tocar o ouvinte em sua alma mais profunda.
+""")
+
+    st.subheader("**Chopin**")
+
+    st.markdown("""
+
+    Foii um compositor polonês do Romântico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+Ouça uma de suas músicas:
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.subheader("**Wagner**")
+
+    st.markdown("""Wagner foi um compositor alemão do Romântico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+Ouça uma de suas músicas:
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+    st.subheader("**Tchaikovsky**")
+
+    st.markdown("""Foi um compositor russo do Romântico, considerado um dos maiores compositores de sua época. Ele é conhecido por sua habilidade em combinar a simplicidade da música popular com a complexidade da música erudita, criando uma forma de música que era acessível a todos os níveis sociais.
+
+Ouça uma de suas músicas:
+    """)
+    st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+
     st.header("🎼 Estilos Musicais Contemporâneos")
 
     st.markdown("""
@@ -668,36 +685,32 @@ def acordes():
 *Obs: Há um total de 60 combinações possíveis para as tétrades nos 12 tons.*
     """)
 
-    st.image("images/tetrade-maior7+.png", caption="Acordes de Sol Maior com +7", use_column_width=True)
+    st.image("images/acordes-tetrades.png", caption="Acordes de Sol Maior com +7", use_column_width=True)
 
-    st.image("images/tetrade-dominante7.png", caption="Acordes de Sol Maior com Sétima Maior", use_column_width=True)
-
-    st.image("images/tetrade-menor7.png", caption="Acordes de Sol Menor com Sétima Maior", use_column_width=True)
-
-    st.image("images/tetrade-meiodiminuta.png", caption="Acordes de Sol Meio-Diminuto", use_column_width=True)
-
-    st.subheader("🎼 Arpejos")
+    st.header("🎼 Arpejos")
 
     st.markdown("""
     Um **arpejo** é quando as notas de um acorde são tocadas **sequencialmente**, uma após a outra, em vez de simultaneamente. Isso cria um efeito melódico com base na harmonia do acorde e é muito usado em solos, acompanhamento e improvisação.
 
-    Os arpejos podem seguir o mesmo formato dos acordes (tríades, tétrades, etc.) e são essenciais para músicos que desejam entender e aplicar harmonia de forma fluida em seus instrumentos.
-
-    | Tipo de Arpejo        | Fórmula                  | Exemplo (notas)     | Aplicação comum                         |
-    |------------------------|---------------------------|----------------------|-----------------------------------------|
-    | Arpejo Maior           | Tônica - 3ª Maior - 5ª Justa | C – E – G            | Pop, rock, clássico                     |
-    | Arpejo Menor           | Tônica - 3ª Menor - 5ª Justa | A – C – E            | Blues, jazz, música triste              |
-    | Arpejo Dominante (7)   | T - 3M - 5J - 7m             | G – B – D – F        | Jazz, modulações, resoluções harmônicas|
-    | Arpejo Menor 7 (m7)    | T - 3m - 5J - 7m             | D – F – A – C        | Jazz, bossa nova, soul                  |
-    | Arpejo Diminuto        | T - 3m - 5d - 6M             | B – D – F – A♭       | Música de suspense, tensão harmônica   |
-
     Os arpejos também podem ser tocados de forma ascendente, descendente ou alternada, e são uma ferramenta essencial para explorar a sonoridade dos acordes no tempo.
     """)
+    st.subheader("Tríade Maior (1 - 3 - 5)")
+    st.image("images/Arpejo-triade-maior.png", caption="Representação visual das tríades", use_column_width=True)
+    st.subheader("Tríade Menor (1 - b3 - 5)")
+    st.image("images/Arpejo-triade-menor.png", caption="Representação visual das tríades", use_column_width=True)
+    st.subheader("Tétrade Maior (1 - 3 - 5 - 7)")
+    st.image("images/Arpejo-tetrade-maior.png", caption="Representação visual das tríades", use_column_width=True)
+    st.subheader("Tétrade Menor (1 - b3 - 5 - b7)")
+    st.image("images/Arpejos-tetrade-menor.png", caption="Representação visual das tríades", use_column_width=True)
+    st.subheader("Tétrade Dominante (1 - 3 - 5 - b7)")
+    st.image("images/Arpejos-tetrade-dominante.png", caption="Representação visual das tríades", use_column_width=True)
+    st.subheader("Tétrade Meia-Diminuta (1 - b3 - b5 - b7)")
+    st.image("images/Arpejos-tetrade-meia-diminuta.png", caption="Representação visual das tríades", use_column_width=True)
+    st.subheader("Tétrade Aumentada (1 - 3 - #5 - 7)")
+    st.image("images/Arpejos-tetrade-aumentada.png", caption="Representação visual das tríades", use_column_width=True)
+    st.subheader("Tétrade Menor com Sétima Maior (1 - b3 - 5 - 7)")
+    st.image("images/Arpejos-tetrade-menor-com-setima-maior.png", caption="Representação visual das tríades", use_column_width=True)
 
-    st.image("images/Arpejos Tríades 5ª Corda.png", caption="Representação visual das tríades", use_column_width=True)
-    st.image("images/Arpejos Tríades 6ª Corda.png", caption="Representação visual das tríades", use_column_width=True)
-
-    
 
 def harmonico():
     st.header("🎼 Campo Harmônico")
