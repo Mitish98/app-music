@@ -16,7 +16,7 @@ cloudinary.config(
 
 
 # Upload do arquivo MP3
-response = cloudinary.uploader.upload("audios/Beethoven - Symphony No. 5, Op. 67 (1808).mp3", resource_type="video")
+response = cloudinary.uploader.upload("audios/Tchaikovsky - Symphony No. 5 in E Minor Op. 64 (Barenboim & West-Eastern Divan Orchestra in Geneva).mp3", resource_type="video")
 
 print("URL pública:", response['secure_url'])
 
