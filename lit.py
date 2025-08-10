@@ -2,6 +2,19 @@ import streamlit as st
 import streamlit.components.v1 as components
 import os
 from PIL import Image
+import base64
+
+def exibir_pdf(pdf_path):
+    if os.path.exists(pdf_path):
+        with open(pdf_path, "rb") as f:
+            base64_pdf = base64.b64encode(f.read()).decode("utf-8")
+        st.markdown(
+            f'<iframe src="data:application/pdf;base64,{base64_pdf}" '
+            'width="100%" height="600" type="application/pdf"></iframe>',
+            unsafe_allow_html=True
+        )
+    else:
+        st.error(f"PDF não encontrado: {pdf_path}")
 
 CODIGO_ACESSO = "MEUCODIGO123"  # Troque para o código que vai enviar na Hotmart
 
@@ -356,27 +369,500 @@ Ouça uma de suas sinfonias *Symphony No. 5 in E Minor Op. 64*:
         st.header("🎼 Estilos Musicais Contemporâneos")
 
         st.markdown("""
-        Cada cultura desenvolveu padrões rítmicos próprios que influenciaram a música ocidental:
+        A música é uma linguagem universal, moldada por séculos de intercâmbio entre culturas ao redor do mundo, sendo sua história muito mais abrangente do que o estudado pela tradição europeia. Cada sociedade desenvolveu estruturas e padrões rítmicos únicos que contribuíram de forma profunda para a diversidade da música contemporânea, veja alguns exeplos ao redor do mundo:
 
-        - **Brasil**: Samba, Baião, Maracatu, Frevo
-        - **África Ocidental**: Ritmos polirrítmicos com djembês
-        - **Oriente Médio**: Usos complexos de ciclos rítmicos (maqams)
-        - **Índia**: Talas (estruturas rítmicas com até 108 tempos)
+        - **Brasil**: Fruto de um intenso encontro entre povos indígenas, africanos e europeus, a música brasileira desenvolveu uma riqueza rítmica ímpar. Estilos como samba, baião, maracatu e frevo nasceram da vivência popular e da resistência cultural, revelando dinâmicas corporais, rituais e afetos codificados em padrões complexos de percussão e dança.
+        - **África Subsaariana Ocidental**: Em regiões como Mali, Senegal, Gana e Nigéria, a música é profundamente interligada à vida comunitária e espiritual. Os ritmos são frequentemente polirrítmicos, isto é, combinam camadas diferentes de pulsos e acentos simultâneos, criados com instrumentos como djembês, talking drums, balafons e kora. Essa complexidade rítmica foi uma das bases do desenvolvimento do jazz, do funk, do reggae e da música afro-brasileira.
+        - **Oriente Médio e Norte da África**: Países como Egito, Turquia, Irã, Síria e Marrocos abrigam tradições musicais milenares que combinam modos melódicos (maqamat) com estruturas rítmicas intricadas (iqa'at ou usul). Esses ciclos rítmicos variam em duração, acentuação e função estética, muitas vezes utilizados em contextos litúrgicos, poéticos e cerimoniais. Sua influência pode ser percebida em fusões modernas, como o jazz modal, a música eletrônica experimental e a world music.
+        - **Índia**: A música clássica indiana, tanto no sistema Carnático (sul) quanto no Hindustani (norte), desenvolveu sistemas rítmicos avançadíssimos conhecidos como talas. Esses ciclos podem ter 3, 7, 9, 16 ou até mais de 100 tempos, com subdivisões internas sofisticadas e ornamentações que desafiam a regularidade métrica. O domínio do tala exige um profundo senso temporal e uma abordagem meditativa do ritmo, e inspirou artistas ocidentais como The Beatles, John McLaughlin e Philip Glass.
 
-        Compreender esses ritmos amplia a percepção e a criatividade musical. Veja mais detalhes de alguns dos principais estilos da música contemporânea: 
+        Compreender esses ritmos amplia a percepção e a criatividade musical. Veja mais detalhes de alguns dos principais estilos da música contemporânea ao redor do mundo: 
         """)
         st.subheader("Gospel")
-        st.subheader("Blues")
-        st.subheader("Country")
-        st.subheader("Rock")
-        st.subheader("Jazz")
-        st.subheader("Pop")
-        st.subheader("Bossa-Nova")
-        st.subheader("Samba")
-        st.subheader("Choro")
-        st.subheader("Baião")
-        st.subheader("Reggae")
+        st.markdown("Essas músicas vêm de spirituals, work songs e early gospel do século XIX e início do século XX, e foram registradas por vozes como Mahalia Jackson, Thomas A. Dorsey, Sister Rosetta Tharpe, entre outros. Essas músicas representam as raízes espirituais e musicais da cultura afro-americana que foram precursoras gêneros como o blues e o country.")
+        st.markdown("""
 
+**1. Swing Low, Sweet Chariot**
+
+Originado dos spirituals do século XIX. Cantado por escravizados no sul dos EUA. Base harmônica e melódica fortemente usada no blues e country.
+
+**2. Wade in the Water**
+
+Canção espiritual ligada ao movimento abolicionista. Ritmo marcante, usada por artistas de blues e jazz.
+
+**3. This Train (Is Bound for Glory)**
+
+Famosamente interpretada por Sister Rosetta Tharpe. Influenciou diretamente o rock’n’roll. Woody Guthrie, Elvis e outros gravaram versões.
+
+**4. Down by the Riverside**
+
+Spiritual de protesto com refrão repetitivo. Fortemente adotado pelo jazz tradicional e pelo folk.
+
+**5. Precious Lord, Take My Hand – Thomas A. Dorsey**
+                    
+Considerado o pai do gospel moderno, Dorsey era pianista de blues. Essa canção influenciou Ray Charles, Sam Cooke e Elvis Presley.
+
+**6. I’ll Fly Away – Albert E. Brumley**
+
+Um dos hinos gospel mais gravados na música country. Aparece em trilhas como "O Brother, Where Art Thou?".
+
+**7. When the Saints Go Marching In**
+
+Popularizado por Louis Armstrong. Mistura gospel, jazz e marching band. Hino universal do sul dos EUA.
+
+**8. Were You There (When They Crucified My Lord)**
+
+Espiritual do século XIX. Forte influência na música country espiritual e blues.
+
+**9. Go Down Moses**
+
+Cantado pelos escravizados como símbolo de liberdade. Seu tom grave e narrativo influenciou o canto de lamento do blues.
+
+**10. Didn’t It Rain**
+
+Gravada por Mahalia Jackson e Sister Rosetta Tharpe. Tem swing, estrutura de chamada e resposta, e base harmônica que influenciou o soul.
+
+""")
+        st.subheader("Blues")
+        st.markdown("O blues surgiu no sul dos Estados Unidos no final do século XIX, profundamente enraizado nas canções de trabalho, spirituals e lamentos das comunidades afro-americanas. Com estruturas harmônicas simples e letras que expressam dor, resistência e ironia, o blues é a base de inúmeros gêneros modernos como o jazz, o rock, o soul e o R&B.")
+        st.markdown("""
+
+        **1. Cross Road Blues – Robert Johnson**
+
+        Gravada em 1936, essa canção imortalizou o mito do pacto com o diabo. Influenciou profundamente o rock, especialmente artistas como Eric Clapton e The Rolling Stones.
+
+        **2. Hellhound on My Trail – Robert Johnson**
+
+        Expressa angústia e perseguição espiritual. É uma das músicas mais intensas do Delta Blues e inspiração para músicos do século XX inteiro.
+
+        **3. I'm Your Hoochie Coochie Man – Muddy Waters**
+
+        Símbolo do Chicago Blues elétrico. Composição de Willie Dixon, fundou a estética do blues urbano e influenciou o rock britânico.
+
+        **4. The Thrill Is Gone – B.B. King**
+
+        Uma balada de blues moderno com orquestração sofisticada. Representa o ápice emocional e técnico do gênero.
+
+        **5. Smokestack Lightning – Howlin’ Wolf**
+
+        Com riff hipnótico e vocal poderoso, influenciou diretamente o rock psicodélico e o blues-rock dos anos 60.
+
+        **6. Boom Boom – John Lee Hooker**
+
+        Mistura falada e cantada com um groove irresistível. Foi adotada por bandas de rock e soul, como The Animals.
+
+        **7. Sweet Home Chicago – Robert Johnson**
+
+        Um dos blues mais regravados da história. Símbolo da migração de músicos negros do sul para o norte industrial dos EUA.
+
+        **8. Mannish Boy – Muddy Waters**
+
+        Com estrutura de chamada e resposta, tornou-se hino da afirmação negra no blues. Amplamente usado em filmes e trilhas sonoras.
+
+        **9. Got My Mojo Working – Muddy Waters**
+
+        Com energia crua e magnetismo, essa faixa definiu o som de Chicago e abriu caminhos para o rhythm & blues.
+
+        **10. Stormy Monday – T-Bone Walker**
+
+        Uma das primeiras fusões entre o blues e o jazz. Clássico absoluto para guitarristas e pianistas de blues, jazz e soul.
+
+        """)
+
+        st.subheader("Country")
+        st.markdown("O country surgiu no início do século XX nos estados do sul dos EUA, misturando música folclórica britânica, spirituals e blues rural. Caracteriza-se por melodias simples, narrativas diretas e uso do violão, banjo e fiddle.")
+        st.markdown("""
+
+        **1. Blue Yodel (T for Texas) – Jimmie Rodgers**
+
+        Pioneiro do country, misturou yodel com blues e lançou as bases do gênero.
+
+        **2. I’m So Lonesome I Could Cry – Hank Williams**
+
+        Poética e melancólica, essa balada de 1949 é um marco do country tradicional.
+
+        **3. Your Cheatin’ Heart – Hank Williams**
+
+        Símbolo do country honky-tonk, com melodia simples e letra sobre traição amorosa.
+
+        **4. Folsom Prison Blues – Johnny Cash**
+
+        Mistura country, folk e rockabilly. Sua batida imita o som dos trilhos de trem.
+
+        **5. Crazy – Patsy Cline**
+
+        Composta por Willie Nelson, eternizada pela interpretação suave e melancólica de Cline.
+
+        **6. I Walk the Line – Johnny Cash**
+
+        Um dos maiores hits do gênero, com uma progressão harmônica única e ritmo constante.
+
+        **7. Hey, Good Lookin’ – Hank Williams**
+
+        Canção animada e popular, considerada um standard country com apelo popular.
+
+        **8. Wildwood Flower – The Carter Family**
+
+        Um hino do country rural com dedilhado tradicional que influenciou gerações.
+
+        **9. Orange Blossom Special – Ervin T. Rouse**
+
+        Instrumental rápido e técnico, conhecido como o “hino não oficial do fiddle”.
+
+        **10. Take Me Home, Country Roads – John Denver**
+
+        Canção icônica dos anos 70 com forte nostalgia e progressão acessível ao violão.
+
+        """)
+
+        st.subheader("Rock")
+        st.markdown("O rock emergiu nos anos 1950 como uma fusão de blues, country e R&B. Com batida forte e guitarra em destaque, tornou-se a trilha sonora de mudanças sociais e culturais do século XX.")
+        st.markdown("""
+
+        **1. Johnny B. Goode – Chuck Berry**
+
+        Guitarra elétrica em destaque, ritmo pulsante e letra sobre ascensão social. Base do rock moderno.
+
+        **2. Tutti Frutti – Little Richard**
+
+        Energia explosiva e vocal rasgado. Um dos primeiros sucessos do rock’n’roll.
+
+        **3. Jailhouse Rock – Elvis Presley**
+
+        Mistura de rockabilly com performance teatral. Um marco da cultura pop.
+
+        **4. Rock Around the Clock – Bill Haley & His Comets**
+
+        Símbolo do nascimento do rock. Popularizou o gênero nos cinemas e rádios.
+
+        **5. Heartbreak Hotel – Elvis Presley**
+
+        Uma balada lenta e profunda que introduziu o dramatismo no rock.
+
+        **6. Whole Lotta Shakin’ Goin’ On – Jerry Lee Lewis**
+
+        Piano frenético, performance ousada e energia contagiante.
+
+        **7. That’ll Be the Day – Buddy Holly**
+
+        Estilo limpo e melódico, com influência country. Fundamentou o pop-rock.
+
+        **8. Hound Dog – Elvis Presley (original de Big Mama Thornton)**
+
+        Versão explosiva que mistura R&B e rock com atitude.
+
+        **9. La Bamba – Ritchie Valens**
+
+        Mistura de rock’n’roll com música folclórica mexicana. Uma ponte entre culturas.
+
+        **10. Good Golly, Miss Molly – Little Richard**
+
+        Vocal visceral, piano marcante e estrutura simples. Influência direta no soul e no hard rock.
+
+        """)
+
+        st.subheader("Jazz")
+        st.markdown("O jazz nasceu em Nova Orleans, fundindo blues, ragtime e música europeia. Marcado pela improvisação, harmonia sofisticada e swing, o jazz influenciou praticamente todos os gêneros modernos.")
+        st.markdown("""
+
+        **1. Take the 'A' Train – Duke Ellington / Billy Strayhorn**
+
+        Hino do jazz de big band, com swing clássico e sofisticação harmônica.
+
+        **2. All of Me – Gerald Marks & Seymour Simons**
+
+        Standard das jam sessions, com estrutura acessível e melodia marcante.
+
+        **3. Autumn Leaves – Joseph Kosma**
+
+        Popular entre iniciantes e profissionais. Ótimo para estudar modulações e improviso.
+
+        **4. Blue in Green – Miles Davis / Bill Evans**
+
+        Balada introspectiva e modal do álbum “Kind of Blue”.
+
+        **5. So What – Miles Davis**
+
+        Representa o jazz modal. Simples, profundo e essencial ao piano.
+
+        **6. Summertime – George Gershwin**
+
+        Ária de ópera que virou jazz standard. Regravada em dezenas de estilos.
+
+        **7. Round Midnight – Thelonious Monk**
+
+        Complexa e melancólica. Um dos pilares do jazz moderno.
+
+        **8. My Funny Valentine – Rodgers & Hart**
+
+        Standard romântico, interpretado por Chet Baker e outros ícones.
+
+        **9. Fly Me to the Moon – Bart Howard**
+
+        Popularizado por Sinatra, mescla balada com swing.
+
+        **10. Satin Doll – Duke Ellington**
+
+        Melodia envolvente e progressão harmônica rica. Clássico do piano e guitarra.
+
+        """)
+
+        st.subheader("Pop")
+        st.markdown("A música pop abrange melodias acessíveis, refrões marcantes e produção polida. Desenvolveu-se a partir do rock, do soul e da música popular dos anos 1950 em diante.")
+        st.markdown("""
+
+        **1. Yesterday – The Beatles**
+
+        Balada melancólica com violão e quarteto de cordas. Uma das músicas mais regravadas da história.
+
+        **2. Imagine – John Lennon**
+
+        Hino pacifista com piano marcante e letra universal.
+
+        **3. Let It Be – The Beatles**
+
+        Canção de consolo com progressão simples e poderosa.
+
+        **4. Billie Jean – Michael Jackson**
+
+        Revolucionou o pop com groove dançante, produção refinada e videoclipes inovadores.
+
+        **5. Like a Prayer – Madonna**
+
+        Pop com elementos gospel, polêmica e lirismo emocional.
+
+        **6. Every Breath You Take – The Police**
+
+        Pop/rock com atmosfera sombria e riffs marcantes.
+
+        **7. Hallelujah – Leonard Cohen / Jeff Buckley**
+
+        Balada espiritual e existencial, muito popular entre violonistas.
+
+        **8. Piano Man – Billy Joel**
+
+        Narrativa envolvente e melodia inesquecível. Ícone do pop com piano.
+
+        **9. Time After Time – Cyndi Lauper**
+
+        Balada sensível dos anos 80, muito usada em trilhas.
+
+        **10. What a Wonderful World – Louis Armstrong**
+
+        Pop nostálgico e orquestral, com mensagem otimista.
+
+        """)
+
+        st.subheader("Bossa-Nova")
+        st.markdown("A Bossa Nova surgiu no Brasil nos anos 1950, combinando samba com harmonia do jazz. Marcada pelo violão suave e letras intimistas, projetou a música brasileira internacionalmente.")
+        st.markdown("""
+
+        **1. Garota de Ipanema – Tom Jobim e Vinicius de Moraes**
+
+        Hino internacional da bossa-nova, com acordes sofisticados e melodia envolvente.
+
+        **2. Chega de Saudade – Tom Jobim e Vinicius de Moraes**
+
+        Considerada a primeira bossa-nova. Mudou a música brasileira.
+
+        **3. Desafinado – Tom Jobim e Newton Mendonça**
+
+        Defende a imperfeição poética da música. Clássico do gênero.
+
+        **4. Águas de Março – Tom Jobim**
+
+        Letra minimalista e estrutura cíclica. Inovadora e hipnótica.
+
+        **5. Corcovado – Tom Jobim**
+
+        Balada calma que exalta o silêncio e a paz.
+
+        **6. Samba de Uma Nota Só – Tom Jobim**
+
+        Explora o minimalismo melódico com harmonia rica.
+
+        **7. O Leãozinho – Caetano Veloso**
+
+        Canção intimista e delicada, muito tocada no violão.
+
+        **8. Manhã de Carnaval – Luiz Bonfá**
+
+        Conhecida mundialmente, também presente no cinema.
+
+        **9. Triste – Tom Jobim**
+
+        Menos conhecida, mas sofisticada e recorrente entre músicos de jazz.
+
+        **10. Insensatez – Tom Jobim e Vinicius de Moraes**
+
+        Lenta, trágica e harmônica. Um dos maiores exemplos de lirismo da bossa.
+
+        """)
+
+        st.subheader("Samba")
+        st.markdown("O samba é uma expressão essencial da cultura afro-brasileira, com raízes no batuque e no choro. Evoluiu em diversas formas: samba-canção, samba-enredo, samba de roda, partido-alto, entre outros.")
+        st.markdown("""
+
+        **1. Aquarela do Brasil – Ary Barroso**
+
+        Hino nacionalista e símbolo do samba-exaltação.
+
+        **2. Pelo Telefone – Donga**
+
+        Primeira gravação registrada como “samba” (1917).
+
+        **3. O Mundo É um Moinho – Cartola**
+
+        Poética, melancólica e refinada. Um dos sambas mais interpretados.
+
+        **4. As Rosas Não Falam – Cartola**
+
+        Lírica e delicada. Harmonia rica e melodia clássica.
+
+        **5. Feitiço da Vila – Noel Rosa e Vadico**
+
+        Retrato da boemia carioca e do talento lírico de Noel.
+
+        **6. Retalhos de Cetim – Benito di Paula**
+
+        Samba-canção com piano e sentimentalismo popular.
+
+        **7. Tiro ao Álvaro – Adoniran Barbosa**
+
+        Samba paulista com humor e sotaque do povo.
+
+        **8. Andança – Beth Carvalho**
+
+        Samba de roda moderno, forte e comovente.
+
+        **9. A Voz do Morro – Zé Keti**
+
+        Representa o samba como identidade e resistência.
+
+        **10. Canta, Canta Minha Gente – Martinho da Vila**
+
+        Autocelebração do samba e da cultura negra.
+
+        """)
+
+        st.subheader("Choro")
+        st.markdown("O choro é o primeiro gênero urbano tipicamente brasileiro. Instrumental, virtuoso e melódico, une elementos do lundu, da polca, da modinha e da música erudita europeia.")
+        st.markdown("""
+
+        **1. Carinhoso – Pixinguinha**
+
+        Hino afetivo do choro. Simples, expressivo e universal.
+
+        **2. Brasileirinho – Waldir Azevedo**
+
+        Um dos choros mais técnicos e conhecidos do cavaquinho.
+
+        **3. Tico-Tico no Fubá – Zequinha de Abreu**
+
+        Virtuosismo e velocidade. Famoso internacionalmente.
+
+        **4. Lamentos – Pixinguinha**
+
+        Choro sofisticado com harmonias impressionantes.
+
+        **5. Doce de Coco – Jacob do Bandolim**
+
+        Delicado e expressivo, ótimo para violão solo.
+
+        **6. Noites Cariocas – Jacob do Bandolim**
+
+        Choro com andamento acelerado e melodias marcantes.
+
+        **7. Ingênuo – Pixinguinha**
+
+        Sofisticado, com improviso e lirismo.
+
+        **8. Cochichando – Pixinguinha**
+
+        Interplay entre os instrumentos, típico do choro tradicional.
+
+        **9. Um a Zero – Pixinguinha e Benedito Lacerda**
+
+        Choro-desafio que simula uma disputa futebolística.
+
+        **10. Apanhei-te Cavaquinho – Ernesto Nazareth**
+
+        Ponte entre o choro e o piano popular brasileiro.
+
+        """)
+
+        st.subheader("Baião")
+        st.markdown("O baião surgiu no nordeste do Brasil, combinando ritmos indígenas, africanos e europeus. Com sanfona, zabumba e triângulo, influenciou forró, xaxado e até o tropicalismo.")
+        st.markdown("""
+
+        **1. Asa Branca – Luiz Gonzaga e Humberto Teixeira**
+
+        Hino do nordeste. Simples, emotiva e marcante.
+
+        **2. Baião – Luiz Gonzaga**
+
+        Definiu o estilo e apresentou o ritmo ao Brasil urbano.
+
+        **3. Xote das Meninas – Luiz Gonzaga**
+
+        Letra leve com andamento de xote. Muito tocada no São João.
+
+        **4. Juazeiro – Luiz Gonzaga**
+
+        Lamento sertanejo com voz marcante e melodia forte.
+
+        **5. Qui Nem Jiló – Luiz Gonzaga**
+
+        Retrata a tristeza e a saudade com simplicidade rural.
+
+        **6. O Fole Roncou – Dominguinhos**
+
+        Virtuosismo na sanfona e letra animada.
+
+        **7. Eu Só Quero um Xodó – Dominguinhos**
+
+        Romântico e popular, virou hit em várias gerações.
+
+        **8. Feira de Mangaio – Sivuca**
+
+        Virtuosismo instrumental e letra que retrata o nordeste.
+
+        **9. Sabiá – Luiz Gonzaga e Zé Dantas**
+
+        Lamento migratório com harmonia rica.
+
+        **10. São João na Roça – Luiz Gonzaga**
+
+        Atmosfera de festa junina, típica do baião original.
+
+        """)
+
+        st.subheader("Reggae")
+        st.markdown("Originado na Jamaica nos anos 1960, o reggae mistura ska, rocksteady e música afro-caribenha. Suas batidas sincopadas, letras conscientes e baixo pulsante o tornaram um fenômeno global.")
+        
+        st.markdown("""
+
+        **1. One Love – Bob Marley**
+        """)
+        exibir_pdf("cifras/Cifra Club - Bob Marley - One Love.pdf")
+
+        st.markdown("""
+
+        **2. Natural Mystic – Bob Marley**
+        """)
+        exibir_pdf("cifras/Cifra Club - Bob Marley - Natural Mystic.pdf")
+
+        st.markdown("""
+
+        **3. Roots, Rock, Reggae – Bob Marley**
+        """)
+        exibir_pdf("cifras/Cifra Club - Bob Marley - Roots, Rock, Reggae.pdf")
+
+        st.markdown("""
+
+        **4. Stir It Up – Bob Marley**
+        """)
+        exibir_pdf("cifras/Cifra Club - Bob Marley - Stir It Up.pdf")
 
     if choice == "Ritmos":
         st.title("Ritmos Musicais 🥁")
@@ -462,7 +948,14 @@ Ouça uma de suas sinfonias *Symphony No. 5 in E Minor Op. 64*:
         - **1 semitom (½ tom)**: distância entre duas notas adjacentes (ex: C para C♯)
         - **1 tom (2 semitons)**: distância equivalente a dois semitons (ex: C para D)
 
-        A classificação do intervalo depende da **quantidade de tons** entre as duas notas.
+        """)
+
+        st.markdown("""
+        Intervalos podem ser classificados pela **qualidade da sensação** que causam:
+
+        - **Consonantes**: sons estáveis, agradáveis ao ouvido (relaxamento).
+        - **Dissonantes**: sons instáveis, que geram tensão (movimento).
+
         """)
 
         st.markdown("""
@@ -483,20 +976,15 @@ Ouça uma de suas sinfonias *Symphony No. 5 in E Minor Op. 64*:
         | Oitava justa            | 6T        | C – C (oitava) | Consonante            | <audio controls style="width:100px;" src="audios/oitava_justa.mp3"></audio> |
         """, unsafe_allow_html=True)
 
-        st.markdown("""
-        Intervalos podem ser classificados pela sensação que causam:
+        st.markdown("""*Os aúdios tocam os intervalos de uma mesma oitava e, depois, o intervalo entre uma oitava a cima*
+                """)
+    
 
-        - **Consonantes**: sons estáveis, agradáveis ao ouvido (relaxamento).
-        - **Dissonantes**: sons instáveis, que geram tensão (movimento).
-
-        """)
-
-
-        st.info("""**¹ Dica:** Liste os intervalos musicais partindo da referência de outras notas. 
+        st.info("""**Dica¹:** Liste os intervalos musicais partindo da referência de outras notas. 
         
-    **² Dica:** Identifique no seu instrumento onde estão esses intervalos.
+**Dica²:** Identifique no seu instrumento onde estão esses intervalos.
 
-    **³ Dica:** Treine a identificação de intervalos de ouvido a partir de aplicativos como Tenuto, Perfect Ear ou teoria online como teoria.com.
+**Dica³:** Treine a identificação de intervalos de ouvido a partir de aplicativos como Tenuto, Perfect Ear ou teoria online como teoria.com.
         
         
         """)
@@ -516,7 +1004,9 @@ Ouça uma de suas sinfonias *Symphony No. 5 in E Minor Op. 64*:
 
         st.info("""🎧 **Dica:** Ouça músicas conhecidas e tente identificar os intervalos presentes nas melodias. 
         
-    Descubra onde ocorre uma terça maior, terça menor, quarta ou quinta justa em trechos de canções populares para conectar teoria à prática, fortalecendo sua percepção musical de forma contextualizada e prazerosa.""")
+**Desafio**: Descubra onde ocorre uma terça maior, terça menor, quarta ou quinta justa em trechos de canções populares para conectar teoria à prática, fortalecendo sua percepção musical de forma contextualizada e prazerosa.
+                
+**Desafio²**: Faça uma melodia utilizando uma terça maior ou menor, uma quarta justa, quinta justa e outro intervalo de sua escolha. Lembre-se de seguir os padrões ritmicos com o metrônomo.""")
 
     # Função para exibir texto e imagens sobre escalas
     def exibir_escalas():
@@ -690,9 +1180,15 @@ Empilhe mais uma terça sobre a terceira nota:
 *Obs: Há um total de 48 combinações possíveis para as tríades nos 12 tons.*
         """)
 
+        st.subheader("Sistema C-A-G-E-D")
+
+        st.markdown("""Qualquer acorde maior ou menor pode ser formado usando as formas básicas dos acordes abertos de C, A, G, E e D, apenas mudando a posição (ou "forma") com pestanas ao longo do braço.
+
+Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar o mesmo acorde em diferentes regiões do braço com formas familiares. Esse recurso é essencial para você memorizar o braço da guitarra com mais facilidade, sendo um 'truque' para você encontrar todas as notas de uma tríade.""")
+
         st.markdown("""
         
-        **Veja as maneiras de montar acordes em tríades no braço da guitarra:** 
+        **Veja como encontrar todas as tríades no braço da guitarra com o sistema C-A-G-E-D.** 
         
         """)
 
@@ -721,7 +1217,7 @@ Empilhe mais uma terça sobre a terceira nota:
 
         st.success("""💡 **Desafio:** Construa uma tabela com as colunas *Tonalidade*, *Tipo de Tríade*, *Notas do Acorde* e *Empilhamento de Terças* para encontrar todos os acordes possíveis nas tétrades dos 12 tons. 
         
-    *Obs: Há um total de 60 combinações possíveis para as tétrades nos 12 tons.*
+*Obs: Há um total de 60 combinações possíveis para as tétrades nos 12 tons.*
         """)
 
         st.image("images/acordes-tetrades.png", caption="Acordes de Sol Maior com +7", use_column_width=True)
@@ -821,6 +1317,8 @@ Empilhe mais uma terça sobre a terceira nota:
 
 
         st.header("🎯 Progressões Harmônicas")
+
+        st.header("🔁 Ciclo das Quintas")
         
         st.header("🔄 Ciclo das Quartas")
 
@@ -836,7 +1334,6 @@ Empilhe mais uma terça sobre a terceira nota:
     C → F → Bb → Eb → Ab → Db → Gb → B → E → A → D → G → C
     """)
 
-        st.header("🔁 Ciclo das Quintas")
 
         st.markdown("""
     O **ciclo das quintas** move-se por **quintas justas ascendentes**. É uma ferramenta fundamental para:
