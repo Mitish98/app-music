@@ -384,11 +384,21 @@ Ouça uma de suas sinfonias *Symphony No. 5 in E Minor Op. 64*:
 
 **1. Swing Low, Sweet Chariot**
 
-Originado dos spirituals do século XIX. Cantado por escravizados no sul dos EUA. Base harmônica e melódica fortemente usada no blues e country.
+*Swing Low, Sweet Chariot* é um spiritual — um tipo de canção religiosa criada por afro-americanos escravizados nos Estados Unidos, principalmente no século XIX. 
+                    
+Esses spirituals expressavam sofrimento, esperança, fé e o desejo de liberdade. Acredita-se que a canção tenha sido composta por Wallace Willis, um homem afro-americano escravizado no século XIX no estado de Oklahoma (então território indígena), por volta da década de 1860. Willis teria criado a música inspirando-se em passagens bíblicas, especialmente do Livro de Números (capítulo 21, versículo 17-18), que fala de Deus guiando o povo de Israel com uma nuvem e uma coluna de fogo para libertá-los da escravidão no Egito. 
+                    
+Durante o século XX, *Swing Low, Sweet Chariot* se tornou um símbolo de resistência e fé para os afro-americanos, sendo cantada em igrejas, manifestações e reuniões do movimento pelos direitos civis. Sua melodia simples e poderosa ressoava como um canto de esperança diante das adversidades. A música transcendeu o gênero gospel e espiritual e entrou para o repertório popular mundial, gravada e interpretada por inúmeros artistas em diversos estilos — do folk ao jazz, do blues ao pop - entre eles: B.B King, Elvis Presley, Eric Clapton, entre outros. 
 
 **2. Wade in the Water**
 
-Canção espiritual ligada ao movimento abolicionista. Ritmo marcante, usada por artistas de blues e jazz.
+*Wade in the Water* é outro spiritual que surgiu entre os escravos afro-americanos nos Estados Unidos, provavelmente no século XIX, durante o período da escravidão.
+
+A música foi usada como um código para ajudar escravos fugitivos a escapar para a liberdade. Ela orientava os escravos a cruzar rios e córregos para evitar serem seguidos por cães farejadores dos caçadores de escravos, pois a água "apagava o cheiro".
+
+Assim, *wade in the water* virou um alerta para atravessar as águas e despistar os perseguidores, uma tática vital para os que fugiam para o Norte ou para territórios livres. 
+                    
+*Wade in the Water* tornou-se uma das músicas mais emblemáticas do gênero espiritual. Foi gravada e interpretada por muitos artistas ao longo dos anos
 
 **3. This Train (Is Bound for Glory)**
 
@@ -561,52 +571,7 @@ Gravada por Mahalia Jackson e Sister Rosetta Tharpe. Tem swing, estrutura de cha
 
         """)
 
-        st.subheader("Jazz")
-        st.markdown("O jazz nasceu em Nova Orleans, fundindo blues, ragtime e música europeia. Marcado pela improvisação, harmonia sofisticada e swing, o jazz influenciou praticamente todos os gêneros modernos.")
-        st.markdown("""
-
-        **1. Take the 'A' Train – Duke Ellington / Billy Strayhorn**
-
-        Hino do jazz de big band, com swing clássico e sofisticação harmônica.
-
-        **2. All of Me – Gerald Marks & Seymour Simons**
-
-        Standard das jam sessions, com estrutura acessível e melodia marcante.
-
-        **3. Autumn Leaves – Joseph Kosma**
-
-        Popular entre iniciantes e profissionais. Ótimo para estudar modulações e improviso.
-
-        **4. Blue in Green – Miles Davis / Bill Evans**
-
-        Balada introspectiva e modal do álbum “Kind of Blue”.
-
-        **5. So What – Miles Davis**
-
-        Representa o jazz modal. Simples, profundo e essencial ao piano.
-
-        **6. Summertime – George Gershwin**
-
-        Ária de ópera que virou jazz standard. Regravada em dezenas de estilos.
-
-        **7. Round Midnight – Thelonious Monk**
-
-        Complexa e melancólica. Um dos pilares do jazz moderno.
-
-        **8. My Funny Valentine – Rodgers & Hart**
-
-        Standard romântico, interpretado por Chet Baker e outros ícones.
-
-        **9. Fly Me to the Moon – Bart Howard**
-
-        Popularizado por Sinatra, mescla balada com swing.
-
-        **10. Satin Doll – Duke Ellington**
-
-        Melodia envolvente e progressão harmônica rica. Clássico do piano e guitarra.
-
-        """)
-
+        
         st.subheader("Pop")
         st.markdown("A música pop abrange melodias acessíveis, refrões marcantes e produção polida. Desenvolveu-se a partir do rock, do soul e da música popular dos anos 1950 em diante.")
         st.markdown("""
@@ -650,6 +615,53 @@ Gravada por Mahalia Jackson e Sister Rosetta Tharpe. Tem swing, estrutura de cha
         **10. What a Wonderful World – Louis Armstrong**
 
         Pop nostálgico e orquestral, com mensagem otimista.
+
+        """)
+
+
+        st.subheader("Jazz")
+        st.markdown("O jazz nasceu em Nova Orleans, fundindo blues, ragtime e música europeia. Marcado pela improvisação, harmonia sofisticada e swing, o jazz influenciou praticamente todos os gêneros modernos.")
+        st.markdown("""
+
+        **1. Take the 'A' Train – Duke Ellington / Billy Strayhorn**
+
+        Hino do jazz de big band, com swing clássico e sofisticação harmônica.
+
+        **2. All of Me – Gerald Marks & Seymour Simons**
+
+        Standard das jam sessions, com estrutura acessível e melodia marcante.
+
+        **3. Autumn Leaves – Joseph Kosma**
+
+        Popular entre iniciantes e profissionais. Ótimo para estudar modulações e improviso.
+
+        **4. Blue in Green – Miles Davis / Bill Evans**
+
+        Balada introspectiva e modal do álbum “Kind of Blue”.
+
+        **5. So What – Miles Davis**
+
+        Representa o jazz modal. Simples, profundo e essencial ao piano.
+
+        **6. Summertime – George Gershwin**
+
+        Ária de ópera que virou jazz standard. Regravada em dezenas de estilos.
+
+        **7. Round Midnight – Thelonious Monk**
+
+        Complexa e melancólica. Um dos pilares do jazz moderno.
+
+        **8. My Funny Valentine – Rodgers & Hart**
+
+        Standard romântico, interpretado por Chet Baker e outros ícones.
+
+        **9. Fly Me to the Moon – Bart Howard**
+
+        Popularizado por Sinatra, mescla balada com swing.
+
+        **10. Satin Doll – Duke Ellington**
+
+        Melodia envolvente e progressão harmônica rica. Clássico do piano e guitarra.
 
         """)
 
@@ -703,47 +715,11 @@ Gravada por Mahalia Jackson e Sister Rosetta Tharpe. Tem swing, estrutura de cha
         st.markdown("O samba é uma expressão essencial da cultura afro-brasileira, com raízes no batuque e no choro. Evoluiu em diversas formas: samba-canção, samba-enredo, samba de roda, partido-alto, entre outros.")
         st.markdown("""
 
-        **1. Aquarela do Brasil – Ary Barroso**
-
-        Hino nacionalista e símbolo do samba-exaltação.
-
-        **2. Pelo Telefone – Donga**
-
-        Primeira gravação registrada como “samba” (1917).
-
-        **3. O Mundo É um Moinho – Cartola**
-
-        Poética, melancólica e refinada. Um dos sambas mais interpretados.
-
-        **4. As Rosas Não Falam – Cartola**
-
-        Lírica e delicada. Harmonia rica e melodia clássica.
-
-        **5. Feitiço da Vila – Noel Rosa e Vadico**
-
-        Retrato da boemia carioca e do talento lírico de Noel.
-
-        **6. Retalhos de Cetim – Benito di Paula**
-
-        Samba-canção com piano e sentimentalismo popular.
-
-        **7. Tiro ao Álvaro – Adoniran Barbosa**
-
-        Samba paulista com humor e sotaque do povo.
-
-        **8. Andança – Beth Carvalho**
-
-        Samba de roda moderno, forte e comovente.
-
-        **9. A Voz do Morro – Zé Keti**
-
-        Representa o samba como identidade e resistência.
-
-        **10. Canta, Canta Minha Gente – Martinho da Vila**
-
-        Autocelebração do samba e da cultura negra.
+        **1. O Sol Nascerá - Cartola**
 
         """)
+
+        exibir_pdf("cifras/Cifra Club - Cartola - O Sol Nascerá.pdf")
 
         st.subheader("Choro")
         st.markdown("O choro é o primeiro gênero urbano tipicamente brasileiro. Instrumental, virtuoso e melódico, une elementos do lundu, da polca, da modinha e da música erudita europeia.")
@@ -796,46 +772,22 @@ Gravada por Mahalia Jackson e Sister Rosetta Tharpe. Tem swing, estrutura de cha
         st.markdown("""
 
         **1. Asa Branca – Luiz Gonzaga e Humberto Teixeira**
+""")
+        exibir_pdf("cifras/Cifra Club - Luiz Gonzaga - Asa Branca.pdf")
 
-        Hino do nordeste. Simples, emotiva e marcante.
+        st.markdown("""
 
-        **2. Baião – Luiz Gonzaga**
+        **2. Xote das Meninas – Luiz Gonzaga**
+""")
+        exibir_pdf("cifras/Cifra Club - Luiz Gonzaga - Xote Das Meninas.pdf")
 
-        Definiu o estilo e apresentou o ritmo ao Brasil urbano.
+        st.markdown("""
 
-        **3. Xote das Meninas – Luiz Gonzaga**
+        **3. Eu Só Quero Um Xodó – Luiz Gonzaga**
+""")
+        exibir_pdf("cifras/Cifra Club - Luiz Gonzaga - Eu Só Quero Um Xodó.pdf")
 
-        Letra leve com andamento de xote. Muito tocada no São João.
-
-        **4. Juazeiro – Luiz Gonzaga**
-
-        Lamento sertanejo com voz marcante e melodia forte.
-
-        **5. Qui Nem Jiló – Luiz Gonzaga**
-
-        Retrata a tristeza e a saudade com simplicidade rural.
-
-        **6. O Fole Roncou – Dominguinhos**
-
-        Virtuosismo na sanfona e letra animada.
-
-        **7. Eu Só Quero um Xodó – Dominguinhos**
-
-        Romântico e popular, virou hit em várias gerações.
-
-        **8. Feira de Mangaio – Sivuca**
-
-        Virtuosismo instrumental e letra que retrata o nordeste.
-
-        **9. Sabiá – Luiz Gonzaga e Zé Dantas**
-
-        Lamento migratório com harmonia rica.
-
-        **10. São João na Roça – Luiz Gonzaga**
-
-        Atmosfera de festa junina, típica do baião original.
-
-        """)
+        
 
         st.subheader("Reggae")
         st.markdown("Originado na Jamaica nos anos 1960, o reggae mistura ska, rocksteady e música afro-caribenha. Suas batidas sincopadas, letras conscientes e baixo pulsante o tornaram um fenômeno global.")
