@@ -4,17 +4,7 @@ import os
 from PIL import Image
 import base64
 
-def exibir_pdf(pdf_path):
-    if os.path.exists(pdf_path):
-        with open(pdf_path, "rb") as f:
-            base64_pdf = base64.b64encode(f.read()).decode("utf-8")
-        st.markdown(
-            f'<iframe src="data:application/pdf;base64,{base64_pdf}" '
-            'width="100%" height="600" type="application/pdf"></iframe>',
-            unsafe_allow_html=True
-        )
-    else:
-        st.error(f"PDF não encontrado: {pdf_path}")
+
 
 CODIGO_ACESSO = "MEUCODIGO123"  # Troque para o código que vai enviar na Hotmart
 
@@ -36,7 +26,7 @@ def audio_embed(youtube_url):
 if codigo_digitado == CODIGO_ACESSO:
 
     # Menu de opções
-    menu = ["História", "Ritmos", "Intervalos","Acordes & Arpejos", "Escalas Naturais", "Campos Harmônicos", "Recursos Adicionais"]
+    menu = ["História", "Ritmos", "Intervalos","Acordes & Arpejos", "Escalas Naturais", "Campos Harmônicos", "Modos Gregos", "Tutoriais", "Recursos Adicionais"]
     choice = st.sidebar.selectbox("Escolha uma função", menu)
 
     if choice == "História":
@@ -378,443 +368,6 @@ Ouça uma de suas sinfonias *Symphony No. 5 in E Minor Op. 64*:
 
         Compreender esses ritmos amplia a percepção e a criatividade musical. Veja mais detalhes de alguns dos principais estilos da música contemporânea ao redor do mundo: 
         """)
-        st.subheader("Gospel")
-        st.markdown("Essas músicas vêm de spirituals, work songs e early gospel do século XIX e início do século XX, e foram registradas por vozes como Mahalia Jackson, Thomas A. Dorsey, Sister Rosetta Tharpe, entre outros. Essas músicas representam as raízes espirituais e musicais da cultura afro-americana que foram precursoras gêneros como o blues e o country.")
-        st.markdown("""
-
-**1. Swing Low, Sweet Chariot**
-
-*Swing Low, Sweet Chariot* é um spiritual — um tipo de canção religiosa criada por afro-americanos escravizados nos Estados Unidos, principalmente no século XIX. 
-                    
-Esses spirituals expressavam sofrimento, esperança, fé e o desejo de liberdade. Acredita-se que a canção tenha sido composta por Wallace Willis, um homem afro-americano escravizado no século XIX no estado de Oklahoma (então território indígena), por volta da década de 1860. Willis teria criado a música inspirando-se em passagens bíblicas, especialmente do Livro de Números (capítulo 21, versículo 17-18), que fala de Deus guiando o povo de Israel com uma nuvem e uma coluna de fogo para libertá-los da escravidão no Egito. 
-                    
-Durante o século XX, *Swing Low, Sweet Chariot* se tornou um símbolo de resistência e fé para os afro-americanos, sendo cantada em igrejas, manifestações e reuniões do movimento pelos direitos civis. Sua melodia simples e poderosa ressoava como um canto de esperança diante das adversidades. A música transcendeu o gênero gospel e espiritual e entrou para o repertório popular mundial, gravada e interpretada por inúmeros artistas em diversos estilos — do folk ao jazz, do blues ao pop - entre eles: B.B King, Elvis Presley, Eric Clapton, entre outros. 
-
-**2. Wade in the Water**
-
-*Wade in the Water* é outro spiritual que surgiu entre os escravos afro-americanos nos Estados Unidos, provavelmente no século XIX, durante o período da escravidão.
-
-A música foi usada como um código para ajudar escravos fugitivos a escapar para a liberdade. Ela orientava os escravos a cruzar rios e córregos para evitar serem seguidos por cães farejadores dos caçadores de escravos, pois a água "apagava o cheiro".
-
-Assim, *wade in the water* virou um alerta para atravessar as águas e despistar os perseguidores, uma tática vital para os que fugiam para o Norte ou para territórios livres. 
-                    
-*Wade in the Water* tornou-se uma das músicas mais emblemáticas do gênero espiritual. Foi gravada e interpretada por muitos artistas ao longo dos anos
-
-**3. This Train (Is Bound for Glory)**
-
-Famosamente interpretada por Sister Rosetta Tharpe. Influenciou diretamente o rock’n’roll. Woody Guthrie, Elvis e outros gravaram versões.
-
-**4. Down by the Riverside**
-
-Spiritual de protesto com refrão repetitivo. Fortemente adotado pelo jazz tradicional e pelo folk.
-
-**5. Precious Lord, Take My Hand – Thomas A. Dorsey**
-                    
-Considerado o pai do gospel moderno, Dorsey era pianista de blues. Essa canção influenciou Ray Charles, Sam Cooke e Elvis Presley.
-
-**6. I’ll Fly Away – Albert E. Brumley**
-
-Um dos hinos gospel mais gravados na música country. Aparece em trilhas como "O Brother, Where Art Thou?".
-
-**7. When the Saints Go Marching In**
-
-Popularizado por Louis Armstrong. Mistura gospel, jazz e marching band. Hino universal do sul dos EUA.
-
-**8. Were You There (When They Crucified My Lord)**
-
-Espiritual do século XIX. Forte influência na música country espiritual e blues.
-
-**9. Go Down Moses**
-
-Cantado pelos escravizados como símbolo de liberdade. Seu tom grave e narrativo influenciou o canto de lamento do blues.
-
-**10. Didn’t It Rain**
-
-Gravada por Mahalia Jackson e Sister Rosetta Tharpe. Tem swing, estrutura de chamada e resposta, e base harmônica que influenciou o soul.
-
-""")
-        st.subheader("Blues")
-        st.markdown("O blues surgiu no sul dos Estados Unidos no final do século XIX, profundamente enraizado nas canções de trabalho, spirituals e lamentos das comunidades afro-americanas. Com estruturas harmônicas simples e letras que expressam dor, resistência e ironia, o blues é a base de inúmeros gêneros modernos como o jazz, o rock, o soul e o R&B.")
-        st.markdown("""
-
-        **1. Cross Road Blues – Robert Johnson**
-
-        Gravada em 1936, essa canção imortalizou o mito do pacto com o diabo. Influenciou profundamente o rock, especialmente artistas como Eric Clapton e The Rolling Stones.
-
-        **2. Hellhound on My Trail – Robert Johnson**
-
-        Expressa angústia e perseguição espiritual. É uma das músicas mais intensas do Delta Blues e inspiração para músicos do século XX inteiro.
-
-        **3. I'm Your Hoochie Coochie Man – Muddy Waters**
-
-        Símbolo do Chicago Blues elétrico. Composição de Willie Dixon, fundou a estética do blues urbano e influenciou o rock britânico.
-
-        **4. The Thrill Is Gone – B.B. King**
-
-        Uma balada de blues moderno com orquestração sofisticada. Representa o ápice emocional e técnico do gênero.
-
-        **5. Smokestack Lightning – Howlin’ Wolf**
-
-        Com riff hipnótico e vocal poderoso, influenciou diretamente o rock psicodélico e o blues-rock dos anos 60.
-
-        **6. Boom Boom – John Lee Hooker**
-
-        Mistura falada e cantada com um groove irresistível. Foi adotada por bandas de rock e soul, como The Animals.
-
-        **7. Sweet Home Chicago – Robert Johnson**
-
-        Um dos blues mais regravados da história. Símbolo da migração de músicos negros do sul para o norte industrial dos EUA.
-
-        **8. Mannish Boy – Muddy Waters**
-
-        Com estrutura de chamada e resposta, tornou-se hino da afirmação negra no blues. Amplamente usado em filmes e trilhas sonoras.
-
-        **9. Got My Mojo Working – Muddy Waters**
-
-        Com energia crua e magnetismo, essa faixa definiu o som de Chicago e abriu caminhos para o rhythm & blues.
-
-        **10. Stormy Monday – T-Bone Walker**
-
-        Uma das primeiras fusões entre o blues e o jazz. Clássico absoluto para guitarristas e pianistas de blues, jazz e soul.
-
-        """)
-
-        st.subheader("Country")
-        st.markdown("O country surgiu no início do século XX nos estados do sul dos EUA, misturando música folclórica britânica, spirituals e blues rural. Caracteriza-se por melodias simples, narrativas diretas e uso do violão, banjo e fiddle.")
-        st.markdown("""
-
-        **1. Blue Yodel (T for Texas) – Jimmie Rodgers**
-
-        Pioneiro do country, misturou yodel com blues e lançou as bases do gênero.
-
-        **2. I’m So Lonesome I Could Cry – Hank Williams**
-
-        Poética e melancólica, essa balada de 1949 é um marco do country tradicional.
-
-        **3. Your Cheatin’ Heart – Hank Williams**
-
-        Símbolo do country honky-tonk, com melodia simples e letra sobre traição amorosa.
-
-        **4. Folsom Prison Blues – Johnny Cash**
-
-        Mistura country, folk e rockabilly. Sua batida imita o som dos trilhos de trem.
-
-        **5. Crazy – Patsy Cline**
-
-        Composta por Willie Nelson, eternizada pela interpretação suave e melancólica de Cline.
-
-        **6. I Walk the Line – Johnny Cash**
-
-        Um dos maiores hits do gênero, com uma progressão harmônica única e ritmo constante.
-
-        **7. Hey, Good Lookin’ – Hank Williams**
-
-        Canção animada e popular, considerada um standard country com apelo popular.
-
-        **8. Wildwood Flower – The Carter Family**
-
-        Um hino do country rural com dedilhado tradicional que influenciou gerações.
-
-        **9. Orange Blossom Special – Ervin T. Rouse**
-
-        Instrumental rápido e técnico, conhecido como o “hino não oficial do fiddle”.
-
-        **10. Take Me Home, Country Roads – John Denver**
-
-        Canção icônica dos anos 70 com forte nostalgia e progressão acessível ao violão.
-
-        """)
-
-        st.subheader("Rock")
-        st.markdown("O rock emergiu nos anos 1950 como uma fusão de blues, country e R&B. Com batida forte e guitarra em destaque, tornou-se a trilha sonora de mudanças sociais e culturais do século XX.")
-        st.markdown("""
-
-        **1. Johnny B. Goode – Chuck Berry**
-
-        Guitarra elétrica em destaque, ritmo pulsante e letra sobre ascensão social. Base do rock moderno.
-
-        **2. Tutti Frutti – Little Richard**
-
-        Energia explosiva e vocal rasgado. Um dos primeiros sucessos do rock’n’roll.
-
-        **3. Jailhouse Rock – Elvis Presley**
-
-        Mistura de rockabilly com performance teatral. Um marco da cultura pop.
-
-        **4. Rock Around the Clock – Bill Haley & His Comets**
-
-        Símbolo do nascimento do rock. Popularizou o gênero nos cinemas e rádios.
-
-        **5. Heartbreak Hotel – Elvis Presley**
-
-        Uma balada lenta e profunda que introduziu o dramatismo no rock.
-
-        **6. Whole Lotta Shakin’ Goin’ On – Jerry Lee Lewis**
-
-        Piano frenético, performance ousada e energia contagiante.
-
-        **7. That’ll Be the Day – Buddy Holly**
-
-        Estilo limpo e melódico, com influência country. Fundamentou o pop-rock.
-
-        **8. Hound Dog – Elvis Presley (original de Big Mama Thornton)**
-
-        Versão explosiva que mistura R&B e rock com atitude.
-
-        **9. La Bamba – Ritchie Valens**
-
-        Mistura de rock’n’roll com música folclórica mexicana. Uma ponte entre culturas.
-
-        **10. Good Golly, Miss Molly – Little Richard**
-
-        Vocal visceral, piano marcante e estrutura simples. Influência direta no soul e no hard rock.
-
-        """)
-
-        
-        st.subheader("Pop")
-        st.markdown("A música pop abrange melodias acessíveis, refrões marcantes e produção polida. Desenvolveu-se a partir do rock, do soul e da música popular dos anos 1950 em diante.")
-        st.markdown("""
-
-        **1. Yesterday – The Beatles**
-
-        Balada melancólica com violão e quarteto de cordas. Uma das músicas mais regravadas da história.
-
-        **2. Imagine – John Lennon**
-
-        Hino pacifista com piano marcante e letra universal.
-
-        **3. Let It Be – The Beatles**
-
-        Canção de consolo com progressão simples e poderosa.
-
-        **4. Billie Jean – Michael Jackson**
-
-        Revolucionou o pop com groove dançante, produção refinada e videoclipes inovadores.
-
-        **5. Like a Prayer – Madonna**
-
-        Pop com elementos gospel, polêmica e lirismo emocional.
-
-        **6. Every Breath You Take – The Police**
-
-        Pop/rock com atmosfera sombria e riffs marcantes.
-
-        **7. Hallelujah – Leonard Cohen / Jeff Buckley**
-
-        Balada espiritual e existencial, muito popular entre violonistas.
-
-        **8. Piano Man – Billy Joel**
-
-        Narrativa envolvente e melodia inesquecível. Ícone do pop com piano.
-
-        **9. Time After Time – Cyndi Lauper**
-
-        Balada sensível dos anos 80, muito usada em trilhas.
-
-        **10. What a Wonderful World – Louis Armstrong**
-
-        Pop nostálgico e orquestral, com mensagem otimista.
-
-        """)
-
-
-        st.subheader("Jazz")
-        st.markdown("O jazz nasceu em Nova Orleans, fundindo blues, ragtime e música europeia. Marcado pela improvisação, harmonia sofisticada e swing, o jazz influenciou praticamente todos os gêneros modernos.")
-        st.markdown("""
-
-        **1. Take the 'A' Train – Duke Ellington / Billy Strayhorn**
-
-        Hino do jazz de big band, com swing clássico e sofisticação harmônica.
-
-        **2. All of Me – Gerald Marks & Seymour Simons**
-
-        Standard das jam sessions, com estrutura acessível e melodia marcante.
-
-        **3. Autumn Leaves – Joseph Kosma**
-
-        Popular entre iniciantes e profissionais. Ótimo para estudar modulações e improviso.
-
-        **4. Blue in Green – Miles Davis / Bill Evans**
-
-        Balada introspectiva e modal do álbum “Kind of Blue”.
-
-        **5. So What – Miles Davis**
-
-        Representa o jazz modal. Simples, profundo e essencial ao piano.
-
-        **6. Summertime – George Gershwin**
-
-        Ária de ópera que virou jazz standard. Regravada em dezenas de estilos.
-
-        **7. Round Midnight – Thelonious Monk**
-
-        Complexa e melancólica. Um dos pilares do jazz moderno.
-
-        **8. My Funny Valentine – Rodgers & Hart**
-
-        Standard romântico, interpretado por Chet Baker e outros ícones.
-
-        **9. Fly Me to the Moon – Bart Howard**
-
-        Popularizado por Sinatra, mescla balada com swing.
-
-        **10. Satin Doll – Duke Ellington**
-
-        Melodia envolvente e progressão harmônica rica. Clássico do piano e guitarra.
-
-        """)
-
-        st.subheader("Bossa-Nova")
-        st.markdown("A Bossa Nova surgiu no Brasil nos anos 1950, combinando samba com harmonia do jazz. Marcada pelo violão suave e letras intimistas, projetou a música brasileira internacionalmente.")
-        st.markdown("""
-
-        **1. Garota de Ipanema – Tom Jobim e Vinicius de Moraes**
-
-        Hino internacional da bossa-nova, com acordes sofisticados e melodia envolvente.
-
-        **2. Chega de Saudade – Tom Jobim e Vinicius de Moraes**
-
-        Considerada a primeira bossa-nova. Mudou a música brasileira.
-
-        **3. Desafinado – Tom Jobim e Newton Mendonça**
-
-        Defende a imperfeição poética da música. Clássico do gênero.
-
-        **4. Águas de Março – Tom Jobim**
-
-        Letra minimalista e estrutura cíclica. Inovadora e hipnótica.
-
-        **5. Corcovado – Tom Jobim**
-
-        Balada calma que exalta o silêncio e a paz.
-
-        **6. Samba de Uma Nota Só – Tom Jobim**
-
-        Explora o minimalismo melódico com harmonia rica.
-
-        **7. O Leãozinho – Caetano Veloso**
-
-        Canção intimista e delicada, muito tocada no violão.
-
-        **8. Manhã de Carnaval – Luiz Bonfá**
-
-        Conhecida mundialmente, também presente no cinema.
-
-        **9. Triste – Tom Jobim**
-
-        Menos conhecida, mas sofisticada e recorrente entre músicos de jazz.
-
-        **10. Insensatez – Tom Jobim e Vinicius de Moraes**
-
-        Lenta, trágica e harmônica. Um dos maiores exemplos de lirismo da bossa.
-
-        """)
-
-        st.subheader("Samba")
-        st.markdown("O samba é uma expressão essencial da cultura afro-brasileira, com raízes no batuque e no choro. Evoluiu em diversas formas: samba-canção, samba-enredo, samba de roda, partido-alto, entre outros.")
-        st.markdown("""
-
-        **1. O Sol Nascerá - Cartola**
-
-        """)
-
-        exibir_pdf("cifras/Cifra Club - Cartola - O Sol Nascerá.pdf")
-
-        st.subheader("Choro")
-        st.markdown("O choro é o primeiro gênero urbano tipicamente brasileiro. Instrumental, virtuoso e melódico, une elementos do lundu, da polca, da modinha e da música erudita europeia.")
-        st.markdown("""
-
-        **1. Carinhoso – Pixinguinha**
-
-        Hino afetivo do choro. Simples, expressivo e universal.
-
-        **2. Brasileirinho – Waldir Azevedo**
-
-        Um dos choros mais técnicos e conhecidos do cavaquinho.
-
-        **3. Tico-Tico no Fubá – Zequinha de Abreu**
-
-        Virtuosismo e velocidade. Famoso internacionalmente.
-
-        **4. Lamentos – Pixinguinha**
-
-        Choro sofisticado com harmonias impressionantes.
-
-        **5. Doce de Coco – Jacob do Bandolim**
-
-        Delicado e expressivo, ótimo para violão solo.
-
-        **6. Noites Cariocas – Jacob do Bandolim**
-
-        Choro com andamento acelerado e melodias marcantes.
-
-        **7. Ingênuo – Pixinguinha**
-
-        Sofisticado, com improviso e lirismo.
-
-        **8. Cochichando – Pixinguinha**
-
-        Interplay entre os instrumentos, típico do choro tradicional.
-
-        **9. Um a Zero – Pixinguinha e Benedito Lacerda**
-
-        Choro-desafio que simula uma disputa futebolística.
-
-        **10. Apanhei-te Cavaquinho – Ernesto Nazareth**
-
-        Ponte entre o choro e o piano popular brasileiro.
-
-        """)
-
-        st.subheader("Baião")
-        st.markdown("O baião surgiu no nordeste do Brasil, combinando ritmos indígenas, africanos e europeus. Com sanfona, zabumba e triângulo, influenciou forró, xaxado e até o tropicalismo.")
-        st.markdown("""
-
-        **1. Asa Branca – Luiz Gonzaga e Humberto Teixeira**
-""")
-        exibir_pdf("cifras/Cifra Club - Luiz Gonzaga - Asa Branca.pdf")
-
-        st.markdown("""
-
-        **2. Xote das Meninas – Luiz Gonzaga**
-""")
-        exibir_pdf("cifras/Cifra Club - Luiz Gonzaga - Xote Das Meninas.pdf")
-
-        st.markdown("""
-
-        **3. Eu Só Quero Um Xodó – Luiz Gonzaga**
-""")
-        exibir_pdf("cifras/Cifra Club - Luiz Gonzaga - Eu Só Quero Um Xodó.pdf")
-
-        
-
-        st.subheader("Reggae")
-        st.markdown("Originado na Jamaica nos anos 1960, o reggae mistura ska, rocksteady e música afro-caribenha. Suas batidas sincopadas, letras conscientes e baixo pulsante o tornaram um fenômeno global.")
-        
-        st.markdown("""
-
-        **1. One Love – Bob Marley**
-        """)
-        exibir_pdf("cifras/Cifra Club - Bob Marley - One Love.pdf")
-
-        st.markdown("""
-
-        **2. Natural Mystic – Bob Marley**
-        """)
-        exibir_pdf("cifras/Cifra Club - Bob Marley - Natural Mystic.pdf")
-
-        st.markdown("""
-
-        **3. Roots, Rock, Reggae – Bob Marley**
-        """)
-        exibir_pdf("cifras/Cifra Club - Bob Marley - Roots, Rock, Reggae.pdf")
-
-        st.markdown("""
-
-        **4. Stir It Up – Bob Marley**
-        """)
-        exibir_pdf("cifras/Cifra Club - Bob Marley - Stir It Up.pdf")
 
     if choice == "Ritmos":
         st.title("Ritmos Musicais 🥁")
@@ -1370,19 +923,170 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
 
     ---
 
-    ### Quer explorar cada modo separadamente?
-
-    Use os comandos:
-
-    - `/modo_jonio`
-    - `/modo_dorico`
-    - `/modo_frigio`
-    - `/modo_lidio`
-    - `/modo_mixolidio`
-    - `/modo_eolio`
-    - `/modo_locio`
 
     """)
+        
+    def tutoriais():
+        st.title("Tutoriais De Repertório")
+
+        tutoriais_text = """
+
+    Os vídeos incorporados pertencem aos seus respectivos criadores e estão hospedados no YouTube. Esta plataforma realiza curadoria e organização educacional de conteúdos públicos, não reivindicando autoria sobre os materiais exibidos.
+
+    Veja os tutoriais disponíveis gratuitamente na internet para desenvolver um repertório musical vasto baseado no seu gênero musical favorito:
+
+"""
+
+        st.markdown(tutoriais_text)
+
+        st.header("Blues")
+
+        st.markdown("**Hit The Road Jack - Ray Charles**")
+        st.video("https://www.youtube.com/watch?v=72JsVAtxxbQ")
+
+        st.markdown("**Sweet Home Chicago - Robert Johnson**")
+        st.video("https://youtu.be/VdiYasPjtDI?si=xc6i62jJKiGS7Gcb")
+
+        st.markdown("**Me And The Devil - Robert Johnson**")
+        st.video("https://youtu.be/JhLqT1UwVf8?si=HxChQ_pAICbiSAsO")
+
+        st.markdown("**My Babe - Little Walter**")
+        st.video("https://youtu.be/4MhQ8fpVnYI?si=9bVZlaij737ohpKq")
+
+        st.markdown("**Born Under a Bad Sign - Albert King**")
+        st.video("https://youtu.be/E71arjUayhA?si=KugdOX2YDmNRmF1x")
+
+        st.markdown("**Help Me - Sonny Boy**")
+        st.video("https://youtu.be/xY26rgQ8cVE?si=0YXwaLbYz7eLBNgs")
+
+        st.markdown("**Still A Fool - Muddy Waters**")
+        st.video("https://youtu.be/39lllqooF_g?si=BtbgL8PYi99AFt0D")
+
+        st.markdown("**Before You Accuse Me - Eric Clapton**")
+        st.video("https://youtu.be/ItSBRoyXQNw?si=B3PjnpC1Nkpkgk1m")
+
+        st.markdown("**Baby Please Don't Go - Lightning Hopkins**")
+        st.video("https://youtu.be/ecTUUDob4pg?si=l2Ztr_ha8w-GJyuh")
+
+        st.markdown("**I Don't Need No Doctor - John Mayer**")
+        st.video("https://youtu.be/zVrZNqcQARE?si=FTW_4s7dl_52ypDS")
+
+
+
+        st.header("Jazz")
+
+
+
+
+        st.header("Rock")
+
+        st.markdown("**Little Wing - Jimi Hendrix**")
+        st.video("https://youtu.be/A6Xqb6ZHipo?si=zhPbWFTnIKVMDRT-")
+
+        st.markdown("**Hey Joe - Jimi Hendrix**")
+        st.video("https://youtu.be/oEp3RNg3UPU?si=X62BOn4EsLQu1Akv")
+
+        st.markdown("**Smells Like Teen Spirit - Nirvana**")
+        st.video("https://youtu.be/wBkJFsRxMJA?si=6y5r-S25GuJnV1X9")
+
+        st.markdown("**Come As You Are - Nirvana**")
+        st.video("https://youtu.be/ijkaVhLAB68?si=9hvwqg2IiNYHruhq")
+
+        st.markdown("**Message In a Bottle - The Police**")
+        st.video("https://youtu.be/fhzUGERg1jY?si=y7vsT5463wI4zFPc")
+
+        st.markdown("**Californication - Red Hot Chili Peppers**")
+        st.video("https://youtu.be/9f1nMzbF6WE?si=s2YGxt9zHhcFe2Wg")
+
+        st.markdown("**Otherside - Red Hot Chili Peppers**")
+        st.video("https://youtu.be/vgrTaCU-WqE?si=qjKji5pi7XkZ1xTN")
+
+        st.markdown("**Johnny B. Goode - Chuck Berry**")
+        st.video("https://youtu.be/5y3PRqVs6Vc?si=IffT_BWhh8P-_seD")
+
+        st.markdown("**Are U Mine? - Arctic Monkeys**")
+        st.video("https://youtu.be/fvNB4OOcDgU?si=9GmWpTysxUpcsP0u")
+
+        st.markdown("**Take A Look Around - Limp Bizkit**")
+        st.video("https://youtu.be/r7VORLT6Kjs?si=RIPER-YUqr6A6Rte")
+
+        st.markdown("**Ain't Talkin'Bout Love - Van Halen**")
+        st.video("https://youtu.be/pQS92VgshDg?si=cpygMV8TcskI8IA9")
+
+        st.markdown("**Johnny B. Goode - Chuck Berry**")
+        st.video("https://youtu.be/5y3PRqVs6Vc?si=IffT_BWhh8P-_seD")
+
+
+
+        st.header("Soul")
+ 
+
+
+
+        st.header("Funk")
+
+
+
+
+        st.header("R&B")
+
+
+
+
+        st.header("Reggae")
+
+
+
+
+        st.header("Pop")
+        st.markdown("**Michael Jackson - Bad**")
+        st.video("https://youtu.be/PioLuT9l-4s?si=YT5UuuPwoFOthXjf")
+
+        st.markdown("**Michael Jackson - Beat It**")
+        st.video("https://youtu.be/b2dYQAejgqQ?si=LT0zUX68AhwIQ_bH")
+
+        st.markdown("**Michael Jackson - Thriller**")
+        st.video("https://www.youtube.com/watch?v=rtlB7SvMlY8&pp=ygUmdGhyaWxsZXIgbWljaGFlbCBqYWNrc29uIGd1aXRhciBsZXNzb24%3D")
+
+        st.markdown("**Michael Jackson - They Don't Care About Us**")
+        st.video("https://www.youtube.com/watch?v=98e-VdYmhWg")
+
+        st.markdown("**Rockwell - Somebody's Watching Me**")
+        st.video("https://www.youtube.com/watch?v=-pNFsGe0tAM&pp=ygU1c29tZWJvZHkgaXMgd2F0Y2hpbmcgbWUgbWljaGFlbCBqYWNrc29uIGd1aXRhciBsZXNzb24%3D")
+
+        st.markdown("**Let It Be - The Beatles**")
+        st.video("https://youtu.be/2a1VBXLCgQg?si=Wva__PDV6LzsYwvf")
+
+        st.markdown("**Tears In Heaven - Eric Clapton**")
+        st.video("https://youtu.be/XdPE58PFNmk?si=pxl6LrsLK_RY9Y44")
+
+
+        st.header("Bossa Nova")
+
+
+
+
+        st.header("Samba")
+
+
+
+
+        st.header("Choro")
+    
+
+
+
+        st.header("Baião")
+ 
+
+
+
+        st.header("MPB")
+  
+        
+
+
+
 
     def recursos():
         st.title("📚 Recursos Adicionais")
@@ -1391,6 +1095,8 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
     Explore aqui uma curadoria de **materiais gratuitos** para aprofundar seus estudos em Teoria Musical.
 
     """
+        
+
 
         st.markdown(recursos_text)
 
@@ -1458,5 +1164,7 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
         harmonico()
     elif choice == "Modos Gregos":
         gregos()
+    elif choice == "Tutoriais":
+        tutoriais()
     elif choice == "Recursos Adicionais":
         recursos()
