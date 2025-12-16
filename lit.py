@@ -359,12 +359,17 @@ Ouça uma de suas sinfonias *Symphony No. 5 in E Minor Op. 64*:
         st.header("🎼 Estilos Musicais Contemporâneos")
 
         st.markdown("""
-        A música é uma linguagem universal, moldada por séculos de intercâmbio entre culturas ao redor do mundo, sendo sua história muito mais abrangente do que o estudado pela tradição europeia. Cada sociedade desenvolveu estruturas e padrões rítmicos únicos que contribuíram de forma profunda para a diversidade da música contemporânea, veja alguns exeplos ao redor do mundo:
+        A música é uma linguagem universal, moldada por séculos de intercâmbio entre culturas ao redor do mundo, sendo sua história muito mais abrangente do que o estudado pela tradição europeia. Cada sociedade desenvolveu estruturas e padrões rítmicos únicos que contribuíram de forma profunda para a diversidade da música contemporânea, veja alguns exemplos de gêneros musicais ao redor do mundo:
 
-        - **Brasil**: Fruto de um intenso encontro entre povos indígenas, africanos e europeus, a música brasileira desenvolveu uma riqueza rítmica ímpar. Estilos como samba, baião, maracatu e frevo nasceram da vivência popular e da resistência cultural, revelando dinâmicas corporais, rituais e afetos codificados em padrões complexos de percussão e dança.
-        - **África Subsaariana Ocidental**: Em regiões como Mali, Senegal, Gana e Nigéria, a música é profundamente interligada à vida comunitária e espiritual. Os ritmos são frequentemente polirrítmicos, isto é, combinam camadas diferentes de pulsos e acentos simultâneos, criados com instrumentos como djembês, talking drums, balafons e kora. Essa complexidade rítmica foi uma das bases do desenvolvimento do jazz, do funk, do reggae e da música afro-brasileira.
-        - **Oriente Médio e Norte da África**: Países como Egito, Turquia, Irã, Síria e Marrocos abrigam tradições musicais milenares que combinam modos melódicos (maqamat) com estruturas rítmicas intricadas (iqa'at ou usul). Esses ciclos rítmicos variam em duração, acentuação e função estética, muitas vezes utilizados em contextos litúrgicos, poéticos e cerimoniais. Sua influência pode ser percebida em fusões modernas, como o jazz modal, a música eletrônica experimental e a world music.
-        - **Índia**: A música clássica indiana, tanto no sistema Carnático (sul) quanto no Hindustani (norte), desenvolveu sistemas rítmicos avançadíssimos conhecidos como talas. Esses ciclos podem ter 3, 7, 9, 16 ou até mais de 100 tempos, com subdivisões internas sofisticadas e ornamentações que desafiam a regularidade métrica. O domínio do tala exige um profundo senso temporal e uma abordagem meditativa do ritmo, e inspirou artistas ocidentais como The Beatles, John McLaughlin e Philip Glass.
+        - **Blues**: Base estrutural de grande parte da música popular ocidental, o blues nasceu da experiência afro-americana no sul dos EUA. Caracteriza-se por formas simples, expressividade intensa, uso de blue notes e uma relação direta entre música e emoção.            
+        - **Jazz**: Surgido nos Estados Unidos a partir da herança africana e da harmonia europeia, o jazz consolidou a improvisação como linguagem central. Seu desenvolvimento passou pelo blues, swing, bebop, modal e fusion, influenciando praticamente toda a música popular contemporânea em termos de harmonia, ritmo e liberdade expressiva.
+        - **Rock**: Resultado direto do blues e do rhythm & blues, o rock tornou-se um fenômeno cultural global. Ao longo das décadas, incorporou elementos do jazz, da música clássica, do folk e de tradições locais, dando origem a inúmeros subgêneros e movimentos estéticos.
+        - **Reggae**: Originário da Jamaica, o reggae combina heranças africanas, caribenhas e cristãs, com forte ênfase no contratempo (offbeat). Tornou-se uma poderosa ferramenta de identidade cultural, resistência política e espiritualidade.
+        - **Música Latina e Afro-Caribenha**: Estilos como salsa, rumba, son, mambo e cumbia derivam de estruturas rítmicas complexas baseadas na clave, um princípio organizador que guia acentos e frases musicais. Esses estilos influenciaram profundamente o jazz, o pop e a música brasileira.
+        - **Música Eletrônica**: A partir do século XX, a tecnologia passou a integrar o processo criativo musical. Gêneros como techno, house, ambient e drum & bass exploram repetição, textura sonora, timbre e ritmo de forma inovadora, muitas vezes dialogando com tradições rítmicas antigas em novos contextos.
+        - **World Music e Fusões Contemporâneas**: Termo que abrange projetos musicais que conectam tradições locais com linguagens modernas. Essas fusões mostram que a música contemporânea é, cada vez mais, um território híbrido e multicultural.
+
+        Explorar esses estilos não é apenas aprender gêneros, mas compreender diferentes formas de organizar o tempo, o som e a expressão humana. Esse conhecimento amplia o vocabulário musical, aprofunda a escuta e fortalece a identidade artística do músico.
 
         Compreender esses ritmos amplia a percepção e a criatividade musical. Veja mais detalhes de alguns dos principais estilos da música contemporânea ao redor do mundo: 
         """)
@@ -925,28 +930,43 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
 
 
     """)
-        
+            
+    def set_video(url):
+        st.session_state.video_ativo = url
+
+
     def tutoriais():
         st.title("Tutoriais De Repertório")
 
         st.markdown("""
-        Os vídeos incorporados pertencem aos seus respectivos criadores e estão hospedados no YouTube. 
-        Esta plataforma realiza curadoria e organização educacional de conteúdos públicos, 
-        não reivindicando autoria sobre os materiais exibidos.
+    Os vídeos incorporados pertencem aos seus respectivos criadores e estão hospedados no YouTube. 
+    Esta plataforma realiza curadoria e organização educacional de conteúdos públicos, 
+    não reivindicando autoria sobre os materiais exibidos.
 
-        Veja os tutoriais disponíveis gratuitamente na internet para desenvolver um repertório musical 
-        vasto baseado no seu gênero musical favorito:
-        """)
+    Veja os tutoriais disponíveis gratuitamente na internet para desenvolver um repertório musical 
+    vasto baseado no seu gênero musical favorito:
+    """)
+        
+                # =============================
+        # Player único
+        # =============================
+        if st.session_state.video_ativo:
+            st.divider()
+            st.subheader("🎬 Vídeo selecionado")
+            st.video(st.session_state.video_ativo)
+
 
         # =============================
-    # Estado global do player
-    # =============================
+        # Estado (sempre no topo)
+        # =============================
         if "video_ativo" not in st.session_state:
-            st.session_state.video_ativo = ""
+            st.session_state.video_ativo = None
 
         # =============================
-        # Repertório organizado
+        # Repertório
         # =============================
+
+        st.divider()
         repertorio = {
             "Blues": {
                 "Hit The Road Jack – Ray Charles": "https://www.youtube.com/watch?v=72JsVAtxxbQ",
@@ -987,22 +1007,19 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
         }
 
         # =============================
-        # Interface de seleção
+        # Seleção (robusta)
         # =============================
         for genero, musicas in repertorio.items():
-            st.header(genero)
+            st.subheader(genero)
 
             for titulo, url in musicas.items():
-                if st.button(f"▶️ {titulo}", key=f"{genero}-{titulo}"):
-                    st.session_state.video_ativo = url
+                st.button(
+                    f"▶️ {titulo}",
+                    key=f"{genero}-{titulo}",
+                    on_click=set_video,
+                    args=(url,),
+                )
 
-    # =============================
-    # Player único (mobile-safe)
-    # =============================
-    if st.session_state.video_ativo:
-        st.divider()
-        st.subheader("🎬 Vídeo selecionado")
-        st.video(st.session_state.video_ativo)
 
 
 
