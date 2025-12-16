@@ -929,162 +929,80 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
     def tutoriais():
         st.title("Tutoriais De Repertório")
 
-        tutoriais_text = """
-
-    Os vídeos incorporados pertencem aos seus respectivos criadores e estão hospedados no YouTube. Esta plataforma realiza curadoria e organização educacional de conteúdos públicos, não reivindicando autoria sobre os materiais exibidos.
-
-    Veja os tutoriais disponíveis gratuitamente na internet para desenvolver um repertório musical vasto baseado no seu gênero musical favorito:
-
-"""
-
-        st.markdown(tutoriais_text)
-
-        st.header("Blues")
-
-        st.markdown("**Hit The Road Jack - Ray Charles**")
-        st.video("https://www.youtube.com/watch?v=72JsVAtxxbQ")
-
-        st.markdown("**Sweet Home Chicago - Robert Johnson**")
-        st.video("https://youtu.be/VdiYasPjtDI?si=xc6i62jJKiGS7Gcb")
-
-        st.markdown("**Me And The Devil - Robert Johnson**")
-        st.video("https://youtu.be/JhLqT1UwVf8?si=HxChQ_pAICbiSAsO")
-
-        st.markdown("**My Babe - Little Walter**")
-        st.video("https://youtu.be/4MhQ8fpVnYI?si=9bVZlaij737ohpKq")
-
-        st.markdown("**Born Under a Bad Sign - Albert King**")
-        st.video("https://youtu.be/E71arjUayhA?si=KugdOX2YDmNRmF1x")
-
-        st.markdown("**Help Me - Sonny Boy**")
-        st.video("https://youtu.be/xY26rgQ8cVE?si=0YXwaLbYz7eLBNgs")
-
-        st.markdown("**Still A Fool - Muddy Waters**")
-        st.video("https://youtu.be/39lllqooF_g?si=BtbgL8PYi99AFt0D")
-
-        st.markdown("**Before You Accuse Me - Eric Clapton**")
-        st.video("https://youtu.be/ItSBRoyXQNw?si=B3PjnpC1Nkpkgk1m")
-
-        st.markdown("**Baby Please Don't Go - Lightning Hopkins**")
-        st.video("https://youtu.be/ecTUUDob4pg?si=l2Ztr_ha8w-GJyuh")
-
-        st.markdown("**I Don't Need No Doctor - John Mayer**")
-        st.video("https://youtu.be/zVrZNqcQARE?si=FTW_4s7dl_52ypDS")
-
-
-
-        st.header("Jazz")
-
-
-
-
-        st.header("Rock")
-
-        st.markdown("**Little Wing - Jimi Hendrix**")
-        st.video("https://youtu.be/A6Xqb6ZHipo?si=zhPbWFTnIKVMDRT-")
-
-        st.markdown("**Hey Joe - Jimi Hendrix**")
-        st.video("https://youtu.be/oEp3RNg3UPU?si=X62BOn4EsLQu1Akv")
-
-        st.markdown("**Smells Like Teen Spirit - Nirvana**")
-        st.video("https://youtu.be/wBkJFsRxMJA?si=6y5r-S25GuJnV1X9")
-
-        st.markdown("**Come As You Are - Nirvana**")
-        st.video("https://youtu.be/ijkaVhLAB68?si=9hvwqg2IiNYHruhq")
-
-        st.markdown("**Message In a Bottle - The Police**")
-        st.video("https://youtu.be/fhzUGERg1jY?si=y7vsT5463wI4zFPc")
-
-        st.markdown("**Californication - Red Hot Chili Peppers**")
-        st.video("https://youtu.be/9f1nMzbF6WE?si=s2YGxt9zHhcFe2Wg")
-
-        st.markdown("**Otherside - Red Hot Chili Peppers**")
-        st.video("https://youtu.be/vgrTaCU-WqE?si=qjKji5pi7XkZ1xTN")
-
-        st.markdown("**Johnny B. Goode - Chuck Berry**")
-        st.video("https://youtu.be/5y3PRqVs6Vc?si=IffT_BWhh8P-_seD")
-
-        st.markdown("**Are U Mine? - Arctic Monkeys**")
-        st.video("https://youtu.be/fvNB4OOcDgU?si=9GmWpTysxUpcsP0u")
-
-        st.markdown("**Take A Look Around - Limp Bizkit**")
-        st.video("https://youtu.be/r7VORLT6Kjs?si=RIPER-YUqr6A6Rte")
-
-        st.markdown("**Ain't Talkin'Bout Love - Van Halen**")
-        st.video("https://youtu.be/pQS92VgshDg?si=cpygMV8TcskI8IA9")
-
-        st.markdown("**Johnny B. Goode - Chuck Berry**")
-        st.video("https://youtu.be/5y3PRqVs6Vc?si=IffT_BWhh8P-_seD")
-
-
-
-        st.header("Soul")
- 
-
-
-
-        st.header("Funk")
-
-
-
-
-        st.header("R&B")
-
-
-
-
-        st.header("Reggae")
-
-
-
-
-        st.header("Pop")
-        st.markdown("**Michael Jackson - Bad**")
-        st.video("https://youtu.be/PioLuT9l-4s?si=YT5UuuPwoFOthXjf")
-
-        st.markdown("**Michael Jackson - Beat It**")
-        st.video("https://youtu.be/b2dYQAejgqQ?si=LT0zUX68AhwIQ_bH")
-
-        st.markdown("**Michael Jackson - Thriller**")
-        st.video("https://www.youtube.com/watch?v=rtlB7SvMlY8&pp=ygUmdGhyaWxsZXIgbWljaGFlbCBqYWNrc29uIGd1aXRhciBsZXNzb24%3D")
-
-        st.markdown("**Michael Jackson - They Don't Care About Us**")
-        st.video("https://www.youtube.com/watch?v=98e-VdYmhWg")
-
-        st.markdown("**Rockwell - Somebody's Watching Me**")
-        st.video("https://www.youtube.com/watch?v=-pNFsGe0tAM&pp=ygU1c29tZWJvZHkgaXMgd2F0Y2hpbmcgbWUgbWljaGFlbCBqYWNrc29uIGd1aXRhciBsZXNzb24%3D")
-
-        st.markdown("**Let It Be - The Beatles**")
-        st.video("https://youtu.be/2a1VBXLCgQg?si=Wva__PDV6LzsYwvf")
-
-        st.markdown("**Tears In Heaven - Eric Clapton**")
-        st.video("https://youtu.be/XdPE58PFNmk?si=pxl6LrsLK_RY9Y44")
-
-
-        st.header("Bossa Nova")
-
-
-
-
-        st.header("Samba")
-
-
-
-
-        st.header("Choro")
-    
-
-
-
-        st.header("Baião")
- 
-
-
-
-        st.header("MPB")
-  
-        
-
+        st.markdown("""
+        Os vídeos incorporados pertencem aos seus respectivos criadores e estão hospedados no YouTube. 
+        Esta plataforma realiza curadoria e organização educacional de conteúdos públicos, 
+        não reivindicando autoria sobre os materiais exibidos.
+
+        Veja os tutoriais disponíveis gratuitamente na internet para desenvolver um repertório musical 
+        vasto baseado no seu gênero musical favorito:
+        """)
+
+        # =============================
+    # Estado global do player
+    # =============================
+        if "video_ativo" not in st.session_state:
+            st.session_state.video_ativo = ""
+
+        # =============================
+        # Repertório organizado
+        # =============================
+        repertorio = {
+            "Blues": {
+                "Hit The Road Jack – Ray Charles": "https://www.youtube.com/watch?v=72JsVAtxxbQ",
+                "Sweet Home Chicago – Robert Johnson": "https://youtu.be/VdiYasPjtDI",
+                "Me And The Devil – Robert Johnson": "https://youtu.be/JhLqT1UwVf8",
+                "My Babe – Little Walter": "https://youtu.be/4MhQ8fpVnYI",
+                "Born Under a Bad Sign – Albert King": "https://youtu.be/E71arjUayhA",
+                "Help Me – Sonny Boy Williamson": "https://youtu.be/xY26rgQ8cVE",
+                "Still A Fool – Muddy Waters": "https://youtu.be/39lllqooF_g",
+                "Before You Accuse Me – Eric Clapton": "https://youtu.be/ItSBRoyXQNw",
+                "Baby Please Don't Go – Lightnin' Hopkins": "https://youtu.be/ecTUUDob4pg",
+                "I Don't Need No Doctor – John Mayer": "https://youtu.be/zVrZNqcQARE",
+            },
+
+            "Rock": {
+                "Little Wing – Jimi Hendrix": "https://youtu.be/A6Xqb6ZHipo",
+                "Hey Joe – Jimi Hendrix": "https://youtu.be/oEp3RNg3UPU",
+                "Smells Like Teen Spirit – Nirvana": "https://youtu.be/wBkJFsRxMJA",
+                "Come As You Are – Nirvana": "https://youtu.be/ijkaVhLAB68",
+                "Message In a Bottle – The Police": "https://youtu.be/fhzUGERg1jY",
+                "Californication – Red Hot Chili Peppers": "https://youtu.be/9f1nMzbF6WE",
+                "Otherside – Red Hot Chili Peppers": "https://youtu.be/vgrTaCU-WqE",
+                "Johnny B. Goode – Chuck Berry": "https://youtu.be/5y3PRqVs6Vc",
+                "Are U Mine? – Arctic Monkeys": "https://youtu.be/fvNB4OOcDgU",
+                "Take A Look Around – Limp Bizkit": "https://youtu.be/r7VORLT6Kjs",
+                "Ain't Talkin' 'Bout Love – Van Halen": "https://youtu.be/pQS92VgshDg",
+            },
+
+            "Pop": {
+                "Bad – Michael Jackson": "https://youtu.be/PioLuT9l-4s",
+                "Beat It – Michael Jackson": "https://youtu.be/b2dYQAejgqQ",
+                "Thriller – Michael Jackson": "https://youtu.be/rtlB7SvMlY8",
+                "They Don't Care About Us – Michael Jackson": "https://youtu.be/98e-VdYmhWg",
+                "Somebody's Watching Me – Rockwell": "https://youtu.be/-pNFsGe0tAM",
+                "Let It Be – The Beatles": "https://youtu.be/2a1VBXLCgQg",
+                "Tears In Heaven – Eric Clapton": "https://youtu.be/XdPE58PFNmk",
+            },
+        }
+
+        # =============================
+        # Interface de seleção
+        # =============================
+        for genero, musicas in repertorio.items():
+            st.header(genero)
+
+            for titulo, url in musicas.items():
+                if st.button(f"▶️ {titulo}", key=f"{genero}-{titulo}"):
+                    st.session_state.video_ativo = url
+
+    # =============================
+    # Player único (mobile-safe)
+    # =============================
+    if st.session_state.video_ativo:
+        st.divider()
+        st.subheader("🎬 Vídeo selecionado")
+        st.video(st.session_state.video_ativo)
 
 
 
