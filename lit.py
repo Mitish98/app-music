@@ -26,7 +26,7 @@ def audio_embed(youtube_url):
 if codigo_digitado == CODIGO_ACESSO:
 
     # Menu de opções
-    menu = ["História", "Ritmos", "Intervalos","Acordes & Arpejos", "Escalas Naturais", "Campos Harmônicos", "Modos Gregos", "Tutoriais", "Recursos Adicionais"]
+    menu = ["História", "Ritmos", "Intervalos","Acordes & Arpejos", "Escalas Naturais", "Campos Harmônicos", "Tutoriais", "Recursos Adicionais"]
     choice = st.sidebar.selectbox("Escolha uma função", menu)
 
     if choice == "História":
@@ -499,6 +499,67 @@ Ouça uma de suas sinfonias *Symphony No. 5 in E Minor Op. 64*:
         
         """)
 
+        st.subheader("Oitavas")
+        st.markdown("- Distância: 0 Tons / 6 Tons")
+        st.markdown("- Qualidade: Consonante")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766598963/image_arrwmk.png", caption="Representação com tônica em Mi (E)")
+
+
+        st.subheader("Segunda Menor")
+        st.markdown("- Distância: 0,5 Tons")
+        st.markdown("- Qualidade: Dissonante ")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766598964/image_1_uqbyfj.png", caption="Representação com tônica em Mi (E)")
+
+        st.subheader("Segunda Maior")
+        st.markdown("- Distância: 1 Tons ")
+        st.markdown("- Qualidade: Dissonante")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766598964/image_2_kixclb.png", caption="Representação com tônica em Mi (E)")
+        
+        st.subheader("Terça Menor")
+        st.markdown("- Distância: 1,5 Tons ")
+        st.markdown("- Qualidade: Consonante")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766598963/image_3_o1e1sb.png", caption="Representação com tônica em Mi (E)")
+
+        st.subheader("Terça Maior")
+        st.markdown("- Distância: 2 Tons")
+        st.markdown("- Qualidade: Consonante")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766599230/image_11_yhlqql.png", caption="Representação com tônica em Mi (E)")
+
+        st.subheader("Quarta Justa")
+        st.markdown("- Distância: 2,5 Tons")
+        st.markdown("- Qualidade: Consonante")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766599173/image_9_pntt5l.png", caption="Representação com tônica em Mi (E)")
+
+        st.subheader("Quarta Aumentada / Quinta Diminuta (Trítono)")
+        st.markdown("- Distância: 3 Tons")
+        st.markdown("- Qualidade: Dissonante")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766598963/image_4_zrbzue.png", caption="Representação com tônica em Mi (E)")
+
+        st.subheader("Quinta Justa")
+        st.markdown("- Distância: 3,5 Tons")
+        st.markdown("- Qualidade: Consonante")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766598963/image_5_f62wic.png", caption="Representação com tônica em Mi (E)")
+
+        st.subheader("Sexta Menor")
+        st.markdown("- Distância: 4 Tons")
+        st.markdown("- Qualidade: Consonante")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766599270/image_12_lyyqsl.png", caption="Representação com tônica em Mi (E)")
+
+        st.subheader("Sexta Maior")
+        st.markdown("- Distância: 4,5 Tons ")
+        st.markdown("- Qualidade: Consonante")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766598964/image_6_jd0yg8.png", caption="Representação com tônica em Mi (E)")
+
+        st.subheader("Sétima Menor")
+        st.markdown("- Distância: 5 Tons ")
+        st.markdown("- Qualidade: Dissonante ")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766598963/image_7_irqlsy.png", caption="Representação com tônica em Mi (E)")
+        
+        st.subheader("Sétima Maior")
+        st.markdown("- Distância:  5,5 Tons")
+        st.markdown("- Qualidade: Dissonante")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766598963/image_8_ckyguj.png", caption="Representação com tônica em Mi (E)")
+
 
 
         st.header("💡 Intervalos e Narrativa Musical")
@@ -539,47 +600,21 @@ Ouça uma de suas sinfonias *Symphony No. 5 in E Minor Op. 64*:
         | Pentatônica Menor  | 1½T - T - T - 1½T - T         | 1ª - 3ªm - 4ªJ - 5ªJ - 7ªm         | A – C – D – E – G  |
         """)
 
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766425184/image_fgi49h.png")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766425181/image_1_w4dasc.png")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766425180/image_2_oxrrur.png")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766425180/image_3_yspcit.png")
 
-        image_path = os.path.join('images', 'pentatonica-maior.jpg')
-        if os.path.exists(image_path):
-            image = Image.open(image_path)
-            st.image(image, caption='Pentatônica Maior')
+        
 
-        image_path = os.path.join('images', 'pentatonica-menor.jpg')
-        if os.path.exists(image_path):
-            image = Image.open(image_path)
-            st.image(image, caption='Pentatônica Menor')
-
-        st.header("🎸 Escala Blues")
+        st.header("🎸 Escala Blues (6 notas)")
 
         st.markdown("""
         A **escala blues** deriva da escala pentatônica menor com a adição de uma nota chamada **blue note** (quinta diminuta), que dá seu caráter expressivo e melancólico.
 """)
         
-        st.markdown("""
-
-| Tipo                 | Distância                           | Intervalos                    | Exemplo (C)             |
-|----------------------|--------------------------------------|-------------------------------|-------------------------|
-| Blues Maior          | T - ½T - ½T - 1T - 1½T - 1T           | 1ª - 2ªM - 3ªm - 3ªM - 5ªJ - 6ªM | C – D – D# – E – G – A   |
-| Blues Menor          | 1½T - T - ½T - ½T - 1½T - T           | 1ª - 3ªm - 4ªJ - 4ª# - 5ªJ - 7ªm | A – C – D – D# – E – G   |
-""")
-        
-        st.markdown("""
-As **escalas pentatônicas e blues** são estruturas essenciais na música popular, especialmente no blues, rock e jazz. A escala blues é uma variação da pentatônica com a adição da "blue note".        """)
-
-        st.subheader("Escala Blues Maior")
-        image_path = os.path.join('images', 'escala-blues-maior.jpg')
-        if os.path.exists(image_path):
-            image = Image.open(image_path)
-            st.image(image, caption='Pentatônica Menor')
-
-        st.subheader("Escala Blues Menor")
-        image_path = os.path.join('images', 'escala-blues-menor.jpg')
-        if os.path.exists(image_path):
-            image = Image.open(image_path)
-            st.image(image, caption='Pentatônica Menor')
-
-        st.success("💡 **Dica:** experimente tocar as escalas no seu instrumento em diferentes tons para sentir como cada uma afeta a sonoridade da música.")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766425179/image_4_ugefvj.png")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766425180/image_5_yza7x4.png")
 
 
         st.header("🔸 Escalas Maiores (7 notas)")
@@ -590,14 +625,11 @@ As **escalas pentatônicas e blues** são estruturas essenciais na música popul
         | Tipo              | Distância                          | Intervalos                                 
         |-------------------|-------------------------------------|--------------------------------------------
         | Maior Natural     | T - T - ST - T - T - T - ST         | 1ª - 2ªM - 3ªM - 4ªJ - 5ªJ - 6ªM - 7ªM      
-        | Maior Harmônica   | T - T - ST - T - ST - 1½T - ST      | 1ª - 2ªM - 3ªM - 4ªJ - 5ªJ - 6ªm - 7ªM      
-        | Maior Melódica    | T - T - ST - T - T - T - ST         | 1ª - 2ªM - 3ªM - 4ªJ - 5ªJ - 6ªM - 7ªM       
+
         """)
 
-        image_path = os.path.join('images', 'escala-maior-natural.jpg')
-        if os.path.exists(image_path):
-            image = Image.open(image_path)
-            st.image(image, caption='Escala Maior Natural')
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766579876/image_qkphhz.png")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766579876/image_1_vxbqmb.png")
 
         st.header("🔹 Escalas Menores (7 notas)")
 
@@ -607,14 +639,14 @@ As **escalas pentatônicas e blues** são estruturas essenciais na música popul
         | Tipo              | Distância                             | Intervalos                                
         |-------------------|----------------------------------------|-------------------------------------------
         | Menor Natural     | T - ST - T - T - ST - T - T            | 1ª - 2ªM - 3ªm - 4ªJ - 5ªJ - 6ªm - 7ªm     
-        | Menor Harmônica   | T - ST - T - T - ST - 1½T - ST         | 1ª - 2ªM - 3ªm - 4ªJ - 5ªJ - 6ªm - 7ªM     
-        | Menor Melódica    | T - ST - T - T - T - T - ST (ascendente)| 1ª - 2ªM - 3ªm - 4ªJ - 5ªJ - 6ªM - 7ªM     
+   
         """)
 
-        image_path = os.path.join('images', 'escala-menor-natural.jpg')
-        if os.path.exists(image_path):
-            image = Image.open(image_path)
-            st.image(image, caption='Escala Menor Natural')
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766579876/image_2_negevb.png")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766579876/image_3_rd1ikt.png")
+
+
+        st.success("💡 **Dica:** experimente tocar as escalas no seu instrumento em diferentes tons para sentir como cada uma afeta a sonoridade da música.")
 
 
         st.header(" 🔁 Escalas Relativas")
@@ -623,13 +655,41 @@ As **escalas pentatônicas e blues** são estruturas essenciais na música popul
                     
 """)
 
-        image_path = os.path.join('images', 'escalas.jpeg')
-        if os.path.exists(image_path):
-            image = Image.open(image_path)
-            st.image(image, caption='Escalas Relativas')
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766425567/escalas_jdmccj.jpg")
 
         st.success("💡 **Dica:** Para achar a relativa menor de uma escala maior desça 1 tom e meio (3 semitons) da tônica. Para achar a relativa maior de uma escala menor suba 1 tom e meio (3 semitons) da tônica.")
 
+        st.header("Demais Escalas Musicais...")
+        st.markdown("""
+        Além das escalas mais utilizadas na música tonal (maiores, menores, pentatônicas e blues), 
+        existe uma enorme variedade de escalas alternativas, modais, simétricas, étnicas e experimentais.
+
+        Cada escala surge a partir de uma organização específica de intervalos e cumpre funções musicais diferentes, como por exemplo : criar harmônicas específicas, produzir sensações de tensão, repouso ou instabilidade que fogem do comum, definir uma identidade sonora de única de estilos musicais diferentes, servir como uma base criativa para improvisação, composição e trilhas sonoras para explorar sonoridades não tradicionais que fogem dos padrões da tonalidade. 
+
+        Muitas dessas escalas são amplamente usadas no jazz, música erudita moderna, música oriental, trilhas de filmes, metal, fusion e música experimental.
+        """)
+
+        st.markdown("""
+        Abaixo está uma visão geral de **outras escalas musicais**, além das mais comuns, 
+        usadas para expandir o vocabulário melódico, harmônico e expressivo do músico.
+        """)
+        
+        st.markdown("""
+        | Escala                         | Nº de Notas | Característica Sonora / Função Principal                          | Uso Comum / Estilo Musical              |
+        |--------------------------------|-------------|---------------------------------------------------------------------|------------------------------------------|
+        | Harmônica Menor                | 7           | Exótica, dramática, dominante forte                                 | Clássica, Flamenco, Metal               |
+        | Melódica Menor                 | 7           | Flexível, moderna, rica harmonicamente                              | Jazz, Fusion                             |
+        | Octatônica        | 8           | Simétrica, alta tensão                                              | Jazz, Música Contemporânea              |
+        | Tons Inteiros                  | 6           | Flutuante, ambígua, sem centro tonal claro                           | Jazz, Trilhas Sonoras                   |
+        | Super Lócria      | 7           | Máxima tensão sobre acordes dominantes                               | Jazz                                    |
+        | Bebop                          | 8           | Fluxo rítmico contínuo em semicolcheias                              | Jazz tradicional                        |
+        | Frígia Dominante               | 7           | Oriental, intensa, dominante                                        | Flamenco, Música Árabe                  |
+        | Cromática                     | 12          | Todas as notas possíveis                                             | Estudo técnico, Música Experimental     |
+        | Sintéticas                     | Variável    | Criadas artificialmente para fins específicos                        | Composição e Experimentação             |
+        | Microtonais                    | Variável    | Intervalos menores que o semitom                                     | Música Contemporânea / Experimental     |
+        """)
+
+    
     def acordes():
         st.title("Acordes & Arpejos Musicais 🎹")
 
@@ -702,13 +762,13 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
         
         """)
 
-        st.image("images/triade-maior.png", caption="Acordes de Sol Maior", use_column_width=True)
+        st.image("images/triade-maior.png", caption="Acordes de Sol Maior")
 
-        st.image("images/triade-menor.png", caption="Acordes de Sol Menor", use_column_width=True)
+        st.image("images/triade-menor.png", caption="Acordes de Sol Menor")
 
-        st.image("images/triade-diminuta.png", caption="Acordes de Sol Diminuto", use_column_width=True)
+        st.image("images/triade-diminuta.png", caption="Acordes de Sol Diminuto")
 
-        st.image("images/triade-aumentada.png", caption="Acordes de Sol Aumentado", use_column_width=True)
+        st.image("images/triade-aumentada.png", caption="Acordes de Sol Aumentado")
 
         st.header("🔸 Tipos de Tétrades")
 
@@ -730,7 +790,7 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
 *Obs: Há um total de 60 combinações possíveis para as tétrades nos 12 tons.*
         """)
 
-        st.image("images/acordes-tetrades.png", caption="Acordes de Sol Maior com +7", use_column_width=True)
+        st.image("images/acordes-tetrades.png", caption="Acordes de Sol Maior com +7")
 
         st.title("🎼 Arpejos")
 
@@ -740,21 +800,44 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
         Os arpejos também podem ser tocados de forma ascendente, descendente ou alternada, e são uma ferramenta essencial para explorar a sonoridade dos acordes no tempo.
         """)
         st.header("Tríade Maior (1 - 3 - 5)")
-        st.image("images/Arpejo-triade-maior.png", caption="Representação visual das tríades", use_column_width=True)
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766423844/image_rwbv5u.png", caption="Representação visual dos intervalos da tríade maior")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766423885/image_1_ok4oii.png", caption="Representação visual das notas da tríade maior")
+
         st.header("Tríade Menor (1 - b3 - 5)")
-        st.image("images/Arpejo-triade-menor.png", caption="Representação visual das tríades", use_column_width=True)
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766424139/image_onkic5.png", caption="Representação visual dos intervalos da tríade menor")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766424139/image_1_wsyivr.png", caption="Representação visual das notas da tríade menor")
+
+        st.header("Tríade Diminuta (1 - b3 - b5)")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766424140/image_2_q7vq7q.png", caption="Representação visual dos intervalos da tríade diminuta")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766424140/image_3_wzwedu.png", caption="Representação visual das notas da tríade diminuta")
+
+
+
         st.header("Tétrade Maior (1 - 3 - 5 - 7)")
-        st.image("images/Arpejo-tetrade-maior.png", caption="Representação visual das tríades", use_column_width=True)
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766424140/image_4_hbazat.png", caption="Representação visual dos intervalos da tétrade maior")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766424144/image_5_ww5skn.png", caption="Representação visual das notas da tétrade maior")
+
+
         st.header("Tétrade Menor (1 - b3 - 5 - b7)")
-        st.image("images/Arpejos-tetrade-menor.png", caption="Representação visual das tríades", use_column_width=True)
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766424145/image_6_omcdoy.png", caption="Representação visual dos intervalos da tétrade menor")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766424145/image_7_hbfxre.png", caption="Representação visual das notas da tétrade menor")
+
+
         st.header("Tétrade Dominante (1 - 3 - 5 - b7)")
-        st.image("images/Arpejos-tetrade-dominante.png", caption="Representação visual das tríades", use_column_width=True)
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766424145/image_8_gtcgyx.png", caption="Representação visual dos intervalos da tétrade dominante")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766424145/image_9_g5413x.png", caption="Representação visual das notas da tétrade dominante")
+
+
+
+
         st.header("Tétrade Meia-Diminuta (1 - b3 - b5 - b7)")
-        st.image("images/Arpejos-tetrade-meia-diminuta.png", caption="Representação visual das tríades", use_column_width=True)
-        st.header("Tétrade Aumentada (1 - 3 - #5 - 7)")
-        st.image("images/Arpejos-tetrade-aumentada.png", caption="Representação visual das tríades", use_column_width=True)
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766424148/image_10_lqqev7.png", caption="Representação visual dos intervalos da tétrade meia-diminuta")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766424148/image_11_t9f2bs.png", caption="Representação visual das notas da tétrade meia-diminuta")
+
+
         st.header("Tétrade Menor com Sétima Maior (1 - b3 - 5 - 7)")
-        st.image("images/Arpejos-tetrade-menor-com-setima-maior.png", caption="Representação visual das tríades", use_column_width=True)
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766424149/image_12_z1uagj.png", caption="Representação visual dos intervalos da tétrade menor com sétima maior")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766424150/image_13_noqiua.png", caption="Representação visual das notas da tétrade menor com sétima maior")
 
 
     def harmonico():
@@ -828,9 +911,12 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
 
         st.header("🎯 Progressões Harmônicas")
 
-        st.header("🔁 Ciclo das Quintas")
+        st.markdown("Descrição das principais progressões harmonicas")
+
+        st.header("🔁 Ciclo das Quartas e das Quintas")
+
+        st.markdown("Descrição do que são os ciclos")
         
-        st.header("🔄 Ciclo das Quartas")
 
         st.markdown("""
     O **ciclo das quartas** move-se por **quartas justas descendentes** (ou quintas ascendentes lidas ao contrário). Usado para:
@@ -859,77 +945,7 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
     > 💡 O ciclo das quartas é o ciclo das quintas lido de trás pra frente!
     """)
 
-    
-    def gregos():
-        st.header("🏛️ Modos Gregos")
 
-        st.markdown("""
-    Os **Modos Gregos** são escalas derivadas da **escala maior diatônica**, cada uma começando em um grau diferente da escala.
-
-    Cada modo possui uma **personalidade sonora única**, com diferentes sensações emocionais e funções harmônicas. Eles são muito utilizados na música modal, jazz, rock, música medieval e contemporânea.
-
-    ---
-
-    🎼 **Modos derivados da escala maior (modo jônio):**
-
-    | Grau | Nome     | Fórmula Intervalar        | Exemplo em C maior          | Característica Principal       |
-    |------|----------|---------------------------|-----------------------------|--------------------------------|
-    | I    | Jônio    | T – T – ST – T – T – T – ST | C – D – E – F – G – A – B   | Brilhante, estável (Escala maior) |
-    | II   | Dórico   | T – ST – T – T – T – ST – T | D – E – F – G – A – B – C   | Menor com sexta maior          |
-    | III  | Frígio   | ST – T – T – T – ST – T – T | E – F – G – A – B – C – D   | Oriental, sombrio              |
-    | IV   | Lídio    | T – T – T – ST – T – T – ST | F – G – A – B – C – D – E   | Maior com quarta aumentada     |
-    | V    | Mixolídio| T – T – ST – T – T – ST – T | G – A – B – C – D – E – F   | Maior com sétima menor         |
-    | VI   | Eólio    | T – ST – T – T – ST – T – T | A – B – C – D – E – F – G   | Triste, introspectivo (Menor natural) |
-    | VII  | Lócrio   | ST – T – T – ST – T – T – T | B – C – D – E – F – G – A   | Instável, dissonante           |
-
-    ---
-
-    ## 📌 Dicas para entender e aplicar:
-
-    - **Jônio**: É o modo da escala maior tradicional. Ideal para músicas alegres e resolutivas.
-    - **Dórico**: Mistura de menor com brilho. Muito usado no jazz, funk e música latina.
-    - **Frígio**: Modo obscuro, muito comum no flamenco e no metal.
-    - **Lídio**: Possui som etéreo e moderno, comum em trilhas sonoras e música cinematográfica.
-    - **Mixolídio**: Perfeito para o blues, rock e música popular. Traz tensão leve com a 7ª menor.
-    - **Eólio**: Modo da escala menor natural. Tristeza, melancolia e emoção.
-    - **Lócrio**: Som instável e misterioso. Pouco usado sozinho, mas muito útil para criar tensão harmônica.
-
-    ---
-
-    ## 🧠 Como praticar?
-
-    - Escolha um **modo** e toque suas notas no teclado ou instrumento;
-    - Crie **acompanhamentos harmônicos** com base no modo;
-    - Tente compor pequenas frases melódicas com a sonoridade do modo;
-    - Compare dois modos seguidos (ex: Dórico vs Eólio) e perceba como muda a sensação sonora.
-
-    ---
-
-    ## 🎹 Exemplo prático: Escala de C maior e seus modos
-
-    | Modo        | Notas                             |
-    |-------------|-----------------------------------|
-    | Jônio       | C – D – E – F – G – A – B         |
-    | Dórico      | D – E – F – G – A – B – C         |
-    | Frígio      | E – F – G – A – B – C – D         |
-    | Lídio       | F – G – A – B – C – D – E         |
-    | Mixolídio   | G – A – B – C – D – E – F         |
-    | Eólio       | A – B – C – D – E – F – G         |
-    | Lócrio      | B – C – D – E – F – G – A         |
-
-    ---
-
-    ## 🎯 Aplicações Musicais
-
-    - **Jazz e improvisação modal**
-    - **Rock progressivo e psicodélico**
-    - **Música medieval e folclórica**
-    - **Trilhas sonoras épicas**
-
-    ---
-
-
-    """)
             
     def set_video(url):
         st.session_state.video_ativo = url
@@ -947,6 +963,10 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
     vasto baseado no seu gênero musical favorito:
     """)
         
+        if "video_ativo" not in st.session_state:
+            st.session_state.video_ativo = None
+
+        
                 # =============================
         # Player único
         # =============================
@@ -959,9 +979,6 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
         # =============================
         # Estado (sempre no topo)
         # =============================
-        if "video_ativo" not in st.session_state:
-            st.session_state.video_ativo = None
-
         # =============================
         # Repertório
         # =============================
@@ -993,6 +1010,7 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
                 "Are U Mine? – Arctic Monkeys": "https://youtu.be/fvNB4OOcDgU",
                 "Take A Look Around – Limp Bizkit": "https://youtu.be/r7VORLT6Kjs",
                 "Ain't Talkin' 'Bout Love – Van Halen": "https://youtu.be/pQS92VgshDg",
+                "Money For Nothing - Dire Straits": "https://www.youtube.com/watch?v=zZbSkA8wdRE",
             },
 
             "Pop": {
@@ -1041,6 +1059,7 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
     Ferramentas online para você praticar e aplicar os conhecimentos de teoria musical:
 
     - [🎸 Oolimo (Teoria e acordes para guitarra)](https://www.oolimo.com/en/)
+    - [🎸 Guitar Scientist (Diagramas)](https://guitarscientist.com/)
     - [🎛️ BandLab (Estúdio de produção musical gratuito)](https://www.bandlab.com/)
     - [🎼 Song Maker (Google Music Lab)](https://musiclab.chromeexperiments.com/Song-Maker)
     - [🎹 Piano Eletrônico Virtual](https://www.pianoeletronico.com.br/index.html)
@@ -1097,8 +1116,6 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
         acordes()
     elif choice == "Campos Harmônicos":
         harmonico()
-    elif choice == "Modos Gregos":
-        gregos()
     elif choice == "Tutoriais":
         tutoriais()
     elif choice == "Recursos Adicionais":
