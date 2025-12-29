@@ -658,7 +658,10 @@ Ouça uma de suas sinfonias *Symphony No. 5 in E Minor Op. 64*:
         st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766425567/escalas_jdmccj.jpg")
 
         st.success("💡 **Dica:** Para achar a relativa menor de uma escala maior desça 1 tom e meio (3 semitons) da tônica. Para achar a relativa maior de uma escala menor suba 1 tom e meio (3 semitons) da tônica.")
-
+        st.header("O Sistema CAGED nas Escalas Naturais")
+        st.markdown("O sistema CAGED é frequentemente utilizado no estudo das escalas naturais como uma referência para a sequência de notas que está sendo executada. Ao identificar a terça e a quinta da escala, é possível localizar o acorde de referência naquela região do instrumento, facilitando a visualização da harmonia e a aplicação prática no braço")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766970692/CAGED_in_Major_Pentatonic_Scale_-_Made_at_Guitarscientist.com_hisoo8.png")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766970350/CAGED_in_Minor_Pentatonic_Scale_-_Made_at_Guitarscientist.com_1_w1bilj.png")
         st.header("Demais Escalas Musicais...")
         st.markdown("""
         Além das escalas mais utilizadas na música tonal (maiores, menores, pentatônicas e blues), 
@@ -762,13 +765,9 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
         
         """)
 
-        st.image("images/triade-maior.png", caption="Acordes de Sol Maior")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766972833/CAGED_in_Major_Triads_1_-_3_-_5_-_Made_at_Guitarscientist.com_t3qujh.png", caption="Acordes Maiores")
 
-        st.image("images/triade-menor.png", caption="Acordes de Sol Menor")
-
-        st.image("images/triade-diminuta.png", caption="Acordes de Sol Diminuto")
-
-        st.image("images/triade-aumentada.png", caption="Acordes de Sol Aumentado")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766972703/CAGED_in_Minor_Triads_I_-_b3_-_5_-_Made_at_Guitarscientist.com_kv79zv.png", caption="Acordes Menores")
 
         st.header("🔸 Tipos de Tétrades")
 
@@ -790,7 +789,12 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
 *Obs: Há um total de 60 combinações possíveis para as tétrades nos 12 tons.*
         """)
 
-        st.image("images/acordes-tetrades.png", caption="Acordes de Sol Maior com +7")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766974098/CAGED_in_Maj7_1_-_3_-_5_-_7_-_Made_at_Guitarscientist.com_t1x6ej.png", caption="Acordes Maiores com Sétima Maior")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766974517/CAGED_in_m7_1_-_b3_-_5_-_b7_-_Made_at_Guitarscientist.com_ufclig.png", caption="Acordes Menores com Sétima Menor")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766974654/CAGED_in_Dominant_7_1_-_3_-_5_-_b7_-_Made_at_Guitarscientist.com_a6jn01.png", caption="Acordes Dominantes")
+        st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766974911/CAGED_in_m7_5_1_-_b3_-_b5_-_b7_-_Made_at_Guitarscientist.com_pc306m.png", caption="Acordes Meio-Diminutos")
+
+
 
         st.title("🎼 Arpejos")
 
@@ -841,110 +845,230 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
 
 
     def harmonico():
-        st.title("🎼 Campo Harmônico")
+        st.title("Harmonia 🎼")
 
         st.markdown("""
-    Os **campos harmônicos** são conjuntos de acordes derivados de uma **escala** (maior ou menor) usados para construir harmonias e progressões musicais.
+        Este capítulo apresenta um **guia progressivo de harmonia**, do básico ao avançado,
+        com foco em **composição, improvisação e aplicação prática na guitarra**, especialmente
+        em contextos de blues moderno e música tonal contemporânea.
 
-    Eles são essenciais para compor, improvisar e entender como os acordes se relacionam entre si.
-
+        O objetivo não é decorar acordes, mas **entender como a harmonia se move e cria direção**.
         """)
 
-        st.header("🌞 Campo Harmônico Maior")
+        # ======================================================
+        st.header("🎼 O que é Campo Harmônico?")
 
         st.markdown("""
-    O **campo harmônico maior** é derivado da escala maior e forma a base para progressões estáveis, alegres e comuns em músicas populares e clássicas.
-
-    **Fórmula:**
-    - I: Tríade Maior
-    - II: Tríade Menor
-    - III: Tríade Menor
-    - IV: Tríade Maior
-    - V: Tríade Maior
-    - VI: Tríade Menor
-    - VII: Tétrade Meio-diminuta
-
-    **Exemplo em C Maior:**
-    C – Dm – Em – F – G – Am – B°
-    """)
-
-        st.header("🌑 Campo Harmônico Menor")
+        Um **campo harmônico** é o conjunto de acordes formados a partir de uma **escala**,
+        empilhando intervalos de terça usando apenas as notas dessa escala. Assim, pode-se dizer que o campo harmônico é a escala observada verticalmente.
+        
+        Vamos construir um campo harmônico **passo a passo**, sem pular etapas:
+            
+                    """)
 
         st.markdown("""
-    O **campo harmônico menor** é baseado na escala menor natural. Tem uma sonoridade mais introspectiva e emocional.
+        **Regra fundamental:**
+        > Escolha uma escala → empilhe terças → obtenha os acordes do campo harmônico.
+        """)
 
-    **Fórmula:**
-    - I: Tríade Menor
-    - II: Tétrade Diminuta
-    - III: Tríade Maior
-    - IV: Tríade Menor
-    - V: Tríade Menor
-    - VI: Tríade Maior
-    - VII: Tétrade Maior
 
-    **Exemplo em A Menor:**
-    Am – B° – C – Dm – Em – F – G
-    """)
+        st.markdown("""
+        **1 - Escolha da escala**
+        (Exemplo: Escala de C maior)
 
+        C – D – E – F – G – A – B
+        """)
+
+        st.markdown("""
+        **2 -  Empilhando terças (formando tríades)**
+
+        Agora escolhemos uma nota da escala e **pulamos sempre uma nota** para empilhar as terças.
+        """)
+
+        st.markdown("""
+        - Grau I (C):  
+        C → E → G → **C maior**
+
+        - Grau ii (D): 
+        D → F → A → **D menor**
+
+        - Grau iii (E):  
+        E → G → B → **E menor**
+
+        - Grau IV (F):
+        F → A → C → **F maior**
+
+        - Grau V (G):
+        G → B → D → **G maior**
+
+        - Grau vi (A):
+        A → C → E → **A menor**
+
+        - Grau vii (B): 
+        B → D → F → **B diminuto**
+        """)
+
+        st.markdown("""
+        Assim surge o **campo harmônico de dó maior em tríades**:
+
+        👉 **C – Dm – Em – F – G – Am – B°**
+        """)
+
+        st.markdown("""
+        As **tríades** representam a forma mais simples de organização harmônica.
+        Elas mostram a **qualidade básica** de cada grau.
+        """)
+
+
+        # ======================================================
+        st.header(" Campo Harmônico Com Tétrades")
+
+        st.markdown("""
+        As **tétrades** surgem ao adicionarmos a **7ª** às tríades.
+        Elas definem com mais clareza a **função harmônica** e são essenciais
+        para improvisação e composição modernas.
+        """)
+
+        st.markdown("""
+        **Fórmula das tétrades no campo harmônico maior:**
+        - I  → maj7  
+        - ii → m7  
+        - iii → m7  
+        - IV → maj7  
+        - V  → 7 (dominante)  
+        - vi → m7  
+        - vii → m7♭5
+        """)
+
+        st.markdown("""
+        **Exemplo — Campo harmônico de C maior (tétrades):**
+
+        Cmaj7 – Dm7 – Em7 – Fmaj7 – G7 – Am7 – Bm7♭5
+        """)
+
+        st.success("""
+        ✅ Em música moderna, **pensar em tétrades é o padrão**.
+        Tríades passam a ser simplificações ou escolhas estéticas.
+        """)
+
+        # ======================================================
         st.header("🎯 Funções Harmônicas")
 
         st.markdown("""
-            No campo harmônico, cada acorde cumpre uma **função harmônica**. As funções são classificadas em:
+        Cada acorde exerce uma **função harmônica**, que define
+        **como ele se comporta dentro da tonalidade**.
+        """)
 
-            - **Tônica (T)**: sensação de repouso, estabilidade;
-            - **Subdominante (SD)**: cria movimento, prepara a tensão;
-            - **Dominante (D)**: cria tensão e conduz de volta à tônica.
+        st.markdown("""
+        **As três funções principais são:**
+        - **Tônica (T)** → repouso, estabilidade  
+        - **Subdominante (SD)** → movimento, preparação  
+        - **Dominante (D)** → tensão, resolução
+        """)
 
-            **Exemplo – Campo harmônico maior de C:**
+        st.markdown("""
+        **Campo harmônico de C maior com funções:**
 
-            | Grau | Acorde | Função        |
-            |------|--------|----------------|
-            | I    | C      | Tônica (T)     |
-            | II   | Dm     | Subdominante   |
-            | III  | Em     | Tônica         |
-            | IV   | F      | Subdominante   |
-            | V    | G      | Dominante      |
-            | VI   | Am     | Tônica         |
-            | VII  | B°     | Dominante      |
-            """)
+        | Grau | Acorde | Função |
+        |------|--------|--------|
+        | I    | Cmaj7  | Tônica |
+        | ii   | Dm7    | Subdominante |
+        | iii  | Em7    | Tônica |
+        | IV   | Fmaj7  | Subdominante |
+        | V    | G7     | Dominante |
+        | vi   | Am7    | Tônica |
+        | vii  | Bm7♭5  | Dominante |
+        """)
 
+        st.markdown("""
+        **Aplicação prática:**
+        - Progressões começam em **T**
+        - Se movem para **SD**
+        - Criam tensão em **D**
+        - Resolvem novamente em **T**
+        """)
 
-        st.header("🎯 Progressões Harmônicas")
+        st.info("""
+        🎸 No improviso:
+        - Tônica → frases estáveis
+        - Subdominante → frases abertas
+        - Dominante → frases tensas que pedem resolução
+        """)
 
-        st.markdown("Descrição das principais progressões harmonicas")
+        # ======================================================
+        st.header("🎯 Dominantes Secundários")
 
-        st.header("🔁 Ciclo das Quartas e das Quintas")
+        st.markdown("""
+        Um **dominante secundário** é um acorde dominante (7)
+        usado para **preparar temporariamente outro acorde**
+        que não é a tônica.
+        """)
 
-        st.markdown("Descrição do que são os ciclos")
+        st.markdown("""
+        👉 Ele funciona como o **V grau de outro acorde**.
+        """)
+
+        st.markdown("""
+        **Exemplo em C maior:**
+
+        Campo harmônico natural:
+        Cmaj7 – Dm7 – Em7 – Fmaj7 – G7 – Am7 – Bm7♭5
+
+        Inserindo dominante secundário:
+        Cmaj7 – **A7** – Dm7
+        """)
+
+        st.markdown("""
+        **Por que A7 funciona?**
+        - A7 é o **V de Dm**
+        - Cria tensão extra
+        - Direciona fortemente a progressão
+        """)
+
+        st.markdown("""
+        **Notação funcional:**
+        - A7 → V/ii (cinco do dois)
+        """)
+
+        st.info("""
+        🎸 No improviso:
+        - trate o dominante secundário como um acorde dominante real
+        - foque na **3ª e 7ª**
+        - resolva claramente no acorde seguinte
+        """)
+
+        # ======================================================
+        st.header("🔁 Progressões Harmônicas Essenciais")
+
+        st.markdown("""
+        Progressões harmônicas organizam o **fluxo da música**
+        e servem como base para composição e improvisação.
+        """)
+
+        st.subheader("➤ ii – V – I")
+
+        st.markdown("""
+        A progressão **ii – V – I** é a base da música tonal moderna.
+
+        **Exemplo em C:**
+        Dm7 → G7 → Cmaj7
+
+        **Função:**
+        SD → D → T
+        """)
+
+        st.subheader("➤ I – vi – ii – V")
+
+        st.markdown("""
+        Progressão circular muito usada em blues moderno, jazz e soul.
+
+        **Exemplo em C:**
+        Cmaj7 → Am7 → Dm7 → G7
+        """)
+
         
 
-        st.markdown("""
-    O **ciclo das quartas** move-se por **quartas justas descendentes** (ou quintas ascendentes lidas ao contrário). Usado para:
-
-    - Modulação entre tonalidades;
-    - Progressões harmônicas previsíveis;
-    - Improvisação e prática.
-
-    **Exemplo:**
-
-    C → F → Bb → Eb → Ab → Db → Gb → B → E → A → D → G → C
-    """)
-
-
-        st.markdown("""
-    O **ciclo das quintas** move-se por **quintas justas ascendentes**. É uma ferramenta fundamental para:
-
-    - Compor progressões que retornam naturalmente à tônica;
-    - Navegar entre tonalidades;
-    - Construir músicas com cadência satisfatória.
-
-    **Exemplo:**
-
-    C → G → D → A → E → B → F♯ → C♯ → G♯ → D♯ → A♯ → F → C
-
-    > 💡 O ciclo das quartas é o ciclo das quintas lido de trás pra frente!
-    """)
-
+        
 
             
     def set_video(url):
