@@ -101,9 +101,12 @@ if codigo_digitado == CODIGO_ACESSO:
 
 Ouça *Hymn to the Sun*:
         """)
-        st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344173/suoop7qv2kyqzaawngvw.mp3")
+        
 
-
+        if st.button("▶️ Ouvir Hymn to the Sun"):
+            st.audio(
+        "https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344173/suoop7qv2kyqzaawngvw.mp3"
+    )
 
         # IDADE MÉDIA
         st.header("🕍 Idade Média (500–1400)")
