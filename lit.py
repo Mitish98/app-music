@@ -141,7 +141,8 @@ Ouça *Hymn to the Sun*:
 Ouça *De Spiritu Sancto*:
         """)
 
-        st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344803/hwynylkgkytdtbriavxh.mp3")
+        if st.button("▶️ Ouvir De Spiritu Sancto"):
+            st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344803/hwynylkgkytdtbriavxh.mp3")
 
 
         st.subheader("**- Leonin (1150–1201)**")
@@ -149,7 +150,9 @@ Ouça *De Spiritu Sancto*:
 
 Ouça *Nostrum Organum Duplum*:
         """)
-        st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751392698/lggvrlwdh2ij3oc5ysbw.mp3")
+
+        if st.button("▶️ Ouvir Nostrum Organum Duplum"):
+            st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751392698/lggvrlwdh2ij3oc5ysbw.mp3")
 
 
         # RENASCIMENTO
@@ -185,7 +188,9 @@ Ouça *Nostrum Organum Duplum*:
         Ouça *Ave Maria ... virgo serena*:
         """)
 
-        st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751486334/pcvqhxhbll6eacvxtlv5.mp3")
+
+        if st.button("▶️ Ouvir Ave Maria ... virgo serena"):
+            st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751486334/pcvqhxhbll6eacvxtlv5.mp3")
 
 
         st.subheader("**- Giovanni Palestrina (1525–1594)** ")
@@ -193,7 +198,9 @@ Ouça *Nostrum Organum Duplum*:
 
 Ouça *Missa Papae Marcelli*:
         """)
-        st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751488772/g0cuwgdeglakntyy6rgc.mp3")
+
+        if st.button("▶️ Ouvir Missa Papae Marcelli"):
+            st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751488772/g0cuwgdeglakntyy6rgc.mp3")
 
 
         st.subheader("**- Orlando di Lasso (1532–1594)** ")
@@ -201,7 +208,9 @@ Ouça *Missa Papae Marcelli*:
 
 Ouça *Lagrime di San Pietro: I. Il magnanimo Pietro*:
         """)
-        st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751497992/cwezwqiiugdezve7uecr.mp3")
+
+        if st.button("▶️ Ouvir Lagrime di San Pietro: I. Il magnanimo Pietro"):
+            st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751497992/cwezwqiiugdezve7uecr.mp3")
 
         # BARROCO
         st.header("🎻 Barroco (1600–1750)")
@@ -234,7 +243,9 @@ Ouça *Lagrime di San Pietro: I. Il magnanimo Pietro*:
 
 Ouça uma de suas óperas mais famosas *L`Orfeo*:
         """)
-        st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+        if st.button("▶️ Ouvir L`Orfeo"):
+            st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
 
         st.subheader("**- Antonio Vivaldi (1678-1741)**")
@@ -244,7 +255,9 @@ Sua obra mais famosa, *Quatro Estações*, parte de um conjunto de 12 concertos 
 
 Ouça *Four Seasons*:
         """)
-        st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1752259605/nhxy9zxf4qdyn9y8c8f3.mp3")
+
+        if st.button("▶️ Ouvir Four Seasons"):
+            st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1752259605/nhxy9zxf4qdyn9y8c8f3.mp3")
 
         st.subheader("**- Johann Sebastian Bach (1685-1750)** ")
 
@@ -258,7 +271,9 @@ O principal propósito de *O Cravo Bem Temperado* era mostrar a versatilidade do
                     
 Ouça uma de suas produções *Prelude and Fugue: No. 18 in G-Sharp Minor, BWV 887*:
                     """)
-        st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1752254587/bmf9qfbd5qqpjmdcncgn.mp3")
+        
+        if st.button("▶️ Ouvir Prelude and Fugue: No. 18 in G-Sharp Minor, BWV 887"):
+            st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1752254587/bmf9qfbd5qqpjmdcncgn.mp3")
 
 
         # CLÁSSICO
@@ -298,7 +313,9 @@ Ouça uma de suas produções *Prelude and Fugue: No. 18 in G-Sharp Minor, BWV 8
         
     Ouça uma de suas sinfonias *Symphony No. 25 in G minor*:
         """)
-        st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1752286273/bvzu89jgalpsqucqo3gt.mp3")
+
+        if st.button("▶️ Ouvir Symphony No. 25 in G minor"):
+            st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1752286273/bvzu89jgalpsqucqo3gt.mp3")
 
         st.subheader("**- Ludwig van Beethoven (1770–1827)**")
         st.markdown("""Redefiniu o papel da música, transformando-a de uma arte cortesã e decorativa em um veículo de expressão pessoal, emoção profunda e ideia filosófica. Ele é a figura de transição entre o Classicismo e o Romantismo, e sua vida e obra são uma jornada intensa de luta, superação, inovação e legado eterno.
@@ -309,7 +326,9 @@ Beethoven via a música como drama puro, e é o primeiro compositor a tratar a e
 
 Ouça uma de suas obras *Symphony No. 5, Op. 67*:
         """)
-        st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1752287831/uadibd8ti2vxuybt0hwi.mp3")
+
+        if st.button("▶️ Ouvir Symphony No. 5, Op. 67"):
+            st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1752287831/uadibd8ti2vxuybt0hwi.mp3")
 
         # ROMÂNTICO
         st.header("🎭 Romântico (1820–1900)")
@@ -346,7 +365,9 @@ Ouça uma de suas obras *Symphony No. 5, Op. 67*:
 
     Ouça uma de suas músicas *Nocturne in E Flat Major (Op. 9 No. 2)*:
         """)
-        st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1752335948/ymupj0sgwkyen9djqgwc.mp3")
+
+        if st.button("▶️ Ouvir Nocturne in E Flat Major (Op. 9 No. 2)"):
+            st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1752335948/ymupj0sgwkyen9djqgwc.mp3")
 
         st.subheader("**- Piotr Ilitch Tchaikovsky (1840–1893)**")
 
@@ -356,7 +377,9 @@ Tchaikovsky era um mestre da melodia emocional, da orquestração brilhante e da
 
 Ouça uma de suas sinfonias *Symphony No. 5 in E Minor Op. 64*:
         """)
-        st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
+
+        if st.button("▶️ Ouvir Symphony No. 5 in E Minor Op. 64"):
+            st.audio("https://res.cloudinary.com/dkbvui6sx/video/upload/v1751334700/eu2ofdspdrmzfwosa5ij.mp3")
 
 
         st.header("🎼 Estilos Musicais Contemporâneos")
