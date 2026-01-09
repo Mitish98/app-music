@@ -4,8 +4,6 @@ import os
 from PIL import Image
 import base64
 
-
-
 CODIGO_ACESSO = "MEUCODIGO123"  # Troque para o código que vai enviar na Hotmart
 
 codigo_digitado = st.text_input("Digite seu código de acesso:", type="password")
@@ -871,230 +869,817 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
 
 
     def harmonico():
-        st.title("Harmonia 🎼")
-
-        st.markdown("""
-        Este capítulo apresenta um **guia progressivo de harmonia**, do básico ao avançado,
-        com foco em **composição, improvisação e aplicação prática na guitarra**, especialmente
-        em contextos de blues moderno e música tonal contemporânea.
-
-        O objetivo não é decorar acordes, mas **entender como a harmonia se move e cria direção**.
-        """)
 
         # ======================================================
-        st.header("🎼 O que é Campo Harmônico?")
+        st.header("🎼 O Que é Campo Harmônico e Como Construí-lo?")
 
         st.markdown("""
-        Um **campo harmônico** é o conjunto de acordes formados a partir de uma **escala**,
-        empilhando intervalos de terça usando apenas as notas dessa escala. Assim, pode-se dizer que o campo harmônico é a escala observada verticalmente.
+        Um campo harmônico é um conjunto de acordes que soam bem com a tonalidade que está sendo tocada. 
+                    
+        Os campos harmônicos são formados a partir da escala da nota tonal escolhida e, para construí-lo, é necessário aplicar o empilhamento de terças em cada uma das notas da escala.
         
-        Vamos construir um campo harmônico **passo a passo**, sem pular etapas:
+        **Vamos construir um campo harmônico passo a passo para entender como ele é feito:**
             
                     """)
 
-        st.markdown("""
-        **Regra fundamental:**
-        > Escolha uma escala → empilhe terças → obtenha os acordes do campo harmônico.
-        """)
-
 
         st.markdown("""
-        **1 - Escolha da escala**
-        (Exemplo: Escala de C maior)
+        **1 - Escolha uma escala** -> Exemplo: Escala Maior Natural de Dó
 
-        C – D – E – F – G – A – B
+        *C – D – E – F – G – A – B*
         """)
 
         st.markdown("""
-        **2 -  Empilhando terças (formando tríades)**
+        **2 -  Empilhando terças até formar tríades**
 
-        Agora escolhemos uma nota da escala e **pulamos sempre uma nota** para empilhar as terças.
+        Agora escolhemos uma nota da escala e, para empilhar terças de forma prática, pulamos sempre uma nota da escala para compor o acorde.
         """)
 
         st.markdown("""
-        - Grau I (C):  
-        C → E → G → **C maior**
+        - **Grau I**:  *C → E → G* → estas são as notas da tríade de **C maior**
 
-        - Grau ii (D): 
-        D → F → A → **D menor**
+        - **Grau II**: *D → F → A* → estas são as notas da tríade de **D menor**
 
-        - Grau iii (E):  
-        E → G → B → **E menor**
+        - **Grau III**: *E → G → B* → estas são as notas da tríade de **E menor**
 
-        - Grau IV (F):
-        F → A → C → **F maior**
+        - **Grau IV**: *F → A → C* → estas são as notas da tríade de **F maior**
 
-        - Grau V (G):
-        G → B → D → **G maior**
+        - **Grau V**: *G → B → D* → estas são as notas da tríade de **G maior**
 
-        - Grau vi (A):
-        A → C → E → **A menor**
+        - **Grau VI**: *A → C → E* → estas são as notas da tríade de **A menor**
 
-        - Grau vii (B): 
-        B → D → F → **B diminuto**
+        - **Grau VII**: *B → D → F* → estas são as notas da tríade de **B diminuto**
         """)
 
         st.markdown("""
-        Assim surge o **campo harmônico de dó maior em tríades**:
+        Portanto, o campo harmônico de dó maior em tríades é:
 
-        👉 **C – Dm – Em – F – G – Am – B°**
+        👉 *C – Dm – Em – F – G – Am – B°*
         """)
 
-        st.markdown("""
-        As **tríades** representam a forma mais simples de organização harmônica.
-        Elas mostram a **qualidade básica** de cada grau.
-        """)
+        
+        st.info("""As tríades mostram a qualidade básica de cada acorde no campo harmônico, ou seja, quais graus terão acordes maiores ou menores.""")
 
+        st.markdown("Veja a **tabela de campos harmônicos maiores** para todas as notas naturais:")
 
+        st.markdown("""I  | II  | III | IV | V  | VI  | VII |
+-- | --- | --- | -- | -- | --- | ---- |
+**C**  | Dm  | Em  | F  | G  | Am  | B°   |
+**G**  | Am  | Bm  | C  | D  | Em  | F#°  |
+**D**  | Em  | F#m | G  | A  | Bm  | C#°  |
+**A**  | Bm  | C#m | D  | E  | F#m | G#°  |
+**E**  | F#m | G#m | A  | B  | C#m | D#°  |
+**B**  | C#m | D#m | E  | F# | G#m | A#°  |
+**F#** | G#m | A#m | B  | C# | D#m | E#°  |
+**Db** | Ebm | Fm  | Gb | Ab | Bbm | C°   |
+**Ab** | Bbm | Cm  | Db | Eb | Fm  | G°   |
+**Eb** | Fm  | Gm  | Ab | Bb | Cm  | D°   |
+**Bb** | Cm  | Dm  | Eb | F  | Gm  | A°   |
+**F**  | Gm  | Am  | Bb | C  | Dm  | E°   |
+""")
+        
+        st.markdown("Veja a **tabela de campos harmônicos menores** para todas as notas naturais:")
+
+        st.markdown("""I   | II | III | IV  | V   | VI | VII |
+--- | --- | --- | --- | --- | -- | --- |
+**Am**  | B°  | C   | Dm  | Em  | F  | G   |
+**Em**  | F#° | G   | Am  | Bm  | C  | D   |
+**Bm**  | C#° | D   | Em  | F#m | G  | A   |
+**F#m** | G#° | A   | Bm  | C#m | D  | E   |
+**C#m** | D#° | E   | F#m | G#m | A  | B   |
+**G#m** | A#° | B   | C#m | D#m | E  | F#  |
+**D#m** | E#° | F#  | G#m | A#m | B  | C#  |
+**Bbm** | C°  | Db  | Ebm | Fm  | Gb | Ab  |
+**Fm**  | G°  | Ab  | Bbm | Cm  | Db | Eb  |
+**Cm**  | D°  | Eb  | Fm  | Gm  | Ab | Bb  |
+**Gm**  | A°  | Bb  | Cm  | Dm  | Eb | F   |
+**Dm**  | E°  | F   | Gm  | Am  | Bb | C   |
+""")
         # ======================================================
-        st.header(" Campo Harmônico Com Tétrades")
+        st.header(" Campos Harmônicos Com Tétrades")
 
         st.markdown("""
-        As **tétrades** surgem ao adicionarmos a **7ª** às tríades.
-        Elas definem com mais clareza a **função harmônica** e são essenciais
-        para improvisação e composição modernas.
+        O campo harmônico completo com tétrades surgem ao adicionarmos mais uma etapa de empilhamento de terças em cada um dos graus com a inserção das sétimas às tríades, definindo com mais clareza a função harmônica de cada grau.
         """)
 
         st.markdown("""
-        **Fórmula das tétrades no campo harmônico maior:**
-        - I  → maj7  
-        - ii → m7  
-        - iii → m7  
-        - IV → maj7  
-        - V  → 7 (dominante)  
-        - vi → m7  
-        - vii → m7♭5
-        """)
+**3 - Adicionando mais uma etapa do empilhamento de terças:**
+""")
 
         st.markdown("""
-        **Exemplo — Campo harmônico de C maior (tétrades):**
+- **Grau I**: *C → E → G → B* → estas são as notas da tétrade de **Cmaj7**
 
-        Cmaj7 – Dm7 – Em7 – Fmaj7 – G7 – Am7 – Bm7♭5
-        """)
+- **Grau II**: *D → F → A → C* → estas são as notas da tétrade de **Dm7**
+
+- **Grau III**: *E → G → B → D* → estas são as notas da tétrade de **Em7**
+
+- **Grau IV**: *F → A → C → E* → estas são as notas da tétrade de **Fmaj7**
+
+- **Grau V**: *G → B → D → F* → estas são as notas da tétrade de **G7**
+
+- **Grau VI**: *A → C → E → G* → estas são as notas da tétrade de **Am7**
+
+- **Grau VII**: *B → D → F → A* → estas são as notas da tétrade de **Bm7♭5**
+""")
+
+        st.markdown("""
+Portanto, o campo harmônico de dó maior em tétrades é:
+
+👉 *Cmaj7 – Dm7 – Em7 – Fmaj7 – G7 – Am7 – Bm7♭5*
+""")
+
 
         st.success("""
-        ✅ Em música moderna, **pensar em tétrades é o padrão**.
-        Tríades passam a ser simplificações ou escolhas estéticas.
+        ✅ Em música moderna sofisticada, pensar em tétrades é o padrão já que o uso das tríades é feito para simplificações, escolhas estéticas rápidas ou validação de protótipos de progressões.
+                   
+As tétrades não apenas ampliam o som dos acordes, como também deixam evidente quem resolve, quem prepara e quem gera tensão no campo harmônico.
         """)
+
+        st.subheader("Fórmula das Tétrades no Campo Harmônico Maior")
+        st.markdown("""
+        
+        - **I**  → maj7  
+        - **II** → m7  
+        - **III** → m7  
+        - **IV** → maj7  
+        - **V**  → 7  
+        - **VI** → m7  
+        - **VII** → m7♭5
+        """)
+
+        st.markdown("""
+        Exemplo - Campo Harmônico de C com tétrades:
+
+        👉 *Cmaj7 – Dm7 – Em7 – Fmaj7 – G7 – Am7 – Bm7♭5*
+        """)
+
+        st.markdown("**Veja a tabela de campos harmônicos maiores com tétrades para todas as notas naturais:**")
+
+        st.markdown("""
+I       | II      | III     | IV       | V      | VI      | VII |
+------- | ------- | ------- | -------- | ------ | ------- | ----- |
+**Cmaj7**   | Dm7     | Em7     | Fmaj7    | G7     | Am7     | Bm7♭5 |
+**Gmaj7**   | Am7     | Bm7     | Cmaj7    | D7     | Em7     | F#m7♭5 |
+**Dmaj7**   | Em7     | F#m7    | Gmaj7    | A7     | Bm7     | C#m7♭5 |
+**Amaj7**   | Bm7     | C#m7    | Dmaj7    | E7     | F#m7    | G#m7♭5 |
+**Emaj7**   | F#m7    | G#m7    | Amaj7    | B7     | C#m7    | D#m7♭5 |
+**Bmaj7**   | C#m7    | D#m7    | Emaj7    | F#7    | G#m7    | A#m7♭5 |
+**F#maj7**  | G#m7    | A#m7    | Bmaj7    | C#7    | D#m7    | E#m7♭5 |
+**Dbmaj7**  | Ebm7    | Fm7     | Gbmaj7   | Ab7    | Bbm7    | Cm7♭5 |
+**Abmaj7**  | Bbm7    | Cm7     | Dbmaj7   | Eb7    | Fm7     | Gm7♭5 |
+**Ebmaj7**  | Fm7     | Gm7     | Abmaj7   | Bb7    | Cm7     | Dm7♭5 |
+**Bbmaj7**  | Cm7     | Dm7     | Ebmaj7   | F7     | Gm7     | Am7♭5 |
+**Fmaj7**   | Gm7     | Am7     | Bbmaj7   | C7     | Dm7     | Em7♭5 |
+""")
+
+
+        st.subheader("Fórmula das Tétrades no Campo Harmônico Menor")
+
+        st.markdown("""
+
+- **I**   → m7  
+- **II**  → m7♭5  
+- **III** → maj7  
+- **IV**  → m7  
+- **V**   → m7  
+- **VI**  → maj7  
+- **VII** → 7
+""")
+
+        st.markdown("""
+Exemplo — Campo Harmônico de Am com tétrades:
+
+👉 *Am7 – Bm7♭5 – Cmaj7 – Dm7 – Em7 – Fmaj7 – G7*
+""")
+
+        st.markdown("**Veja a tabela de campos harmônicos menores com tétrades para todas as notas naturais:**")
+
+        st.markdown("""
+I       | II     | III     | IV      | V       | VI      | VII |
+------- | ------- | ------- | ------- | ------- | ------- | ----- |
+**Am7**  | Bm7♭5   | Cmaj7   | Dm7     | Em7     | Fmaj7   | G7   |
+**Em7**  | F#m7♭5  | Gmaj7   | Am7     | Bm7     | Cmaj7   | D7   |
+**Bm7**  | C#m7♭5  | Dmaj7   | Em7     | F#m7    | Gmaj7   | A7   |
+**F#m7** | G#m7♭5  | Amaj7   | Bm7     | C#m7    | Dmaj7   | E7   |
+**C#m7** | D#m7♭5  | Emaj7   | F#m7    | G#m7    | Amaj7   | B7   |
+**G#m7** | A#m7♭5  | Bmaj7   | C#m7    | D#m7    | Emaj7   | F#7  |
+**D#m7** | E#m7♭5  | F#maj7  | G#m7    | A#m7    | Bmaj7   | C#7  |
+**Bbm7** | Cm7♭5   | Dbmaj7  | Ebm7    | Fm7     | Gbmaj7  | Ab7  |
+**Fm7**  | Gm7♭5   | Abmaj7  | Bbm7    | Cm7     | Dbmaj7  | Eb7  |
+**Cm7**  | Dm7♭5   | Ebmaj7  | Fm7     | Gm7     | Abmaj7  | Bb7  |
+**Gm7**  | Am7♭5   | Bbmaj7  | Cm7     | Dm7     | Ebmaj7  | F7   |
+**Dm7**  | Em7♭5   | Fmaj7   | Gm7     | Am7     | Bbmaj7  | C7   |
+""")
+ 
+        
+        st.info("""
+⚠️ Observe que o acorde **V (Em7)** não é dominante forte e, por isso, esse campo tem sensação mais modal e menos direcional se for usada a teória absoluta. Porém, em aplicações práticas, é muito comum substituir o acorde Em7 pelo E7 mesmo no campo harmônico menor natural para promover a função de dominante forte que as pessoas já estão acostumadas a ouvir nesse grau. 
+                
+**Então, na prática, você pode substituir o acorde do V grau Em7 por E7.**
+""")
+
+
+
 
         # ======================================================
         st.header("🎯 Funções Harmônicas")
 
         st.markdown("""
-        Cada acorde exerce uma **função harmônica**, que define
-        **como ele se comporta dentro da tonalidade**.
+        Cada acorde exerce uma função dentro do campo harmônico que define como se comporta em uma progressão. Sendo assim, as três funções principais são:
         """)
 
         st.markdown("""
-        **As três funções principais são:**
-        - **Tônica (T)** → repouso, estabilidade  
-        - **Subdominante (SD)** → movimento, preparação  
-        - **Dominante (D)** → tensão, resolução
+        
+        - **Tônica** (T) → repouso, estabilidade  
+        - **Subdominante** (SD) → movimento, preparação  
+        - **Dominante** (D) → tensão
         """)
 
         st.markdown("""
-        **Campo harmônico de C maior com funções:**
+        **Tabela de Funções do Campo Harmônico por Grau**
 
-        | Grau | Acorde | Função |
-        |------|--------|--------|
-        | I    | Cmaj7  | Tônica |
-        | ii   | Dm7    | Subdominante |
-        | iii  | Em7    | Tônica |
-        | IV   | Fmaj7  | Subdominante |
-        | V    | G7     | Dominante |
-        | vi   | Am7    | Tônica |
-        | vii  | Bm7♭5  | Dominante |
+        | Grau | Função | Característica |
+        |------|--------|-----------------|
+        | I    | Tônica Principal | Centro Tonal
+        | II   | Subdominante | Preparação / Movimento
+        | III  | Tônica | Expansão do Centro Tonal
+        | IV   | Subdominante | Preparação / Movimento
+        | V    | Dominante | Tensão
+        | VI   | Tônica | Expansão do Centro Tonal
+        | VII  | Dominante  | Tensão
         """)
+
+        st.success("""
+✅ Um dos conceitos mais importantes da harmonia funcional é entender que acordes que compartilham a mesma função harmônica podem se substituir.
+
+Isso significa que, ao invés de pensar apenas em acordes específicos, podemos pensar em funções que os acordes exercem nos papéis harmônicos que desempenham naquele tom.
+
+Essa ideia amplia drasticamente as possibilidades futuras para alcançar ideias de composição, reharmonização, modularidade e improvisação.
+                 
+                   """)
+
+    
 
         st.markdown("""
-        **Aplicação prática:**
-        - Progressões começam em **T**
-        - Se movem para **SD**
-        - Criam tensão em **D**
-        - Resolvem novamente em **T**
-        """)
+Observe os exemplos abaixo:
+""")
 
+        st.markdown("""
+**Exemplo 1: Cmaj7 → Am7 → Dm7 → G7 -> C**
+""")
+
+        st.markdown("""
+Função Harmônica:
+- Cmaj7 → Tônica
+- Am7 → Tônica (prolongamento)
+- Dm7 → Subdominante
+- G7 → Dominante
+""")
+
+        st.markdown("""
+Agora, compare com esta progressão:
+""")
+
+        st.markdown("""
+**Exemplo 2: Cmaj7 → Em7 → Fmaj7 → G7 -> C**
+""")
+
+        st.markdown("""
+Função Harmônica:
+- Cmaj7 → Tônica
+- Em7 → Tônica (prolongamento)
+- Fmaj7 → Subdominante
+- G7 → Dominante
+""")
+
+        st.success("""
+✅ Apesar dos acordes serem diferentes, as duas progressões são funcionalmente equivalentes.
+
+Elas têm o mesmo fluxo:
+Tônica → Subdominante → Dominante → Tônica
+""")
+
+# ------------------------------------------------------
         st.info("""
-        🎸 No improviso:
-        - Tônica → frases estáveis
-        - Subdominante → frases abertas
-        - Dominante → frases tensas que pedem resolução
-        """)
+🎸 **Aplicação prática (composição e improviso):**
+
+- Pense em funções, não apenas em acordes
+- Use substituições para variar progressões sem perder o sentido tonal
+- No improviso, você pode manter a mesma ideia melódica enquanto os acordes mudam,
+desde que a função seja preservada
+""")
 
         # ======================================================
         st.header("🎯 Dominantes Secundários")
 
         st.markdown("""
-        Um **dominante secundário** é um acorde dominante (7)
-        usado para **preparar temporariamente outro acorde**
-        que não é a tônica.
+        Um dominante secundário é o V grau dominante (7) de outro acorde usado para preparar temporariamente a aterrizagem em outro grau que não seja a tônica.
         """)
 
         st.markdown("""
-        👉 Ele funciona como o **V grau de outro acorde**.
-        """)
+        Por exemplo:
 
-        st.markdown("""
-        **Exemplo em C maior:**
-
-        Campo harmônico natural:
-        Cmaj7 – Dm7 – Em7 – Fmaj7 – G7 – Am7 – Bm7♭5
+        Como já vimos, o campo harmônico natural de C é:
+                    
+        *Cmaj7 – Dm7 – Em7 – Fmaj7 – G7 – Am7 – Bm7♭5*
+                    
+        Se quisermos inserir um dominante secundário para preparar a aterrizagem em Dm7, por exemplo, colocamos o V grau do campo harmônico de D, que é A7, para sofisticar a nossa chegada em Dm7.
 
         Inserindo dominante secundário:
-        Cmaj7 – **A7** – Dm7
+        Cmaj7 – **A7** – Dm7 
         """)
+
+        st.success("""
+        *Por que o acorde A7 funciona mesmo sem ele estar no campo harmônico de C?*
+        - A7 é usado temporariamente como o V grau de Dm
+        - Cria tensão extra para chegar em Dm
+        - Direciona fortemente a progressão 
+        - Na notação funcional, A7 → V/ii (dominante V do segundo grau)
+        """)
+
 
         st.markdown("""
-        **Por que A7 funciona?**
-        - A7 é o **V de Dm**
-        - Cria tensão extra
-        - Direciona fortemente a progressão
+**Veja como ficaria o campo harmônico maior e menor se aplicarmos os dominantes secundários em todos os graus**: 
+                    
+Maior: *Cmaj7 – A7 – Dm7 – B7 – Em7 – C7 – Fmaj7 – D7 – G7 – E7 – Am7 – F#7 – Bm7♭5*
+
+Menor: *Am – F#7 – Bm7♭5 – G7 – Cmaj7 – A7 – Dm7 – B7 – Em7 – C7 – Fmaj7 – D#7 – G#°*
         """)
+
+
+        st.header("🎯 Empréstimo Modal")
 
         st.markdown("""
-        **Notação funcional:**
-        - A7 → V/ii (cinco do dois)
-        """)
+Empréstimo modal é quando utilizamos acordes de um modo paralelo para enriquecer a harmonia de uma progressão sem abandonar a tonalidade principal, ou seja, usamos um acorde do campo harmônico menor quando deveriamos usar do campo harmônico maior ou vice-versa para 'colorir' e diversificar melhor uma progressão.
 
+Esse é um recurso amplamente usado em diversos gêneros musicais, como por exemplo: MPB, Jazz, Rock, Blues moderno, entre outros. Sendo assim, é um conceito fundamental para entender a harmonia de uma forma abrangente. 
+
+""")
+        
         st.info("""
-        🎸 No improviso:
-        - trate o dominante secundário como um acorde dominante real
-        - foque na **3ª e 7ª**
-        - resolva claramente no acorde seguinte
-        """)
+⚠️ No empréstimo modal, a tônica não muda. O que muda é o modo emprestado por um curto período de tempo. 
 
-        # ======================================================
-        st.header("🔁 Progressões Harmônicas Essenciais")
+Assim, para que tenha o efeito desejado, **o empréstimo modal deve ser excessão e não regra em uma progressão**.
+""")
+        
+        st.markdown("""
+Por exemplo,
+
+- Campo harmônico natural: *Cmaj7 – Dm7 – Em7 – Fmaj7 – G7 – Am7 – Bm7♭5*
+
+- Campo harmônico menor paralelo (Cm): *Cm7 – Dm7♭5 – Ebmaj7 – Fm7 – Gm7 – Abmaj7 – Bb7*
+""")
 
         st.markdown("""
-        Progressões harmônicas organizam o **fluxo da música**
-        e servem como base para composição e improvisação.
-        """)
+Para iniciar nossos estudos, podemos considerar alguns empréstimos modais específicos que encaixam bem em determinados graus.
+""")
+        
+        st.markdown("**Veja a seguir a tabela de empréstimos modais:**")
 
-        st.subheader("➤ ii – V – I")
-
-        st.markdown("""
-        A progressão **ii – V – I** é a base da música tonal moderna.
-
-        **Exemplo em C:**
-        Dm7 → G7 → Cmaj7
-
-        **Função:**
-        SD → D → T
-        """)
-
-        st.subheader("➤ I – vi – ii – V")
+        st.markdown("- *Exemplo em C Maior:*")
 
         st.markdown("""
-        Progressão circular muito usada em blues moderno, jazz e soul.
+| Grau | Acorde diatônico | Acorde emprestado | Efeito sonoro |
+|------|------------------|------------------|----------------|
+| IV   | F                | Fm               | Melancolia / contraste |
+| VI   | Am               | Ab               | Profundidade emocional |
+| VII  | B°               | Bb               | Sonoridade modal / folk |
+| II   | Dm               | D°               | Instabilidade leve |
+""")
 
-        **Exemplo em C:**
-        Cmaj7 → Am7 → Dm7 → G7
-        """)
+        st.markdown("- *Exemplo em C Maior com tétrades:*")
 
+        st.markdown("""
+| Grau | Acorde diatônico | Acorde emprestado | Efeito sonoro |
+|------|------------------|------------------|----------------|
+| IV   | Fmaj7            | Fm7              | Melancolia / contraste |
+| VI   | Am7              | Abmaj7           | Profundidade emocional |
+| VII  | Bm7♭5            | Bb7              | Sonoridade modal / folk |
+| II   | Dm7              | Dm7♭5            | Instabilidade leve |
+""")
+
+        st.markdown("- *Exemplo em A Menor:*")
+
+        st.markdown("""
+| Grau | Acorde diatônico | Acorde emprestado| Efeito sonoro |
+|------|------------------|------------------|----------------|
+| IV   | F                | Fm               | Melancolia / contraste |
+| VI   | Am               | Ab               | Profundidade emocional |
+| VII  | B°               | Bb               | Sonoridade modal / folk |
+| II   | Dm               | D°               | Instabilidade leve |
+""")
+
+        st.markdown("- *Exemplo em A Menor com tétrades:*")
+
+        st.markdown("""
+| Grau | Acorde diatônico | Acorde emprestado | Efeito sonoro |
+|------|------------------|------------------|----------------|
+| I    | Am7              | Amaj7            | Clareza / brilho |
+| IV   | Dm7              | Dmaj7            | Abertura sonora |
+| V    | Em7              | E7               | Direcionalidade forte |
+| VI   | Fmaj7            | F#m7             | Expansão sofisticada |
+""")
+  
+# ------------------------------------------------------
+        st.info("""
+🎸 **Aplicação prática:**
+
+- Use empréstimo modal para variar progressões previsíveis
+- Mantenha o centro tonal claro e use o acorde do empréstimo com a mesma função do original
+
+""")
+
+        st.header("🎯 Progressões Harmônicas")
+
+        st.markdown("""
+Uma progressão harmônica é a organização dos acordes em um arranjo musical. Sendo assim, a progressão define o fluxo emocional, a direção e o nível de tensão e repouso de uma música.
+
+E, agora que você já entende:
+- Campo harmônico
+- Funções harmônicas
+- Tétrades
+- Substituições funcionais
+- Dominantes secundários
+- Empréstimo modal
+
+Vamos aprender a combinar tudo isso na prática.
+""")
+
+# ------------------------------------------------------
+        st.subheader("🔹Progressões Básicas e Fundamentais")
+
+        st.markdown("""
+Essas progressões usam apenas acordes do campo harmônico principal, sem muitas sofisticações ou alterações. São a base da musica tonal que funciona muito bem se aplicado corretamente.
+""")
+
+        st.markdown("""
+**👉 I – IV – V – I**  
+Exemplo com tríades: *C → F → G → C*
+
+Exemplo com tétrades: *Cmaj7 → Fmaj7 → G7 → Cmaj7*
+
+""")
+        
+        st.markdown("""
+**👉 I – V – IV – I**  
+Exemplo com tríades: *C → G → F → C*
+
+Exemplo com tétrades: *Cmaj7 → G7 → Fmaj7 → Cmaj7*
+
+""")
+        
+        st.markdown("""
+**👉 II – V – I**  
+Exemplo com tríades: *Dm → G → C*
+
+Exemplo com tétrades: *Dm7 → G7 → Cmaj7*
+
+""")
+        
+        
+        st.markdown("""
+**👉 I – VI – II – V – I**  
+Exemplo com tríades: *C → Am → Dm → G → C*
+
+Exemplo com tétrades: *Cmaj7 → Am7 → Dm7 → G7 → Cmaj7* 
+
+""")
+
+        st.markdown("""
+**👉 I – V – VI – IV**  
+Exemplo com tríades: *C → G → Am → F*
+
+Exemplo com tétrades: *Cmaj7 → G7 → Am7 → Fmaj7*
+
+""")
+
+# ------------------------------------------------------
+        st.subheader("🔹Progressões com Dominantes Secundários")
+
+        st.markdown("""
+Como vimos, dominantes secundários criam tensão direcionada para acordes que não são a tônica.
+""")
+
+        st.markdown("""
+**👉 I – V/ii – II – V – I**  
+Exemplo com tríades:
+
+Exemplo com tétrades: *Cmaj7 → A7 → Dm7 → G7 → Cmaj7*
+""")
+        
+        st.markdown("""
+**👉 I – V/vi – VI – II – V – I**  
+Exemplo com tríades:
+
+Exemplo com tétrades: *Cmaj7 → E7 → Am7 → Dm7 → G7 → Cmaj7*
+""")
+        
+        st.markdown("""
+**👉 I – V/iii – III – VI – II – V – I**  
+Exemplo com tríades:
+
+Exemplo com tétrades: *Cmaj7 → B7 → Em7 → Am7 → Dm7 → G7 → Cmaj7*
+""")
+        
+        st.markdown("""
+**👉 I – V/IV – IV – V – I**  
+Exemplo com tríades:
+
+Exemplo com tétrades: *Cmaj7 → C7 → Fmaj7 → G7 → Cmaj7*
+""")
+        
+        st.markdown("""
+**👉 I – V/V – V – I**  
+Exemplo com tríades:
+
+Exemplo com tétrades: *Cmaj7 → D7 → G7 → Cmaj7*
+""")
+
+        st.markdown("""
+**👉 I – VI – V/ii – II – V – I**  
+Exemplo com tríades:
+
+Exemplo com tétrades: *Cmaj7 → Am7 → A7 → Dm7 → G7 → Cmaj7*
+""")
+        
+        st.markdown("""
+**👉 I – VI – V/ii – II – V – I**  
+Exemplo com tríades:
+
+Exemplo com tétrades: *Cmaj7 → Am7 → A7 → Dm7 → G7 → Cmaj7*
+""")
+
+
+        st.subheader("🔹Progressões com Empréstimo Modal")
+
+        st.markdown("""
+O empréstimo modal adiciona cor emocional sem abandonar a tonalidade principal, muito usado para trazer mais sofisticações e imprivisibilidade à progressão.
+""")
+
+        st.markdown("""
+**👉 I – IVm – V – I**  
+Exemplo em tríades: *C → Fm → G → C*
+                    
+Exemplo em tétrades: *Cmaj7 → Fm7 → G7 → Cmaj7* 
+""")
+
+        st.markdown("""
+**👉 I – VIm – V – I**  
+Exemplo em tríades: *C → Ab → G → C*
+                    
+Exemplo em tétrades: *Cmaj7 → Abmaj7 → G7 → Cmaj7*
+""")
+        
+        st.markdown("""
+**👉 I – IVm – ♭VII – I**  
+Exemplo em tríades: *C → Fm → Bb → C*  
+
+Exemplo em tétrades: *Cmaj7 → Fm7 → Bb7 → Cmaj7*
+""")
+
+        st.markdown("""
+**👉 I – ♭VII – IV – I**  
+Exemplo em tríades: *C → Bb → F → C*  
+
+Exemplo em tétrades: *Cmaj7 → Bb7 → Fmaj7 → Cmaj7*
+""")
+
+        st.markdown("""
+**👉 I – IVm – ♭VI – V – I**  
+Exemplo em tríades: *C → Fm → Ab → G → C*  
+
+Exemplo em tétrades: *Cmaj7 → Fm7 → Abmaj7 → G7 → Cmaj7*
+""")
+
+        st.markdown("""
+**👉 I – ♭VI – ♭VII – I**  
+Exemplo em tríades: *C → Ab → Bb → C*  
+
+Exemplo em tétrades: *Cmaj7 → Abmaj7 → Bb7 → Cmaj7*
+""")
+
+        st.markdown("""
+**👉 I – IIm7♭5 – V – I**  
+Exemplo em tríades: *C → D° → G → C*  
+
+Exemplo em tétrades: *Cmaj7 → Dm7♭5 → G7 → Cmaj7*
+""")
+
+# ------------------------------------------------------
+        st.subheader("🔹Progressões Complexas Combinando Vários Conceitos")
+
+        st.markdown("""
+Aqui começam as progressões mais sofisticadas que misturam tudo o que vimos até então.
+""")
+        
+        st.markdown("""
+**👉 I – V/ii – IIm – V – I**  
+(Dominante secundário + função clássica)
+
+Exemplo em tríades: *C → A → Dm → G → C*  
+
+Exemplo em tétrades: *Cmaj7 → A7 → Dm7 → G7 → Cmaj7*
+""")
+
+        st.markdown("""
+**👉 I – IVm – V/vi – VIm – V – I**  
+(Empréstimo modal + dominante secundário)
+
+Exemplo em tríades: *C → Fm → E → Am → G → C*  
+
+Exemplo em tétrades: *Cmaj7 → Fm7 → E7 → Am7 → G7 → Cmaj7*
+""")
+
+        st.markdown("""
+**👉 I – V/IV – IV – IVm – I**  
+(Dominante secundário + empréstimo modal)
+
+Exemplo em tríades: *C → C7 → F → Fm → C*  
+
+Exemplo em tétrades: *Cmaj7 → C7 → Fmaj7 → Fm7 → Cmaj7*
+""")
+
+        st.markdown("""
+**👉 I – ♭VI – V/ii – IIm – V – I**  
+(Empréstimo modal + dominante secundário + encadeamento funcional)
+
+Exemplo em tríades: *C → Ab → A → Dm → G → C*  
+
+Exemplo em tétrades: *Cmaj7 → Abmaj7 → A7 → Dm7 → G7 → Cmaj7*
+""")
+
+        st.markdown("""
+**👉 I – IV – ♭VII – V/III – IIIm – V – I**  
+(Substituição funcional + empréstimo modal + dominante secundário)
+
+Exemplo em tríades: *C → F → Bb → B → Em → G → C*  
+
+Exemplo em tétrades: *Cmaj7 → Fmaj7 → Bb7 → B7 → Em7 → G7 → Cmaj7*
+""")
+
+        st.markdown("""
+**👉 I – V/vi – VIm – IIm7♭5 – V – I**  
+(Dominante secundário + empréstimo modal leve)
+
+Exemplo em tríades: *C → E → Am → D° → G → C*  
+
+Exemplo em tétrades: *Cmaj7 → E7 → Am7 → Dm7♭5 → G7 → Cmaj7*
+""")
+
+        st.markdown("""
+**👉 I – IVm – ♭VI – V/ii – IIm – V – I**  
+(Empréstimo modal + dominante secundário + resolução clássica)
+
+Exemplo em tríades: *C → Fm → Ab → A → Dm → G → C*  
+
+Exemplo em tétrades: *Cmaj7 → Fm7 → Abmaj7 → A7 → Dm7 → G7 → Cmaj7*
+""")
+
+        st.success("""
+🎯 Essas progressões representam o ponto de encontro entre:
+- harmonia funcional tradicional
+- empréstimo e linguagem modal
+- sofisticação tonal moderna
+
+Elas são extremamente comuns em Jazz, MPB, trilhas sonoras,
+Neo Soul e diversos outros estilos de músicas sofisticados.
+""")
+
+        st.header("🎯 Modulação")
+
+        st.markdown("""
+Modulação é o processo em que uma música muda de tonalidade durante sua execução, ou seja,
+o centro tonal deixa de ser um e passa a ser outro de forma perceptível
+para o ouvinte enquanto a faixa esta sendo tocada. """)
+        
+        
+        st.markdown("""
+A modulação é muito usada para:
+
+- Expandir a narrativa harmônica
+- Criar contrastes fortes entre seções ou músicas
+- Elevar tensão emocional e criar transições para não interromper a faixa entre músicas
+- Evitar repetição excessiva para criar exclusividade em performances
+""")
+
+        st.success("""
+🎯 Pensar modulação corretamente significa dominar profundamente a harmonia para distinguir quando você está colorindo a tonalidade
+e quando você está mudando o chão onde pisa.
+
+Esse domínio separa o músico funcional do músico consciente da linguagem harmônica abrindo espaço para performances criativas e exclusivas de expressões únicas. Ao dominar a modulação você pode criar uma passagem de uma música a outra sem precisar parar a sua performance.
+""")
+
+
+        st.markdown("""
+Diferente do empréstimo modal e dos dominantes secundários, na modulação
+a nova tonalidade se estabelece como principal para apresentar uma nova secção ou uma nova música que será tocada.
+""")
+
+        st.markdown("""
+| Recurso | Tônica muda? | Duração | Função |
+|-------|--------------|--------|--------|
+| Empréstimo Modal | ❌ Não | Curta | Cor e contraste |
+| Dominante Secundário | ❌ Não | Curta | Direcionamento |
+| Modulação | ✅ Sim | Média ou longa | Mudança de centro tonal |
+""")
+
+# ------------------------------------------------------
+
+        st.markdown("""
+Existem diversas formas de modular na música tonal, mas a mais importante que vamos estudar nesse módulo é a **Modulação por Acorde Pivô**
+""")
+
+        st.markdown("""
+
+Essa modulação ocorre quando um mesmo acorde pertence ao campo harmônico de duas tonalidades diferentes exercendo funções distintas entre as duas tonalidades,
+servindo como ponte entre elas.
+""")
+
+        st.markdown("""
+Por exemplo:
+
+*Tom de C maior passando para o Tom de G maior*
+
+- Campo Harmônico de C Maior: *Cmaj7 – **Dm7** – Em7 – Fmaj7 – G7 – Am7 – Bm7♭5*
+                    
+- Campo Harmônico de G Menor: *Gm7 – Am7♭5 – Bbmaj7 – Cm7 – **Dm7** – Ebmaj7 – F7* 
+
+O Dm7 funciona como:
+- II grau em C
+- V grau em Gm 
+                    
+Se tomarmos a progressão *Cmaj7 → Em7 → Dm7 → Gm7 → Cm7 → F7 → Bbmaj7*, podemos perceber que a partir de Dm7 para Gm7 o centro tonal passa a ser Gm sendo usado os acordes desse novo centro tonal.
+
+Assim, nota-se que podemos usar o Dm7 para modularizar o tom de C para G.    
+
+**Veja outros exemplos de modulações possíveis em fórmulas para você estudar:**             
+""")
+        
+        st.markdown("""
+| Grau no tom de origem | Qualidade do acorde | Função no tom de origem | Pode virar função no novo tom | Novo centro tonal                |
+| --------------------- | ------------------- | ----------------------- | ----------------------------- | -------------------------------- |
+| **I**                 | Maior / Maj7        | Tônica                  | IV                            | Tom acima (V do tom de origem)   |
+| **I**                 | Maior / Maj7        | Tônica                  | V                             | Tom abaixo (IV do tom de origem) |
+| **ii**                | Menor / m7          | Subdominante            | I                             | Tom menor relativo ao ii         |
+| **ii**                | Menor / m7          | Subdominante            | IV                            | Tom uma 4ª acima                 |
+| **ii**                | Menor / m7          | Subdominante            | V                             | Tom uma 5ª acima (menor)         |
+| **iii**               | Menor / m7          | Tônica relativa         | I                             | Tom relativo menor               |
+| **iii**               | Menor / m7          | Tônica relativa         | vi                            | Tom uma 3ª acima                 |
+| **IV**                | Maior / Maj7        | Subdominante            | I                             | Mesmo acorde como nova tônica    |
+| **IV**                | Maior / Maj7        | Subdominante            | V                             | Tom uma 4ª abaixo                |
+| **V**                 | Maior / 7           | Dominante               | I                             | Tom uma 5ª acima                 |
+| **vi**                | Menor / m7          | Tônica relativa         | I                             | Tom relativo menor               |
+| **vi**                | Menor / m7          | Tônica relativa         | ii                            | Tom uma 5ª acima                 |
+| **viiø**              | Meio-diminuto       | Dominante fraca         | ii                            | Tom relativo menor               |
+
+
+""")
+        
+        st.markdown("""
+Por exemplo:
+
+*Tom de C maior modulando para A menor*
+
+- Campo Harmônico de C Maior: *Cmaj7 – Dm7 – Em7 – Fmaj7 – G7 – Am7 – Bm7♭5*
+
+- Campo Harmônico de A Menor (natural): *Am7 – Bm7♭5 – Cmaj7 – Dm7 – Em7 – Fmaj7 – G7*
+
+O acorde Am7 funciona inicialmente como VI grau em C maior e, para que haja modulação real para Am7, usamos o acorde Dm7 subdominante comum como preparação (II grau em C e IV grau em Am), introduzimos o grau dominante do novo tom Em7 (V grau em Am e III grau em C) e, para completar a modulação definitiva, mudamos o acorde para dominante 7 para não deixar dúvidas que vamos resolver agora em Am. 
+
+Exemplo de progressão com modulação completa:
+
+*Cmaj7 → G7 → Cmaj7 → Am7 → Dm7 → Em7 → E7 → Am7*
+
+""")
+        
+        st.success("""🎯 **A partir desse ponto, Am se estabelece como novo tom e Cmaj7 pode ser entendido como o III grau com tônica estendida**. 
+                   
+Assim, apesar de os acordes serem os mesmos eles passam a desempenhar uma nova função na harmônia de Am em comparação com C.""")
         
 
+        st.markdown("""
+**Agora, digamos que queremos sair de Am e chegar em F:**
+
+
+
+- Campo Harmônico de A Menor: *Am7 – Bm7♭5 – Cmaj7 – Dm7 – Em7 – Fmaj7 – G7*
+
+- Campo Harmônico de F Maior: *Fmaj7 – Gm7 – Am7 – Bbmaj7 – C7 – Dm7 – Em7♭5*
+
+O acorde Fmaj7 funciona inicialmente como o VI grau em Am e, para que a modulação se estabeleça de forma clara, introduzimos o acorde dominante do novo tom, o C7,
+que resolve diretamente em **Fmaj7**, eliminando qualquer ambiguidade quanto ao novo centro tonal.
+
+Exemplo de progressão com modulação completa saindo de C -> Am -> F:
+
+***Cmaj7** → G7 → Cmaj7 → Am7 → Dm7 → Em7 → E7 → **Am7** → Dm7 → Fmaj7 → C7 → **Fmaj7***
+
+""")
         
+        st.success("""**✅ Nessa progressão, saimos de C, passamos pelo tom de Am e aterrizamos no tom F.**
+                   
+A partir disso, podemos continuar a progressão no campo harmônico de F ou escolher qualquer outro tom para iniciar nossa modularização.
+                   
+                   """)
 
             
     def set_video(url):
