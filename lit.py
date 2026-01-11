@@ -24,7 +24,7 @@ def audio_embed(youtube_url):
 if codigo_digitado == CODIGO_ACESSO:
 
     # Menu de opções
-    menu = ["História", "Ritmos", "Intervalos","Acordes & Arpejos", "Escalas Naturais", "Campos Harmônicos", "Tutoriais", "Recursos Adicionais"]
+    menu = ["História", "Ritmo", "Intervalos", "Escalas Musicais", "Acordes & Arpejos", "Campos Harmônicos", "Tutoriais", "Recursos Adicionais"]
     choice = st.sidebar.selectbox("Escolha uma função", menu)
 
     if choice == "História":
@@ -398,75 +398,224 @@ Ouça uma de suas sinfonias *Symphony No. 5 in E Minor Op. 64*:
         Compreender esses ritmos amplia a percepção e a criatividade musical. Veja mais detalhes de alguns dos principais estilos da música contemporânea ao redor do mundo: 
         """)
 
-    if choice == "Ritmos":
-        st.title("Ritmos Musicais 🥁")
+    if choice == "Ritmo":
+        st.title("🥁 Ritmos Musicais")
 
         st.markdown("""
-        O ritmo é um dos elementos fundamentais da música. Ele organiza o tempo musical e dá forma às melodias, criando padrões de duração, silêncio e repetição. Independentemente do estilo, é o ritmo que nos faz bater o pé, dançar ou reconhecer uma batida.
+        Junto com a harmonia e a melodia, o ritmo é um dos três elementos fundamentais da música, sendo o responsável pela organização do tempo das notas e acordes que estão sendo tocados definindo quando os sons acontecem e por quanto tempo eles duram. 
+                    
+Sem noções de ritmo não há sensação de continuidade musical e definitivamente não é possível criar coesão entre diferentes vozes (violão + canto + bateria + baixo ...) e, por isso, estudar a teoria do ritmo é fundamental para te desenvolver como um músico. 
+           
         """)
 
-        st.header("🔹 Pulsação e Tempo")
+        st.header("Conceitos Fundamentais de Ritmo")
+
+        st.markdown("""Para entender como funciona o ritmo dentro da música, precisamos entender conceitos como:
+- Pulso
+- Tempo
+- Compasso
+- Acentuação
+- Contra-tempo
+- Figuras rítmicas               
+                    
+Com eles, podemos entender o ritmo para criar músicais que seja recursivas, ou seja, que admitem a inserção de novas vozes no arranjo. A seguir, vamos nos aprofundar cada um desses conceitos para dominar e executar corretamente: 
+                    
+                     """)
+
+        st.subheader("Pulso (Beat)")
 
         st.markdown("""
-        A **pulsação** é a batida constante que sentimos ao ouvir uma música. Ela pode ser lenta ou rápida, mas é sempre regular. Já o **tempo (ou andamento)** é a velocidade dessa pulsação, normalmente medida em **BPM (batidas por minuto)**. Alguns exemplos:
+        O pulso é a batida regular e constante que sentimos na música — aquilo que nos faz bater o pé ou balançar a cabeça. 
+                    
+        Normalmente, é medido pelo metrônomo e calculado em forma de batidas por minuto (BPM) sendo o que garante que todos os músicos de uma banda estejam "no tempo certo" da música. Sendo assim, o pulso deve ser estável e não mudar mesmo que as notas e durações das notas mudem, funcionando como um relógio musical a ser seguido. 
+                    
+        Por exemplo: 
         
-        - 🎵 *Lento* (~60 BPM)
-        - 🎵 *Moderado* (~90–120 BPM)
-        - 🎵 *Rápido* (~140+ BPM)
+        - Beat *Lento* (~60 BPM)
+        - Beat *Moderado* (~90–120 BPM)
+        - Beat *Rápido* (~140+ BPM)
+                    
+        A sequência de pulsos é chamada de tempo e indica a velocidade como cada pulso bate. 
 
-        O metrônomo é a ferramenta utilizada para marcar o tempo de forma precisa durante os estudos.
         """)
 
-        st.header("🔸 Compasso e Métrica")
+        st.subheader("Compasso")
+
+        st.markdown(""" 
+        O compasso é o que organiza a música em um conjunto de pulsos para criar um bloco rítmico. É o conceito responsável por mapear o local de uma canção e garantir que todos estejam na mesma parte de uma música, podendo ser entendido como um "mapa músical". 
+                    
+        Sendo assim, esse mapa chamado compasso pode organizar 3 pulsos de uma vez, 4 pulsos de uma vez, 5 pulsos de uma vez e assim por diante, representado por frações como ... e permitem com que os músicos separem as partes musicais por compassos, como por exemplo: o primeiro compasso de uma música, o décimo compasso de uma música e o último compasso de uma música. 
+
+        - O número de cima indica quantos pulsos há no compasso.
+        - O número de baixo indica o valor da figura rítmica.
+
+        """)
+
+        st.subheader("Acentuação Ritmica")
 
         st.markdown("""
-        O **compasso** organiza a música em pequenos blocos rítmicos com pulsos fortes e fracos. É representado por frações como **4/4**, **3/4**, **6/8** etc.
 
-        - O número de cima indica quantos tempos há no compasso.
-        - O número de baixo indica o valor da figura rítmica (ex: 4 = semínima).
+A acentuação é um recurso expressivo que dá enfâse a um ou outro pulso dentro de um compasso, fazendo com que nem todos os pulsos tenham o mesmo peso. 
+                    
+Em geral, um pulso é forte enquanto os outros do compasso são fracos e, normalmente, o primeiro pulso é quem tem o maior peso no compasso. Por exemplo: 
+                    
+- 4/4 → Forte e bem marcado – fraco – fraco – fraco
 
-        A **métrica** define o padrão acentual desses compassos. Exemplos:
+- 3/4 → Forte e bem marcado – fraco – fraco 
+
+""")
+        st.subheader("Contra-tempo")
+
+        st.markdown("""Contra-tempo é a execução de um som nas subdivisões intermediárias do pulso, isto é, entre um tempo e outro do compasso. Por exemplo, se no compasso temos os pulsos 1 2 3 4, o contra-tempo seria o espaço que existe entre o pulso 1 e o 2, entre o 2 e o 3 , entre o 3 e 4 e assim por diante. 
+                    
+De forma prática, para encontrá-lo normalmente podemos inserir a letra "e" na contagem do tempo. Por exemplo: 
+
+*1 **e** 2 **e** 3 **e** 4*
+
+Cada uma dessas letras "e" marca o contra-tempo dentro de um compasso. 
+                    
+""")
         
-        - 2/4 → binário simples (ex: marchas)
-        - 3/4 → ternário simples (ex: valsa)
-        - 6/8 → binário composto (ex: músicas celtas ou afro-brasileiras)
-        """)
+        st.info("""⚠️ Se formos mais adiante na teoria, podemos perceber que entre um contra-tempo e o pulso (entre o 'e' e o pulso 2, por exemplo) existe uma nova subdivisão, podendo dividir o compasso em infinitas subunidades assim como um número fracionário. 
+                
+Mas, de forma prática, o mais utilizado são os pulsos numéricos tradicionais do compasso e a primeira divisão de contra-tempo entre eles representado pela letra 'e'.""")
 
-        st.header("🔹 Figuras Rítmicas")
-
-        st.markdown("""
-        As **figuras rítmicas** indicam a duração dos sons. Cada figura possui uma pausa correspondente:
-
-        - **Semibreve (𝅝)**: 4 tempos
-        - **Mínima (𝅗𝅥)**: 2 tempos
-        - **Semínima (𝅘𝅥)**: 1 tempo
-        - **Colcheia (𝅘𝅥𝅮)**: ½ tempo
-        - **Semicolcheia (𝅘𝅥𝅯)**: ¼ tempo
-
-        A combinação dessas figuras gera os padrões rítmicos que usamos nas músicas.
-        """)
-
-        st.header("🔸 Pausas Musicais")
+        st.subheader("Figuras Rítmicas")
 
         st.markdown("""
-        O silêncio também é parte do ritmo. As **pausas** indicam momentos em que não há som, mas o tempo continua correndo. Cada figura tem sua pausa correspondente, com igual valor de tempo.
+        As figuras rítmicas indicam a duração dos sons dentro de cada pulso. Sendo que as principais são:
+
+- **Semibreve** (𝅝): 4 tempos
+- **Mínima** (𝅗𝅥): 2 tempos
+- **Semínima** (𝅘𝅥): 1 tempo
+- **Colcheia** (𝅘𝅥𝅮): ½ tempo
+- **Semicolcheia** (𝅘𝅥𝅯): ¼ tempo
+
+É importante compreender que essas durações são sempre relativas ao pulso do compasso. Ou seja, as figuras rítmicas não duram um compasso inteiro por si mesmas, mas sim um determinado número de tempos.
+
+Por exemplo, um compasso 4/4 pode ser preenchido de diversas formas, entre elas: *4 semínimas, 2 mínimas, 1 semibreve, 8 colcheias, ou qualquer combinação que complete os 4 pulsos no tempo*. 
+                    
+Sendo assim, um único pulso pode conter até 8 figuras ritmicas (colcheia) e, ainda sim, respeitar o tempo lento de uma música.  
+                    
+Outro exemplo que diferencia pulso de figura ritmica é que, se uma semibreve aparecer no pulso 3 de um compasso 4/4, por exemplo, a duração dela vai extrapolar o compasso em que ela apareceu e atuar até o pulso 2 do compasso seguinte. 
+
+E, se a semibreve aparecer no pulso 1 de um compasso maior (6/8, por exemplo) ela não vai preencher totalmente a duração do compasso e ainda será necessário preenchê-lo com silêncio ou então com outras figuras ritmicas até começar o compasso seguinte. 
+
+Portanto, o pulso funciona como a referência do tempo, enquanto as figuras rítmicas representam como esse tempo é ocupado e dividido dentro do compasso.
+        
         """)
 
-        st.header("🔹 Síncope e Contratempo")
+        st.success("""✅ **De forma prática, podemos fazer um paralelo entre esses conceitos de ritmo musical e uma caminhada:** 
+                   
+- Pulsos são os passos que damos
+- Compassos são as sequências de passos 
+- Figuras ritmicas são os tamanhos dos passos em uma caminhada
+                   
+Por exemplo, nós podemos dar 4 passos curtos, 2 passos longos ou 1 passo muito longo e, ainda sim, percorrer o mesmo caminho. 
+                   
+                   
+                   """)
+
+        st.header("Conceitos Avançados de Ritmo")
+
+        st.markdown("""Após compreender os elementos fundamentais do ritmo — pulso, compasso, acentuação, contra-tempo e figuras rítmicas — podemos avançar para conceitos que ampliam a expressividade musical e permitem uma maior complexidade rítmica nos arranjos e composições.
+""")
+
+        st.subheader("Síncope")
 
         st.markdown("""
-        A **síncope** desloca o acento natural do compasso, criando tensão rítmica. Ela ocorre quando um som prolongado atravessa uma batida forte e fraca, ou quando acentuamos uma parte fraca do compasso.
+A síncope ocorre quando um som é iniciado em um tempo fraco ou contra-tempo e se prolonga sobre o tempo forte seguinte, fazendo com que esse tempo forte deixe de ser marcado.
 
-        O **contratempo** é o acento justamente nos tempos fracos, produzindo um efeito de “empurrão” na música. Ambos são comuns em estilos como samba, jazz e reggae.
+Diferente do contra-tempo, onde o som acontece apenas entre os pulsos, na síncope o som invade o pulso forte, criando uma sensação de deslocamento rítmico ainda mais evidente.
+
+Por exemplo, em um compasso 4/4:
+
+1 **e** 2 **e** 3 **e** 4  
+                    
+Se uma nota começa no “e” do tempo 1 e se estende até o tempo 2, o pulso 2 deixa de ser acentuado, caracterizando uma síncope.
+
+A síncope é um dos elementos mais importantes da música popular e aparece com força em estilos como samba, jazz, funk, reggae, rock e música brasileira em geral, sendo fundamental para a criação de balanço, groove e identidade rítmica.
         """)
 
-        st.header("🔸 Polirritmia e Subdivisão")
+        st.subheader("Polirritmia")
 
         st.markdown("""
-        A **polirritmia** ocorre quando dois ou mais ritmos diferentes são executados simultaneamente. É comum em músicas africanas, latinas e no jazz moderno.
+A polirritmia acontece quando dois ou mais padrões rítmicos diferentes são executados simultaneamente, mantendo pulsos ou divisões distintas entre si.
 
-        Já a **subdivisão** é a divisão interna do tempo. Por exemplo, uma semínima pode ser subdividida em duas colcheias ou quatro semicolcheias, permitindo criar diferentes grooves e variações rítmicas.
+Esses ritmos coexistem dentro do mesmo tempo musical, criando camadas rítmicas independentes que se complementam.
+
+Um exemplo simples de polirritmia é:
+- uma mão batendo em 2 tempos
+- enquanto a outra bate em 3 tempos, dentro do mesmo intervalo de tempo
+
+Mesmo quando não percebida conscientemente, ela contribui para a riqueza rítmica e para a sensação de profundidade do arranjo.
         """)
+
+        st.subheader("Organização temporal")
+
+        st.markdown("""
+                    
+Além do ritmo interno dos compassos, a música também se organiza ritmicamente em estruturas maiores ao longo do tempo, formando seções que se repetem, contrastam e se desenvolvem para a criação de uma canção.
+
+Essa organização é feita através da quantidade de compassos e é chamada de forma musical, sendo entendida como ritmo em grande escala de uma música.
+                    
+#### Intro
+Quantidade estimada de compassos: 2 a 8
+                    
+A introdução estabelece o pulso, o andamento e o caráter rítmico da música. Ela prepara o ouvinte para o que virá, muitas vezes apresentando o groove principal ou criando expectativa.            
+
+#### Verso
+Quantidade estimada de compassos: 8 a 24
+
+O verso geralmente possui uma estrutura rítmica única e estável, servindo como base para a narrativa da música. É comum que vários versos compartilhem exatamente o mesmo padrão rítmico com variações na letra, melodia ou harmônia.
+
+#### Ponte
+Quantidade estimada de compassos: 2 a 8
+                    
+A ponte quebra o ciclo rítmico estabelecido anteriormente. Ela cria contraste, variação e renovação do interesse do ouvinte, muitas vezes alterando o ritmo, a densidade ou a acentuação para criar tensão suficiente entre o verso e o refrão.             
+
+#### Refrão
+Quantidade estimada de compassos: 8 a 12           
+
+O refrão é a seção mais marcante e memorável da música. Ritmicamentre, costuma ser mais enfático, com acentuações mais claras ou padrões mais amplos, reforçando a sensação de chegada.
+
+#### Interlúdio
+Quantidade estimada de compassos: 2 a 8
+                    
+O interlúdio é uma seção instrumental que ocorre entre partes da música, normalmente dividindo ao meio a canção. Ele serve para criar transição, respiro ou variação, mantendo o pulso e o andamento enquanto explora novas ideias rítmicas ou harmônicas, timbres ou texturas sem a presença da voz principal. Normalmente, é onde guitarristas ou pianistas colocam os solos.
+
+#### Verso '
+Quantidade estimada de compassos: 8 a 24
+
+Após a ponte ou interlúdio, o retorno ao verso ou ao refrão gera uma sensação de familiaridade, pois o ritmo já foi assimilado pelo ouvinte. Esse retorno pode manter o mesmo padrão rítmico do verso inicial ou apresentar pequenas variações para evitar repetição excessiva.
+
+#### Desfecho
+Quantidade estimada de compassos: 2 a 8
+                    
+O desfecho encerra a organização temporal da música. Pode repetir o refrão, desacelerar o ritmo, reduzir gradualmente os elementos ou finalizar de forma abrupta, dependendo da proposta musical.
+""")
+        
+        st.info("""⚠️ As secções da organização temporal não são mandatórias, ou seja, não é preciso colocar obrigatoriamente todas elas juntas para formar uma música. 
+
+Essas são apenas as secções que usualmente aparecem na música popular, mas não são todas que possuem intro, interlúdio, desfecho ou até mesmo refrão. A escolha em inserir uma secção ou outra depende da inteção do artista e do objetivo que ele tem com a obra""")
+
+        st.success("""✅ É muito comum que compositores utilizem a periodicidade métrica de compassos, ou seja, organizem as estruturas musicais em ciclos regulares e previsíveis para facilitar a memorização. 
+
+Sendo assim, grande parte da música popular é estruturada a partir de frases de 4 compassos, formando seções de 8, 16 ou 32 compassos. Essa organização, conhecida como forma quadrada, facilita a percepção do tempo pelo ouvinte e a interação entre os músicos, criando ciclos rítmicos previsíveis e funcionais. Ex:
+
+- 4 compassos (intro)
+
+- 8 compassos (refrão)
+
+- 16 compassos (verso)
+
+Isso facilita a memória e aguça a percepção intuitiva da troca já que o cérebro reconhece o padrão com mais facilidade ao perceber 2 + 2, depois 4, depois 8, depois 16 e assim por diante para formar ciclos de tensão e resolução que funcionam independentemente e em conjunto ao mesmo tempo. 
+                   
+Com esse padrão, o ouvinte sente claramente o começo, meio e fim de cada parte como também percebe o começo meio e fim da obra como um todo, criando uma previsibilidade e segurança saudável sem causar monotonia. 
+                   
+Mas, lembre-se que isso não é uma regra, e sim apenas uma convenção funcional que facilita a composição e percepção do público; mas, se usado com maestria, a quebra desse padrão pode gerar um recurso artístico interessante para quebrar expectativas, se usado conscientemente.  
+                   
+ """)
 
 
     elif choice == "Intervalos":
@@ -493,22 +642,23 @@ Ouça uma de suas sinfonias *Symphony No. 5 in E Minor Op. 64*:
         """)
 
         st.markdown("""
-        | Nome do Intervalo       | Distância | Exemplo       | Qualidade             | Áudio |
-        |-------------------------|-----------|----------------|------------------------|-------|
-        | Uníssono                | 0T        | C – C          | Consonante            | <audio controls style="width:100px;" src="audios/unisono.mp3"></audio> |
-        | Segunda menor           | ½T        | C – C♯/D♭       | Dissonante            | <audio controls style="width:100px;" src="audios/segunda_menor.mp3"></audio> |
-        | Segunda maior           | 1T        | C – D          | Dissonante            | <audio controls style="width:100px;" src="audios/segunda_maior.mp3"></audio> |
-        | Terça menor             | 1½T       | C – E♭         | Consonante imperfeita | <audio controls style="width:100px;" src="audios/terca_menor.mp3"></audio> |
-        | Terça maior             | 2T        | C – E          | Consonante imperfeita | <audio controls style="width:100px;" src="audios/terca_maior.mp3"></audio> |
-        | Quarta justa            | 2½T       | C – F          | Consonante            | <audio controls style="width:100px;" src="audios/quarta_justa.mp3"></audio> |
-        | Quarta aumentada / Quinta diminuta | 3T | C – F♯/G♭ | Dissonante | <audio controls style="width:100px;" src="audios/quarta_aumentada.mp3"></audio> |
-        | Quinta justa            | 3½T       | C – G          | Consonante            | <audio controls style="width:100px;" src="audios/quinta_justa.mp3"></audio> |
-        | Sexta menor             | 4T        | C – A♭         | Consonante imperfeita | <audio controls style="width:100px;" src="audios/sexta_menor.mp3"></audio> |
-        | Sexta maior             | 4½T       | C – A          | Consonante imperfeita | <audio controls style="width:100px;" src="audios/sexta_maior.mp3"></audio> |
-        | Sétima menor            | 5T        | C – B♭         | Dissonante            | <audio controls style="width:100px;" src="audios/setima_menor.mp3"></audio> |
-        | Sétima maior            | 5½T       | C – B          | Dissonante            | <audio controls style="width:100px;" src="audios/setima_maior.mp3"></audio> |
-        | Oitava justa            | 6T        | C – C (oitava) | Consonante            | <audio controls style="width:100px;" src="audios/oitava_justa.mp3"></audio> |
-        """, unsafe_allow_html=True)
+| Nome do Intervalo       | Distância | Exemplo        | Qualidade             |
+|-------------------------|-----------|----------------|------------------------|
+| Uníssono                | 0T        | C – C          | Consonante            |
+| Segunda menor           | ½T        | C – C♯/D♭       | Dissonante            |
+| Segunda maior           | 1T        | C – D          | Dissonante            |
+| Terça menor             | 1½T       | C – E♭         | Consonante imperfeita |
+| Terça maior             | 2T        | C – E          | Consonante imperfeita |
+| Quarta justa            | 2½T       | C – F          | Consonante            |
+| Quarta aumentada / Quinta diminuta | 3T | C – F♯/G♭ | Dissonante |
+| Quinta justa            | 3½T       | C – G          | Consonante            |
+| Sexta menor             | 4T        | C – A♭         | Consonante imperfeita |
+| Sexta maior             | 4½T       | C – A          | Consonante imperfeita |
+| Sétima menor            | 5T        | C – B♭         | Dissonante            |
+| Sétima maior            | 5½T       | C – B          | Dissonante            |
+| Oitava justa            | 6T        | C – C (oitava) | Consonante            |
+""")
+
 
         st.markdown("""*Os aúdios tocam os intervalos de uma mesma oitava e, depois, o intervalo entre uma oitava a cima*
                 """)
@@ -868,6 +1018,243 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
         st.image("https://res.cloudinary.com/dkbvui6sx/image/upload/v1766424150/image_13_noqiua.png", caption="Representação visual das notas da tétrade menor com sétima maior")
 
 
+        st.title("Acordes Sofisticados")
+
+        st.markdown("""
+Os acordes sofisticados surgem quando vamos além das estruturas básicas de tríades e tétrades e começamos a explorar o movimento interno dos intervalos de uma escala para alcançar diferentes cores harmônicas, tensões controladas e resoluções criativas.
+
+Assim, esses acordes servem principalmente para ampliar possibilidades expressivas e refinar o discurso musical do artista. E, por isso, vamos ver alguns dos principais conceitos que podem ampliar o seu vocabulário como músico.  
+
+""")
+
+        st.header("Inversões")
+
+        st.markdown("""
+Uma inversão ocorre quando a nota mais grave do acorde não é a tônica.
+
+As inversões não mudam o nome do acorde, mas alteram o encadeamento, o movimento do baixo e a sensação de fluidez.
+""")
+        
+        st.markdown("""
+Exemplo: *Cmaj7 (C – E – G – B)*
+
+| Posição | Sequência de notas | Nota do baixo | Notação |
+|-------|-------------------|---------------|---------|
+| Posição fundamental | C – E – G – B | C | Cmaj7 |
+| 1ª inversão | E – G – B – C | E | Cmaj7/E |
+| 2ª inversão | G – B – C – E | G | Cmaj7/G |
+| 3ª inversão | B – C – E – G | B | Cmaj7/B |
+""")
+        
+        st.success("""
+🎯 **Por que usar inversões?**
+- Criar linhas de baixo melódicas
+- Evitar saltos grandes entre acordes
+- Melhorar o encadeamento harmônico
+- Dar sensação de movimento contínuo
+""")
+
+
+        st.header("Acordes com Extensões")
+        st.markdown("""
+Os acordes com 9ª, 11ª e 13ª surgem quando continuamos o empilhamento de terças além da sétima.
+
+Essas extensões não criam novos acordes independentes, mas expandem a sonoridade dos acordes já existentes, adicionando cor, tensão e sofisticação à progressão.
+""")
+        st.subheader("Acordes com 9°")
+
+        st.markdown("""
+A 9ª é a mesma nota da 2ª, porém pensada uma oitava acima. Ela traz suavidade, riqueza harmônica e sensação de espaço ao acorde.
+
+| Tipo de Acorde | Fórmula | Exemplo | Notação do Exemplo |
+|----------------|--------|---------|-------------------|
+| Maj9 | 1 – 3 – 5 – 7 – 9 | C – E – G – B – D | Cmaj9 |
+| m9 | 1 – ♭3 – 5 – ♭7 – 9 | D – F – A – C – E | Dm9 |
+| 9 (dominante) | 1 – 3 – 5 – ♭7 – 9 | G – B – D – F – A | G9 |
+""")
+
+        st.info("""
+🎯 **Uso musical:**  
+- Muito comum em Jazz, MPB, Soul e Pop moderno  
+- Excelente para acordes de tônica e subdominante  
+- Em dominantes, aumenta a tensão sem ficar agressivo
+""")
+
+        st.subheader("Acordes com 11ª")
+
+        st.markdown("""
+A 11ª corresponde à 4ª da escala e adiciona uma sensação mais aberta, suspensa e modal. Em acordes maiores, a 11ª pode colidir com a 3ª maior ao criar o intervalo de trítono e, por isso, muitas vezes usa-se sus4 ou 11#.
+        
+| Tipo de Acorde | Fórmula | Exemplo | Notação do Exemplo |
+|----------------|--------|---------|-------------------|
+| m11 | 1 – ♭3 – 5 – ♭7 – 9 – 11 | D – F – A – C – E – G | Dm11 |
+| 11 (dominante) | 1 – 3 – 5 – ♭7 – 9 – 11 | G – B – D – F – A – C | G11 |
+| sus4 | 1 – 4 – 5 – ♭7 | G – C – D – F | G7sus4 |
+""")
+
+        st.info("""
+🎯 **Uso musical:**  
+- Cria sensação de suspensão  
+- Muito usada em contextos modais e grooves  
+- Ótima para evitar resoluções óbvias
+""")
+
+        st.subheader("Acordes com 13ª")
+
+        st.markdown("""
+A 13ª corresponde à 6ª da escala e traz um som rico, elegante e sofisticado. Na prática, muitos acordes com 13ª não usam todas as notas — escolhem-se as mais importantes para manter clareza sonora.
+        
+| Tipo de Acorde | Fórmula | Exemplo | Notação do Exemplo |
+|----------------|--------|---------|-------------------|
+| 13 | 1 – 3 – 5 – ♭7 – 9 – 13 | G – B – D – F – A – E | G13 |
+| m13 | 1 – ♭3 – 5 – ♭7 – 9 – 11 – 13 | D – F – A – C – E – G – B | Dm13 |
+
+""")
+
+        st.info("""
+🎯 **Uso musical:**  
+- Muito comum em dominantes finais  
+- Ideal para cadências sofisticadas  
+- Muito usada em Jazz, Fusion e MPB
+""")
+        
+        st.header("Acordes Suspensos")
+
+        st.markdown("""
+Os acordes suspensos (sus) são acordes que não possuem a 3ª, a nota responsável por definir se o acorde é maior ou menor. Ou seja, os acordes suspensos não possuem a definição de maiores ou menores.
+
+Ao remover a 3ª e substituí-la por outra nota, criamos uma sensação de suspensão, expectativa e ambiguidade tonal por não serem nem maiores e nem menores. 
+""")
+
+        st.subheader("Sus2 e Sus4")
+
+        st.markdown("""
+A diferença entre sus2 e **sus4 está na nota que substitui a 3ª do acorde.
+        
+| Tipo de Acorde | Fórmula | Exemplo | Notação do Exemplo |
+|----------------|--------|---------|-------------------|
+| sus2 | 1 – 2 – 5 | C – D – G | Csus2 |
+| sus4 | 1 – 4 – 5 | C – F – G | Csus4 |
+""")
+
+        st.info("""
+🎯 **Sensação sonora:**  
+- **Sus2:** som aberto, leve e moderno  
+- **Sus4:** mais tensão, sensação clara de suspensão  
+""")
+
+        st.subheader("Acordes Suspensos com Sétima")
+
+        st.markdown("""
+Os acordes suspensos também podem aparecer com **7ª**, especialmente em contextos dominantes.
+Nesse caso, eles criam uma forte expectativa de resolução.
+        
+| Tipo de Acorde | Fórmula | Exemplo | Notação |
+|----------------|--------|---------|---------|
+| 7sus4 | 1 – 4 – 5 – ♭7 | G – C – D – F | G7sus4 |
+| 9sus4 | 1 – 4 – 5 – ♭7 – 9 | G – C – D – F – A | G9sus4 |
+""")
+
+        st.success("""
+🎯 **Uso musical:**  
+- Muito comum antes de dominantes tradicionais  
+- Excelente para evitar resoluções óbvias  
+- Muito usado em Jazz, Funk, Gospel, MPB e Pop  
+""")
+
+
+
+        st.markdown("""
+A característica mais importante dos acordes suspensos é que eles tendem a resolver para um acorde com a 3ª. Por exemplo:
+
+- Csus4 → C
+- Dsus2 → D
+- G7sus4 → G7 → C
+""")
+
+        st.title("Resumo Geral sobre Acordes")
+
+
+        st.markdown("""
+Ao longo deste capítulo, vimos vários tipos de acordes. É importante entender que eles*não se excluem, mas atuam em **dimensões diferentes da harmonia**.
+
+Abaixo está um resumo comparativo para organizar essas ideias:
+""")
+
+        st.markdown("""
+| Tipo de Acorde | O que muda? | Função musical | Exemplo |
+|----------------|------------|---------------|---------|
+| **Tríades** | Estrutura básica (3 notas) | Define se o acorde é maior, menor, diminuto ou aumentado | C, Am, B° |
+| **Acordes com 7ª** | Adiciona função harmônica | Cria tensão, resolução e movimento tonal | Cmaj7, G7, Dm7 |
+| **Extensões (9, 11, 13)** | Adiciona cor e sofisticação | Enriquece a sonoridade sem mudar a função básica | Cmaj9, G13 |
+| **Inversões** | Muda a nota do baixo | Melhora encadeamento e linhas de baixo | Cmaj7/E |
+| **Suspensos (sus)** | Remove a 3ª | Cria suspensão e ambiguidade tonal | Csus4, G7sus4 |
+""")
+
+        st.success("""
+🎯 **Ideia-chave:**  
+Esses conceitos atuam em camadas diferentes do acorde:
+
+- A **tríade** define a identidade básica  
+- A **7ª** define a função harmônica  
+- As **extensões** refinam a cor sonora  
+- As **inversões** organizam o movimento  
+- Os **sus** criam expectativa e suspensão
+""")
+
+        st.markdown("""
+Veja como um único acorde pode acumular várias dessas ideias ao mesmo tempo:
+
+**Cmaj7(9)/E**
+  - Tom: C
+  - Notas: E – G – B – C – D
+  - Tétrade: maior com 7ª (Cmaj7)
+  - Extensão: 9ª (D)
+  - Inversão: E no baixo
+                    
+
+                    
+**G7(13)/B**
+  - Tom: G
+  - Notas: B – D – F – A – E – G
+  - Tétrade: dominante (G7)
+  - Extensão: 13ª (E)
+  - Inversão: B no baixo 
+
+                    
+**Dm11/F**
+  - Tom: D
+  - Notas: F – A – C – D – G
+  - Tétrade: menor com 7ª (Dm7)
+  - Extensão: 11ª (G)
+  - Inversão: F no baixo 
+
+                    
+**A13sus4/C#**
+  - Tom: A
+  - Notas: C# – D – E – G – F#
+  - Suspenso: sem 3ª (sus4)
+  - Extensão: 13ª (F#)
+  - Inversão: C# no baixo 
+
+                    
+**Fmaj7(#11)/A**
+  - Tom: F
+  - Notas: A – C – E – F – B
+  - Tétrade: maior com 7ª (Fmaj7)
+  - Extensão: #11 (B)
+  - Inversão: A no baixo 
+
+Ou seja: um único acorde pode ser sofisticado em vários níveis harmônicos simultaneamente.
+""")
+
+        st.info("""  
+👉 **A sofisticação musical não vem de decorar todos esses acordes de uma vez,
+mas sim de entender como pequenas mudanças estruturais dos intervalos transformam a função e a sensação sonora para causar um efeito desejado em uma progressão.**
+""")
+
+    
+
     def harmonico():
 
         # ======================================================
@@ -922,26 +1309,26 @@ Essas formas se repetem ciclicamente no braço do instrumento, permitindo tocar 
 
         st.markdown("Veja a **tabela de campos harmônicos maiores** para todas as notas naturais:")
 
-        st.markdown("""I  | II  | III | IV | V  | VI  | VII |
--- | --- | --- | -- | -- | --- | ---- |
+        st.markdown("""I  | II  | III | IV | V  | VI  | VII | 
+-- | --- | --- | -- | -- | --- | ---- | 
 **C**  | Dm  | Em  | F  | G  | Am  | B°   |
-**G**  | Am  | Bm  | C  | D  | Em  | F#°  |
-**D**  | Em  | F#m | G  | A  | Bm  | C#°  |
-**A**  | Bm  | C#m | D  | E  | F#m | G#°  |
-**E**  | F#m | G#m | A  | B  | C#m | D#°  |
-**B**  | C#m | D#m | E  | F# | G#m | A#°  |
-**F#** | G#m | A#m | B  | C# | D#m | E#°  |
-**Db** | Ebm | Fm  | Gb | Ab | Bbm | C°   |
-**Ab** | Bbm | Cm  | Db | Eb | Fm  | G°   |
-**Eb** | Fm  | Gm  | Ab | Bb | Cm  | D°   |
-**Bb** | Cm  | Dm  | Eb | F  | Gm  | A°   |
-**F**  | Gm  | Am  | Bb | C  | Dm  | E°   |
+**G**  | Am  | Bm  | C  | D  | Em  | F#°  | 
+**D**  | Em  | F#m | G  | A  | Bm  | C#°  | 
+**A**  | Bm  | C#m | D  | E  | F#m | G#°  | 
+**E**  | F#m | G#m | A  | B  | C#m | D#°  | 
+**B**  | C#m | D#m | E  | F# | G#m | A#°  | 
+**F#** | G#m | A#m | B  | C# | D#m | E#°  | 
+**Db** | Ebm | Fm  | Gb | Ab | Bbm | C°   | 
+**Ab** | Bbm | Cm  | Db | Eb | Fm  | G°   | 
+**Eb** | Fm  | Gm  | Ab | Bb | Cm  | D°   | 
+**Bb** | Cm  | Dm  | Eb | F  | Gm  | A°   | 
+**F**  | Gm  | Am  | Bb | C  | Dm  | E°   | 
 """)
         
         st.markdown("Veja a **tabela de campos harmônicos menores** para todas as notas naturais:")
 
-        st.markdown("""I   | II | III | IV  | V   | VI | VII |
---- | --- | --- | --- | --- | -- | --- |
+        st.markdown("""I   | II | III | IV  | V   | VI | VII 
+--- | --- | --- | --- | --- | -- | --- 
 **Am**  | B°  | C   | Dm  | Em  | F  | G   |
 **Em**  | F#° | G   | Am  | Bm  | C  | D   |
 **Bm**  | C#° | D   | Em  | F#m | G  | A   |
@@ -1016,8 +1403,8 @@ As tétrades não apenas ampliam o som dos acordes, como também deixam evidente
         st.markdown("**Veja a tabela de campos harmônicos maiores com tétrades para todas as notas naturais:**")
 
         st.markdown("""
-I       | II      | III     | IV       | V      | VI      | VII |
-------- | ------- | ------- | -------- | ------ | ------- | ----- |
+I       | II      | III     | IV       | V      | VI      | VII | 
+------- | ------- | ------- | -------- | ------ | ------- | ----- | 
 **Cmaj7**   | Dm7     | Em7     | Fmaj7    | G7     | Am7     | Bm7♭5 |
 **Gmaj7**   | Am7     | Bm7     | Cmaj7    | D7     | Em7     | F#m7♭5 |
 **Dmaj7**   | Em7     | F#m7    | Gmaj7    | A7     | Bm7     | C#m7♭5 |
@@ -1055,8 +1442,8 @@ Exemplo — Campo Harmônico de Am com tétrades:
         st.markdown("**Veja a tabela de campos harmônicos menores com tétrades para todas as notas naturais:**")
 
         st.markdown("""
-I       | II     | III     | IV      | V       | VI      | VII |
-------- | ------- | ------- | ------- | ------- | ------- | ----- |
+I       | II     | III     | IV      | V       | VI      | VII | 
+------- | ------- | ------- | ------- | ------- | ------- | ----- | 
 **Am7**  | Bm7♭5   | Cmaj7   | Dm7     | Em7     | Fmaj7   | G7   |
 **Em7**  | F#m7♭5  | Gmaj7   | Am7     | Bm7     | Cmaj7   | D7   |
 **Bm7**  | C#m7♭5  | Dmaj7   | Em7     | F#m7    | Gmaj7   | A7   |
@@ -1127,6 +1514,10 @@ Observe os exemplos abaixo:
         st.markdown("""
 **Exemplo 1: Cmaj7 → Am7 → Dm7 → G7 -> C**
 """)
+        if st.button("▶"):
+            st.audio(
+        "https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344173/suoop7qv2kyqzaawngvw.mp3"
+    )
 
         st.markdown("""
 Função Harmônica:
@@ -1143,6 +1534,11 @@ Agora, compare com esta progressão:
         st.markdown("""
 **Exemplo 2: Cmaj7 → Em7 → Fmaj7 → G7 -> C**
 """)
+        if st.button("▶", key="1"):
+            st.audio(
+        "https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344173/suoop7qv2kyqzaawngvw.mp3"
+    )
+
 
         st.markdown("""
 Função Harmônica:
@@ -1313,45 +1709,92 @@ Essas progressões usam apenas acordes do campo harmônico principal, sem muitas
 """)
 
         st.markdown("""
-**👉 I – IV – V – I**  
-Exemplo com tríades: *C → F → G → C*
-
+#### I – IV – V – I  
+Exemplo com tríades: *C → F → G → C* """)
+        
+        if st.button("▶", key="2"):
+            st.audio(
+        "https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344173/suoop7qv2kyqzaawngvw.mp3"
+    )
+            
+        st.markdown("""
 Exemplo com tétrades: *Cmaj7 → Fmaj7 → G7 → Cmaj7*
-
 """)
+        if st.button("▶", key="3"):
+            st.audio(
+        "https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344173/suoop7qv2kyqzaawngvw.mp3"
+    )
         
         st.markdown("""
-**👉 I – V – IV – I**  
+#### I – V – IV – I
 Exemplo com tríades: *C → G → F → C*
+""")
+        if st.button("▶", key="4"):
+            st.audio(
+        "https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344173/suoop7qv2kyqzaawngvw.mp3"
+    )
 
+
+        st.markdown("""
 Exemplo com tétrades: *Cmaj7 → G7 → Fmaj7 → Cmaj7*
-
 """)
+        if st.button("▶", key="5"):
+            st.audio(
+        "https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344173/suoop7qv2kyqzaawngvw.mp3"
+    )
         
         st.markdown("""
-**👉 II – V – I**  
+#### II – V – I
 Exemplo com tríades: *Dm → G → C*
-
+""")
+        if st.button("▶", key="6"):
+            st.audio(
+        "https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344173/suoop7qv2kyqzaawngvw.mp3"
+    )
+            
+        st.markdown("""
 Exemplo com tétrades: *Dm7 → G7 → Cmaj7*
-
 """)
-        
+        if st.button("▶", key="7"):
+            st.audio(
+        "https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344173/suoop7qv2kyqzaawngvw.mp3"
+    )
         
         st.markdown("""
-**👉 I – VI – II – V – I**  
+#### I – VI – II – V – I 
 Exemplo com tríades: *C → Am → Dm → G → C*
-
-Exemplo com tétrades: *Cmaj7 → Am7 → Dm7 → G7 → Cmaj7* 
-
 """)
-
+        
+        if st.button("▶", key="8"):
+            st.audio(
+        "https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344173/suoop7qv2kyqzaawngvw.mp3"
+    )
+            
         st.markdown("""
-**👉 I – V – VI – IV**  
-Exemplo com tríades: *C → G → Am → F*
-
-Exemplo com tétrades: *Cmaj7 → G7 → Am7 → Fmaj7*
-
+Exemplo com tétrades: *Cmaj7 → Am7 → Dm7 → G7 → Cmaj7* 
 """)
+        
+        if st.button("▶", key="9"):
+            st.audio(
+        "https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344173/suoop7qv2kyqzaawngvw.mp3"
+    )
+
+        st.markdown("""                    
+#### I – V – VI – IV 
+Exemplo com tríades: *C → G → Am → F*
+""")
+        if st.button("▶", key="10"):
+            st.audio(
+        "https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344173/suoop7qv2kyqzaawngvw.mp3"
+    )
+            
+        st.markdown("""
+Exemplo com tétrades: *Cmaj7 → G7 → Am7 → Fmaj7*
+""")
+        if st.button("▶", key="11"):
+            st.audio(
+        "https://res.cloudinary.com/dkbvui6sx/video/upload/v1751344173/suoop7qv2kyqzaawngvw.mp3"
+    )
 
 # ------------------------------------------------------
         st.subheader("🔹Progressões com Dominantes Secundários")
@@ -1361,53 +1804,54 @@ Como vimos, dominantes secundários criam tensão direcionada para acordes que n
 """)
 
         st.markdown("""
-**👉 I – V/ii – II – V – I**  
-Exemplo com tríades:
+#### I – V/ii – II – V – I
+Exemplo com tríades: C -> A7 -> Dm -> G -> C
 
 Exemplo com tétrades: *Cmaj7 → A7 → Dm7 → G7 → Cmaj7*
 """)
         
         st.markdown("""
-**👉 I – V/vi – VI – II – V – I**  
-Exemplo com tríades:
+#### I – V/vi – VI – II – V – I 
+Exemplo com tríades: C -> E7 -> Am -> Dm -> G -> C
 
 Exemplo com tétrades: *Cmaj7 → E7 → Am7 → Dm7 → G7 → Cmaj7*
 """)
         
         st.markdown("""
-**👉 I – V/iii – III – VI – II – V – I**  
-Exemplo com tríades:
+#### I – V/iii – III – VI – II – V – I  
+Exemplo com tríades: C -> B7 -> Em -> Am -> Dm -> G -> C
 
 Exemplo com tétrades: *Cmaj7 → B7 → Em7 → Am7 → Dm7 → G7 → Cmaj7*
 """)
         
         st.markdown("""
-**👉 I – V/IV – IV – V – I**  
-Exemplo com tríades:
+#### I – V/IV – IV – V – I  
+Exemplo com tríades: C -> C7 -> F -> G -> C
 
 Exemplo com tétrades: *Cmaj7 → C7 → Fmaj7 → G7 → Cmaj7*
 """)
         
         st.markdown("""
-**👉 I – V/V – V – I**  
-Exemplo com tríades:
+#### I – V/V – V – I 
+Exemplo com tríades: C -> D7 -> G -> C
 
 Exemplo com tétrades: *Cmaj7 → D7 → G7 → Cmaj7*
 """)
 
         st.markdown("""
-**👉 I – VI – V/ii – II – V – I**  
-Exemplo com tríades:
+#### I – VI – V/ii – II – V – I 
+Exemplo com tríades: C -> Am -> A7 -> Dm -> G7 -> C
 
 Exemplo com tétrades: *Cmaj7 → Am7 → A7 → Dm7 → G7 → Cmaj7*
 """)
         
         st.markdown("""
-**👉 I – VI – V/ii – II – V – I**  
-Exemplo com tríades:
+#### I – VI – V/ii – II – V – I  
+Exemplo com tríades: C -> Am -> A7 -> Dm -> G -> C
 
 Exemplo com tétrades: *Cmaj7 → Am7 → A7 → Dm7 → G7 → Cmaj7*
 """)
+
 
 
         st.subheader("🔹Progressões com Empréstimo Modal")
@@ -1417,49 +1861,49 @@ O empréstimo modal adiciona cor emocional sem abandonar a tonalidade principal,
 """)
 
         st.markdown("""
-**👉 I – IVm – V – I**  
+#### I – IVm – V – I
 Exemplo em tríades: *C → Fm → G → C*
                     
 Exemplo em tétrades: *Cmaj7 → Fm7 → G7 → Cmaj7* 
 """)
 
         st.markdown("""
-**👉 I – VIm – V – I**  
+#### I – VIm – V – I  
 Exemplo em tríades: *C → Ab → G → C*
                     
 Exemplo em tétrades: *Cmaj7 → Abmaj7 → G7 → Cmaj7*
 """)
         
         st.markdown("""
-**👉 I – IVm – ♭VII – I**  
+#### I – IVm – ♭VII – I 
 Exemplo em tríades: *C → Fm → Bb → C*  
 
 Exemplo em tétrades: *Cmaj7 → Fm7 → Bb7 → Cmaj7*
 """)
 
         st.markdown("""
-**👉 I – ♭VII – IV – I**  
+#### I – ♭VII – IV – I
 Exemplo em tríades: *C → Bb → F → C*  
 
 Exemplo em tétrades: *Cmaj7 → Bb7 → Fmaj7 → Cmaj7*
 """)
 
         st.markdown("""
-**👉 I – IVm – ♭VI – V – I**  
+#### I – IVm – ♭VI – V – I  
 Exemplo em tríades: *C → Fm → Ab → G → C*  
 
 Exemplo em tétrades: *Cmaj7 → Fm7 → Abmaj7 → G7 → Cmaj7*
 """)
 
         st.markdown("""
-**👉 I – ♭VI – ♭VII – I**  
+#### I – ♭VI – ♭VII – I  
 Exemplo em tríades: *C → Ab → Bb → C*  
 
 Exemplo em tétrades: *Cmaj7 → Abmaj7 → Bb7 → Cmaj7*
 """)
 
         st.markdown("""
-**👉 I – IIm7♭5 – V – I**  
+#### I – IIm7♭5 – V – I 
 Exemplo em tríades: *C → D° → G → C*  
 
 Exemplo em tétrades: *Cmaj7 → Dm7♭5 → G7 → Cmaj7*
@@ -1473,7 +1917,7 @@ Aqui começam as progressões mais sofisticadas que misturam tudo o que vimos at
 """)
         
         st.markdown("""
-**👉 I – V/ii – IIm – V – I**  
+#### I – V/ii – IIm – V – I  
 (Dominante secundário + função clássica)
 
 Exemplo em tríades: *C → A → Dm → G → C*  
@@ -1482,8 +1926,7 @@ Exemplo em tétrades: *Cmaj7 → A7 → Dm7 → G7 → Cmaj7*
 """)
 
         st.markdown("""
-**👉 I – IVm – V/vi – VIm – V – I**  
-(Empréstimo modal + dominante secundário)
+#### I – IVm – V/vi – VIm – V – I 
 
 Exemplo em tríades: *C → Fm → E → Am → G → C*  
 
@@ -1491,8 +1934,7 @@ Exemplo em tétrades: *Cmaj7 → Fm7 → E7 → Am7 → G7 → Cmaj7*
 """)
 
         st.markdown("""
-**👉 I – V/IV – IV – IVm – I**  
-(Dominante secundário + empréstimo modal)
+#### I – V/IV – IV – IVm – I  
 
 Exemplo em tríades: *C → C7 → F → Fm → C*  
 
@@ -1500,8 +1942,7 @@ Exemplo em tétrades: *Cmaj7 → C7 → Fmaj7 → Fm7 → Cmaj7*
 """)
 
         st.markdown("""
-**👉 I – ♭VI – V/ii – IIm – V – I**  
-(Empréstimo modal + dominante secundário + encadeamento funcional)
+#### I – ♭VI – V/ii – IIm – V – I
 
 Exemplo em tríades: *C → Ab → A → Dm → G → C*  
 
@@ -1509,8 +1950,7 @@ Exemplo em tétrades: *Cmaj7 → Abmaj7 → A7 → Dm7 → G7 → Cmaj7*
 """)
 
         st.markdown("""
-**👉 I – IV – ♭VII – V/III – IIIm – V – I**  
-(Substituição funcional + empréstimo modal + dominante secundário)
+#### I – IV – ♭VII – V/III – IIIm – V – I  
 
 Exemplo em tríades: *C → F → Bb → B → Em → G → C*  
 
@@ -1518,8 +1958,7 @@ Exemplo em tétrades: *Cmaj7 → Fmaj7 → Bb7 → B7 → Em7 → G7 → Cmaj7*
 """)
 
         st.markdown("""
-**👉 I – V/vi – VIm – IIm7♭5 – V – I**  
-(Dominante secundário + empréstimo modal leve)
+#### I – V/vi – VIm – IIm7♭5 – V – I  
 
 Exemplo em tríades: *C → E → Am → D° → G → C*  
 
@@ -1527,8 +1966,7 @@ Exemplo em tétrades: *Cmaj7 → E7 → Am7 → Dm7♭5 → G7 → Cmaj7*
 """)
 
         st.markdown("""
-**👉 I – IVm – ♭VI – V/ii – IIm – V – I**  
-(Empréstimo modal + dominante secundário + resolução clássica)
+#### I – IVm – ♭VI – V/ii – IIm – V – I  
 
 Exemplo em tríades: *C → Fm → Ab → A → Dm → G → C*  
 
@@ -1620,17 +2058,17 @@ Assim, nota-se que podemos usar o Dm7 para modularizar o tom de C para G.
 | --------------------- | ------------------- | ----------------------- | ----------------------------- | -------------------------------- |
 | **I**                 | Maior / Maj7        | Tônica                  | IV                            | Tom acima (V do tom de origem)   |
 | **I**                 | Maior / Maj7        | Tônica                  | V                             | Tom abaixo (IV do tom de origem) |
-| **ii**                | Menor / m7          | Subdominante            | I                             | Tom menor relativo ao ii         |
-| **ii**                | Menor / m7          | Subdominante            | IV                            | Tom uma 4ª acima                 |
-| **ii**                | Menor / m7          | Subdominante            | V                             | Tom uma 5ª acima (menor)         |
-| **iii**               | Menor / m7          | Tônica relativa         | I                             | Tom relativo menor               |
-| **iii**               | Menor / m7          | Tônica relativa         | vi                            | Tom uma 3ª acima                 |
+| **II**                | Menor / m7          | Subdominante            | I                             | Tom menor relativo ao ii         |
+| **II**                | Menor / m7          | Subdominante            | IV                            | Tom uma 4ª acima                 |
+| **II**                | Menor / m7          | Subdominante            | V                             | Tom uma 5ª acima (menor)         |
+| **III**               | Menor / m7          | Tônica relativa         | I                             | Tom relativo menor               |
+| **III**               | Menor / m7          | Tônica relativa         | vi                            | Tom uma 3ª acima                 |
 | **IV**                | Maior / Maj7        | Subdominante            | I                             | Mesmo acorde como nova tônica    |
 | **IV**                | Maior / Maj7        | Subdominante            | V                             | Tom uma 4ª abaixo                |
 | **V**                 | Maior / 7           | Dominante               | I                             | Tom uma 5ª acima                 |
-| **vi**                | Menor / m7          | Tônica relativa         | I                             | Tom relativo menor               |
-| **vi**                | Menor / m7          | Tônica relativa         | ii                            | Tom uma 5ª acima                 |
-| **viiø**              | Meio-diminuto       | Dominante fraca         | ii                            | Tom relativo menor               |
+| **VI**                | Menor / m7          | Tônica relativa         | I                             | Tom relativo menor               |
+| **VI**                | Menor / m7          | Tônica relativa         | ii                            | Tom uma 5ª acima                 |
+| **VII**              | Meio-diminuto       | Dominante fraca         | ii                            | Tom relativo menor               |
 
 
 """)
@@ -1841,11 +2279,11 @@ A partir disso, podemos continuar a progressão no campo harmônico de F ou esco
         st.write("")
     elif choice == "Períodos Históricos":
         st.write("")
-    elif choice == "Ritmos":
+    elif choice == "Ritmo":
         st.write("")
     elif choice == "Intervalos":
         st.write("")
-    elif choice == "Escalas Naturais":
+    elif choice == "Escalas Musicais":
         exibir_escalas()
     elif choice == "Acordes & Arpejos":
         acordes()
